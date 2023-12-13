@@ -1,8 +1,9 @@
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import "../src/index.css"
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement!);
-root.render(
-        <App />
-  );
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+	<RouterProvider router={router} />
+);
