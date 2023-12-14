@@ -1,9 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Role } from "../models";
+// import { Role } from "../models";
 import { ErrorBoundary, ProtectedRoute } from "../features";
 import ErrorPage from "../pages/Error";
 import Layout from "../layout/Layout";
-import {Home, Organisations} from "../pages/User";
+import {
+  Calculator,
+  Faq,
+  Home,
+  ImeiCheckService,
+  ImeiTariffService,
+  Information,
+  IssuanceSpecialPermitService,
+  McqsService,
+  Organisations,
+} from "../pages/User";
+// import Categories from "../pages/User/Categories";
 // import { Checkout, DetailDescription, DetailReview, Home,Books  } from '../pages';
 // import { AuthLayout } from '../features/layout/Auth';
 // import { Login } from '../pages/Auth';
@@ -12,7 +23,6 @@ import {Home, Organisations} from "../pages/User";
 // import { ThemeContext, ThemeProvider } from '../context/ThemeContext';
 
 export const router = createBrowserRouter([
-
   {
     path: "*",
     element: <ErrorPage />,
@@ -20,7 +30,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute expectedRole={Role.USER} redirectPath="/auth/login">
+      <ProtectedRoute expectedRole={null} redirectPath="/auth/login">
         <Layout />
       </ProtectedRoute>
     ),
@@ -32,60 +42,68 @@ export const router = createBrowserRouter([
       },
       {
         path: "/organisations",
-        element:<Organisations/>,
+        element: <Organisations />,
         children: [],
       },
       {
-        path: 'services',
-        children: [],  
+        path: "services",
+        // element:<Services/>,
+        children: [],
+      },
+      // {
+      //   path: '/categories',
+      //   element: <Categories />,
+      //   children: []
+      // },
+      {
+        path: "/infomation",
+        element: <Information />,
+      },
+
+      {
+        path: "/imei-check-service",
+        element: <ImeiCheckService />,
       },
       {
-        path: '/categories',
-        // element: <Categories />
-        children: []
+        path: "/msqs-service",
+        element: <McqsService />,
       },
-    //   {
-        //     path:'/infomation',
-        //     element: <Information/>
-        // },
+      {
+        path: "/imei-tariff-service",
+        element: <ImeiTariffService />,
+      },
+      {
+        path: "/calculator",
+        element: <Calculator />,
+      },
+      {
+        path: "faq",
+        element: <Faq />,
+      },
+      {
+        path: "/issuance-special-permit-service",
+        element: <IssuanceSpecialPermitService />,
+      },
 
-     
-    
-    //   34
+      //   34
       //issuance-special-permit-service
-    //   38
-    // search-phone-number-service
-    // appeal-radio-service
-      // {
-      //     path:'/imei-check-service',
-      //     element :<imeiCheckService/>
-      // }
-       // {
-      // 	path: '/msqs-service',
-      // 	element: <McqsService/>
-      // },
-      //   {
-      //     path :'/imei-tariff-service',
-      //     element :<imeiTariffService
-      //   },
+      //   38
+      // search-phone-number-service
+      // appeal-radio-service
+
       //issuing-certificate-conformity-service
-          //   /calculator
 
-    //   1064
-    // street-search-service
-    // postal-tracking-service
-    // 1065
-    // permission-movement-service
+      //   1064
+      // street-search-service
+      // postal-tracking-service
+      // 1065
+      // permission-movement-service
 
-    // 35
-    // search-offices-classifier-service
-    // street-search-service
-    // detailed-information-departments-service
-    // registration-radio-electronic-devices-service
-      // {
-      //     path:'faq',
-      //     element: <Faq/>
-      // }
+      // 35
+      // search-offices-classifier-service
+      // street-search-service
+      // detailed-information-departments-service
+      // registration-radio-electronic-devices-service
     ],
   },
 ]);

@@ -1,0 +1,171 @@
+@import url("https://fonts.cdnfonts.com/css/regular");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none !important;
+  list-style-type: none;
+}
+body {
+  font-family: Font-Regular;
+  color: #14142b;
+}
+
+.header {
+  max-width: 100%;
+  max-height: 435px;
+  vertical-align: middle;
+  background: url(../assets/images/Headerbg.png) no-repeat;
+  background-size: cover;
+  background-position: initial;
+  background-clip: padding-box;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  transition: all 0.5s ease;
+
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .v-container {
+    max-width: 1300px;
+  }
+}
+.header--home {
+  padding-bottom: 20.125rem;
+  .header__logo {
+    img {
+      width: 18.75rem;
+      height: 4.375rem;
+    }
+  }
+  .header__login {
+    width: 30rem;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    .header__call {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            margin-right: 3.125rem;
+            height: 50px;
+            font-weight: 600;
+            font-family: Font-SemiBold;
+            font-size: 1rem;
+            line-height: 1.3125rem;
+            color: #fff;
+     
+      img{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1.4rem;
+      }
+
+    }
+    button {
+        padding: 15px 15px 13px 15px;
+        text-shadow: none;
+        font-size: .875rem;
+        color: #304b82;
+        cursor: pointer;
+        outline: none;
+        font-weight: 500;
+        line-height: 1.3125rem;
+        background-color: white;
+        border: 1px solid #304b82;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+
+    }
+   
+  }
+}
+.d-lg-none {
+    display: none !important;
+  }
+  
+@media screen and (max-width: 992px) {
+  .header--home {
+    padding-bottom: 16.0625rem;
+    .header__logo {
+      img {
+        width: 13rem;
+        height: 70px;
+        object-fit: contain;
+      }
+    }
+  }
+  .d-none {
+    display: none !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+  .col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  
+  .d-block {
+    display: block !important;
+  }
+  
+
+  
+  
+}
+
+@media screen and (max-width: 480px) {
+  .header__logo {
+    height: 70px;
+    img {
+      width: 13rem;
+      height: 70px;
+      object-fit: contain;
+    }
+  }
+  .d-none {
+    display: none !important;
+  } 
+  
+}
+
+
+/* Row Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .align-center {
+    align-items: center;
+  }
+  
+  .mb-60 {
+    margin-bottom: 60px;
+  }
+  
+  /* Column Styles */
+  .col-10 {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+
+
+  .text-right {
+    text-align: right;
+  }
+

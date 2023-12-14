@@ -4,12 +4,12 @@ import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div className="">
-        <Footer />
+    <div className="container">
         <div className="w-full">
         <Header />
         <main className=""><Outlet /></main>
         </div>
+        <Footer />
     </div>
   )
 }
