@@ -1,6 +1,4 @@
-import React from 'react';
 import MainLogo from '../../assets/images/MainLogo.svg';
-
 const Header = () => {
   return (
     <div className="header header--home">
