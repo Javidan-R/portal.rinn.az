@@ -1,17 +1,26 @@
-import Header from "./Header"
-import Footer from "./Footer"
-import { Outlet } from 'react-router-dom'
+// Layout.tsx
+
+import React from 'react';
+import Header from "./Header";
+import Footer from "./Footer";
+import { Outlet } from 'react-router-dom';
+import LoadingComponent from "../components/Loading";
 
 const Layout = () => {
   return (
-    <div className="container">
+  <>
+   <LoadingComponent />
+      
+      <div className="container">
         <div className="w-full">
-        <Header />
-        <main className=""><Outlet /></main>
+          <Header />
+          <main className=""><Outlet /></main>
         </div>
         <Footer />
-    </div>
-  )
+      </div>
+  </>
+   
+  );
 }
 
-export default Layout
+export default Layout;

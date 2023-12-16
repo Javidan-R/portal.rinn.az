@@ -1,4 +1,6 @@
 export {Home} from './Home';
+export {Services} from './Services'
+export {Categories} from './Categories'
 export {Organisations} from './Organisations'
 export {Calculator} from './Calculator'
 export {Faq} from './Faq'

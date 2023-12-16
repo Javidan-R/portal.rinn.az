@@ -24,10 +24,10 @@ export const ProtectedRoute: FC<ProtectedRouteProps> = ({
 	switch (currentRole) {
 		case Role.ADMIN:
 			return <Navigate to='/admin/dashboard' />;
-		case Role.USER:
+		case Role.GUEST:
 			return <Navigate to='/' />;
 		case null:
-			return <Navigate to='/auth/login' />;
+			return <Navigate to='/' />;
 		default:
 			return <Navigate to={redirectPath} />;
 	}

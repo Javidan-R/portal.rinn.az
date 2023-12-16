@@ -6,6 +6,7 @@ import Layout from "../layout/Layout";
 import {
   AppealRadio,
   Calculator,
+  Categories,
   DetailedInfoDep,
   Faq,
   Home,
@@ -21,9 +22,9 @@ import {
   RegistrationRadio,
   SearchOfficesClassifier,
   SearchPhoneNumber,
+  Services,
   StreetSearch,
 } from "../pages/User";
-import { Role } from "../models";
 // import Categories from "../pages/User/Categories";
 // import { AuthLayout } from '../features/layout/Auth';
 // import { Login } from '../pages/Auth';
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute expectedRole={Role.USER} redirectPath="/auth/login">
+      <ProtectedRoute expectedRole={null} redirectPath="/auth/login">
         <Layout />
       </ProtectedRoute>
     ),
@@ -50,83 +51,81 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/organisations",
+        path: "organisations:id",
         element: <Organisations />,
-        children: [],
       },
       {
-        path: "/services",
-        // element:<Services/>,
-        children: [],
+        path: "services/:id",
+        element:<Services/>,
       },
-      // {
-      //   path: '/categories',
-      //   element: <Categories />,
-      //   children: []
-      // },
       {
-        path: "/infomation",
+        path: 'categories/:id',
+        element: <Categories />,
+        children: []
+      },
+      {
+        path: "infomation",
         element: <Information />,
       },
 
       {
-        path: "/imei-check-service",
+        path: "imei-check-service",
         element: <ImeiCheck />,
       },
       {
-        path: "/msqs-service",
+        path: "msqs-service",
         element: <Mcqs />,
       },
       {
-        path: "/imei-tariff-service",
+        path: "imei-tariff-service",
         element: <ImeiTariff />,
       },
       {
-        path: "/calculator",
+        path: "calculator",
         element: <Calculator />,
       },
       {
-        path: "/faq",
+        path: "faq",
         element: <Faq />,
       },
       {
-        path: "/issuance-special-permit-service",
+        path: "issuance-special-permit-service",
         element: <IssuanceSpecialPermit />,
       },
       {
-        path: "/search-phone-number-service",
+        path: "search-phone-number-service",
         element : <SearchPhoneNumber/>
       },
       {
-        path: "/appeal-radio-service",
+        path: "appeal-radio-service",
         element : <AppealRadio />
       },
       {
-        path: "/issuing-certificate-conformity-service",
+        path: "issuing-certificate-conformity-service",
         element : <IssuingCertificateConformity />
       },
       {
-        path: "/postal-tracking-service",
+        path: "postal-tracking-service",
         element : <PostalTracking />
       },
       {
-        path: "/permission-movement-service",
+        path: "permission-movement-service",
         element : <PermissionMovement />
       },
       {
-        path: "/search-offices-classifier-service",
+        path: "search-offices-classifier-service",
         element : <SearchOfficesClassifier />
       },
       {
-        path: "/street-search-service",
+        path: "street-search-service",
         element : <StreetSearch />
       },
       {
-        path: "/detailed-information-departments-service",
+        path: "detailed-information-departments-service",
         element : <DetailedInfoDep />
       },
       {
-        path: "/registration-radio-electronic-devices-service",
+        path: "registration-radio-electronic-devices-service",
         element : <RegistrationRadio />
       },
    ],

@@ -1,0 +1,90 @@
+{
+    "information" :[
+        {
+            "id":22,
+            "telefon":"1655 Çağrı Mərkəzi",
+            "email":"mincom@mincom.gov.az",
+            "text": ""
+        }
+    ],
+    "organisations":[
+        {
+            "id":30,
+            "name": "“AzInTelecom” MMC",
+            "photo":"./src/assets/images/organisations/AzInTelecom.png",
+            "web" :"www.azintelecom.az",
+            "tel1":"(+994 12) 200-00-20",
+            "tel2":157,
+            "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
+            "services":[
+                    {
+                        "id":1,
+                        "image":"./src/assets/images/services/Imei.png",
+                        "title":"IMEI Qeydiyyat"
+                    },
+                    {
+                        "id":2,
+                        "image":"./src/assets/images/services/Mobiltarifler.png",
+                        "title":"Mobil cihazların qeydiyyat tarifləri"
+                    },
+                    {
+                        "id":3,
+                        "image":"./src/assets/images/services/Imeiyoxlama.png",
+                        "title":"IMEI yoxlama"
+                    },
+                    {
+                        "id":4,
+                        "image":"./src/assets/images/services/Mobiltarifler.png",
+                        "title":"Vətəndaşların adına olan mobil nömrələr barədə "
+                    },
+                    {
+                        "id":4,
+                        "image":"./src/assets/images/services/Nomredasinma.png",
+                        "title":"Mobil nömrə daşınması xidməti vasitəsiylə digər "
+                    }
+
+
+            ]
+
+        },
+        {
+            "id":64,
+            "name": "“Aztelekom” MMC",
+            "photo":"./src/assets/images/organisations/AzInTelecom.png",
+            "web" :"www.aztelekom.az/ ",
+            "tel1":"(+994 12) 344-00-00",
+            "tel2":	170,
+            "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
+            "services":[
+                    {
+                        "id":1,
+                        "image":"./src/assets/images/services/Imei.png",
+                        "title":"IMEI Qeydiyyat"
+                    },
+                    {
+                        "id":2,
+                        "image":"./src/assets/images/services/Mobiltarifler.png",
+                        "title":"Mobil cihazların qeydiyyat tarifləri"
+                    },
+                    {
+                        "id":3,
+                        "image":"./src/assets/images/services/Imeiyoxlama.png",
+                        "title":"IMEI yoxlama"
+                    },
+                    {
+                        "id":4,
+                        "image":"./src/assets/images/services/Mobiltarifler.png",
+                        "title":"Telefon nömrəsi üzrə axtarış"
+                    },
+                    {
+                        "id":4,
+                        "image":"./src/assets/images/services/Nomredasinma.png",
+                        "title":"Mobil nömrə daşınması xidməti vasitəsiylə digər "
+                    }
+
+
+            ]
+
+        }
+    ]
+}

@@ -92,7 +92,10 @@ const Footer = () => {
             </div>
             <div></div>
           </div>
-          <div className="col-12">
+        
+        </div>
+        <div className="row">
+         <div className="col-12">
             <hr className="divider" />
             <div className="footer__logo py-14 d-block d-md-flex justify-between">
               <img src={MainLogo} alt="logo-footer" />
@@ -102,7 +105,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+         </div>
       </div>
       <div className="modal" style={{ display: "none" }}>
         <div className="modal--lg modal__dialog" style={{ display: "none" }}>
