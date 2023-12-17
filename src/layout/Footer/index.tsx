@@ -1,5 +1,5 @@
 import MainLogo from '../../assets/images/MainLogo.svg';
-
+import './Footer.css';
 const Footer = () => {
   return (
     <div className="footer d-lg-block d-none">
@@ -36,7 +36,9 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6" style={{paddingRight: "15px",
+  paddingLeft: "15px"
+}}>
                   <div className="footer-menu-item mb-40">
                     <div className="footer-menu-item__title mb-8">
                       Sürətli keçid
@@ -69,7 +71,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 d-block d-lg-flex justify-end">
+          <div className="col-lg-3 d-block d-lg-flex justify-end " style={{display:'flex', justifyContent:'flex-end'}}>
             <div>
               <div className="footer-menu-item__title mb-8"> Əlaqə </div>
               <div className="mb-12 mr-40">
@@ -97,8 +99,14 @@ const Footer = () => {
         <div className="row">
          <div className="col-12">
             <hr className="divider" />
-            <div className="footer__logo py-14 d-block d-md-flex justify-between">
-              <img src={MainLogo} alt="logo-footer" />
+            <div className="footer__logo py-14 d-block d-md-flex justify-between" style={{display:'flex' , justifyContent:'space-between'}}>
+              <img src={MainLogo} alt="logo-footer" style={{ 
+                maxWidth:'100%', 
+                width: '21rem',
+                height: '3.6rem',
+                objectFit:'contain',
+                margin:0
+                }}/>
               <div className="mt-20 footer__copyright">
                 
                 © 2023. Bütün hüquqlar qorunur.

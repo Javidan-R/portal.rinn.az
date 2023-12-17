@@ -11,7 +11,14 @@ body {
   font-family: Font-Regular;
   color: #14142b;
 }
-
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.v-container {
+  max-width: 1300px;
+}
 .header {
   max-width: 100%;
   max-height: 435px;
@@ -24,14 +31,7 @@ body {
   padding-bottom: 0.9375rem;
   transition: all 0.5s ease;
 
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  .v-container {
-    max-width: 1300px;
-  }
+
 }
 .header--home {
   padding-bottom: 20.125rem;
@@ -102,9 +102,7 @@ body {
   align-items: center;
 }
 
-.mb-60 {
-  margin-bottom: 60px;
-}
+
 
 /* Column Styles */
 .col-10 {
@@ -116,35 +114,136 @@ body {
   flex: 0 0 50%;
   max-width: 50%;
 }
+/* Bootstrap Col Classes */
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-lg-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Bootstrap Spacing Classes */
+.mb-60 {
+  margin-bottom: 60px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
 
 
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+.mb-8{
+  margin: bottom 8px;;
+}
+
+
+
+
+
+.d-md-flex {
+  display: flex !important;
+}
+
+/* Bootstrap Justify Content Classes */
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* Bootstrap Text Styles */
+.text-right {
+  text-align: right;
+}
+
+/* Bootstrap Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .text-right {
   text-align: right;
 }
-/*  */
-/* FOOTER */
-/*  */
-.footer{
-  background-color: #14142b;
-  color: #fff;
-  padding: 3.3125rem 0 1.25rem;
-  .divider{
-    height: 1px;
-  background: rgba(234,237,234,.15);
-  background: #eaedea;
-  height: 2px;
-  border: none;
-  width: 100%;
-  }
-  .footer__copyright {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #fff;
-    opacity: .7;
+
+
+.header__search-col {
+  transition: all .5s ease;
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
+.search {
+  position: relative;
+}
+.search__button {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+}
+.search__input input {
+  border-radius: .9375rem;
+  padding: 1.25rem 1.25rem 1.25rem 4.0625rem;
+  border: 0;
+}
 
+
+.v-input {
+  width: 100%;
+  font-family: Font-Medium;
+  letter-spacing: .0625rem;
+  color: #14142b;
+  border: 1px solid #c2c2c2;
+  border-radius: 8px;
+  outline: none;
+  padding: .875rem 1.25rem;
+  box-sizing: border-box;
+  font-size: .75rem;
+  line-height: 1.25rem;
+  transition: all .5s ease;
+}
+.v-input::placeholder {
+  font-size: .8125rem;
+  color: #959595;
+  opacity: .5;
+}
+
+.search__advanced-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  color: #14142b;
+}
+.search__advanced-icon img {
+  margin-right: .5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
 @media screen and (max-width: 992px) {
   .header--home {
     padding-bottom: 16.0625rem;
@@ -155,6 +254,9 @@ body {
         object-fit: contain;
       }
     }
+  }
+  .search {
+    margin-bottom: 1.25rem;
   }
   .d-none {
     display: none !important;
@@ -177,6 +279,7 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+
   .header__logo {
     height: 70px;
     img {
@@ -188,6 +291,8 @@ body {
   .d-none {
     display: none !important;
   } 
-  
+  .d-md-block {
+    display: block !important;
+  }
 }
 

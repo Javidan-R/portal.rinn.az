@@ -4,7 +4,7 @@ import React from 'react';
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from 'react-router-dom';
-import LoadingComponent from "../components/Loading";
+import LoadingComponent from "../components/atoms/Loading";
 
 const Layout = () => {
   return (

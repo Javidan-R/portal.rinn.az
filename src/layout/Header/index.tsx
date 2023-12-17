@@ -1,4 +1,6 @@
 import MainLogo from '../../assets/images/MainLogo.svg';
+import SearcInput from '../../components/SearchInput';
+import  SwiperComponent  from '../../components/SearchInput/SwipperButtons';
 const Header = () => {
   return (
     <div className="header header--home">
@@ -16,7 +18,7 @@ const Header = () => {
               <img src="https://portal.rinn.az/img/menu.6f936fc4.svg" alt="menu" />
             </div>
           </div>
-          <div className="col-12 col-md-6 text-right d-lg-block d-none">
+          <div className=" col-md-6 text-right d-lg-block d-none">
             <div className="header__login">
               <a href="tel:1655" className="header__call d-md-inline d-none">
                 <img src="https://portal.rinn.az/img/call.859bda17.svg" alt="call" /> 1655 Çağrı Mərkəzi
@@ -27,23 +29,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="row justify-center">
-          <div className="col-12 col-lg-7 header__search-col">
-            <div className="margin-home search">
-              <div className="search__input mb-20">
-                <input placeholder="Hansı xidməti axtarırsınız?" className="v-input" type="text" />
-                <button className="search__button">
-                  <img src="/img/search.9f2c397b.svg" alt="search" />
-                </button>
-                <div className="search__advanced-icon">
-                  <img src="/img/filter.6f5fda6c.svg" alt="filter" />
-                  <span className="d-none d-md-block">Ətraflı axtarış</span>
-                </div>
-              </div>
-              {/* ... */}
-            </div>
-          </div>
-        </div>
+        <SearcInput/>
+        <SwiperComponent/>
       </div>
     </div>
   );
