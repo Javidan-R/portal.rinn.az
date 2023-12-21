@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
 import SwipperButton from '../atoms/Button/SwipperButton';
-
-
 const buttons = [
   { id: 1, name: 'Mobil' },
   { id: 2, name: 'MCQS' },
