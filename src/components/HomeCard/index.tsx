@@ -1,14 +1,9 @@
 import { FC } from "react";
 import './style.css'
-interface HomeCardProps{
-    name:string;
-    desc:string;
-    image:string;
-}
-
-export const HomeCard:FC<HomeCardProps> = ({name,desc,image}) => {
+import {CardProps} from '../../types/type';
+export const HomeCard:FC<CardProps> = ({name,desc,image}) => {
   return (
-    <div className="card p-24 h-100 lead__box">
+    <div className="card p-24 h-[104px] lead__box">
       <div className="box d-flex box--row align-center">
         <div className="box__icon">
           <img src={image} alt="icon" />
@@ -21,7 +16,7 @@ export const HomeCard:FC<HomeCardProps> = ({name,desc,image}) => {
             {desc}
           </div>
         </div>
-      </div>
+    </div>
     </div>
   );
 };

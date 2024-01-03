@@ -10,9 +10,9 @@ const Footer = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="footer-menu-item mb-40">
-                    <div className="footer-menu-item__title mb-8">Portal</div>
+                    <div className="footer-menu-item__title ">Portal</div>
                     <ul className="footer-menu-item__container">
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content ">
                         <a
                           href="/az/information/23"
                           className="footer-menu-item__link"
@@ -20,7 +20,7 @@ const Footer = () => {
                           Haqqımızda
                         </a>
                       </li>
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content">
                         <a
                           href="/az/information/22"
                           className="footer-menu-item__link"
@@ -28,7 +28,7 @@ const Footer = () => {
                           Məxfilik siyasəti
                         </a>
                       </li>
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content">
                         <a href="/az/faq" className="footer-menu-item__link">
                           FAQ
                         </a>
@@ -40,27 +40,27 @@ const Footer = () => {
   paddingLeft: "15px"
 }}>
                   <div className="footer-menu-item mb-40">
-                    <div className="footer-menu-item__title mb-8">
+                    <div className="footer-menu-item__title ">
                       Sürətli keçid
                     </div>
                     <ul className="footer-menu-item__container">
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content">
                         <div>
-                          <a className="footer-menu-item__link a">
+                          <a className="footer-menu-item__link ">
                             Seçilmiş xidmətlər
                           </a>
                         </div>
                       </li>
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content">
                         <div>
-                          <a className="footer-menu-item__link a">
+                          <a className="footer-menu-item__link">
                             Kateqoriyalar
                           </a>
                         </div>
                       </li>
-                      <li className="footer-menu-item__content mb-8">
+                      <li className="footer-menu-item__content">
                         <div>
-                          <a className="footer-menu-item__link a">
+                          <a className="footer-menu-item__link">
                             Ən çox istifadə olunan
                           </a>
                         </div>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 d-block d-lg-flex justify-end " style={{display:'flex', justifyContent:'flex-end'}}>
             <div>
-              <div className="footer-menu-item__title mb-8"> Əlaqə </div>
+              <div className="footer-menu-item__title"> Əlaqə </div>
               <div className="mb-12 mr-40">
                 <a
                   href="tel:1655"
@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="row">
          <div className="col-12">
             <hr className="divider" />
-            <div className="footer__logo py-14 d-block d-md-flex justify-between" style={{display:'flex' , justifyContent:'space-between'}}>
+            <div className="footer__logo  d-block d-md-flex justify-between flex items-center">
               <img src={MainLogo} alt="logo-footer" style={{ 
                 maxWidth:'100%', 
                 width: '21rem',
@@ -107,7 +107,7 @@ const Footer = () => {
                 objectFit:'contain',
                 margin:0
                 }}/>
-              <div className="mt-20 footer__copyright">
+              <div className="footer__copyright  ">
                 
                 © 2023. Bütün hüquqlar qorunur.
               </div>

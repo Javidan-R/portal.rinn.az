@@ -11,13 +11,11 @@ const Layout = () => {
   <>
    <LoadingComponent />
       
-      <div className="container">
         <div className="w-full">
           <Header />
           <main className=""><Outlet /></main>
         </div>
         <Footer />
-      </div>
   </>
    
   );
