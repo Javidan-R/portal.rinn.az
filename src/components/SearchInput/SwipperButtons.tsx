@@ -1,5 +1,3 @@
-// SwiperComponent.tsx
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -22,14 +20,15 @@ const buttons = [
 ];
 const SwiperComponent: React.FC = () => {
   return (
+    <div className='search__tags'>
     <Swiper spaceBetween={10} slidesPerView={7} className="swiper-container">
       {buttons.map((item, key) => (
-        <SwiperSlide key={key} className="swiper-slide">
+        <SwiperSlide key={key} className="swiper-slide" style={{width:'initial',transform: 'translate3d(0px, 0px, 0px)'}}>
           <SwipperButton className="swiper-button">{item.name}</SwipperButton>
         </SwiperSlide>
       ))}
     </Swiper>
+    </div>
   );
 };
-
 export default SwiperComponent;

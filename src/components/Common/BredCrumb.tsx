@@ -1,12 +1,12 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
-interface BredCrumbPorps{
-    link: string;
-    name: string;
-    text: string;
+interface BredCrumbProps {
+  link: string;
+  name: string;
+  text: string;
 }
 
-const BredCrumb:FC<BredCrumbPorps> = ({ link, name, text, ...props }) => {
+const BredCrumb: FC<BredCrumbProps> = ({ link, name, text, ...props }) => {
   return (
     <div {...props} aria-label="breadcrumb">
       <ol className="breadcrumb">

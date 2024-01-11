@@ -58,7 +58,7 @@
   }
 
   .box--bold {
-    font-weight: 700;
+    font-weight: 900;
     font-family: Font-Bold;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -70,7 +70,7 @@
     box-orient: vertical;
   }
   .box--font-14 {
-    font-size: .875rem;
+    font-size: 1rem;
   }
   .box__description{
     width:auto;

@@ -1,22 +1,21 @@
-import { ButtonHTMLAttributes, ReactNode, CSSProperties } from "react";
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+import React, { ButtonHTMLAttributes, ReactNode, CSSProperties } from "react";
+
+interface BackButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  className?:string;
-  style? : CSSProperties;
+  customClassName?: string;
+  customStyle?: CSSProperties;
 }
-const SwipperButton: React.FC<ButtonProps> = ({ className, style ,children, ...props }) => {
+
+const BackButton: React.FC<BackButtonProps> = ({ customClassName, customStyle, children, ...props }) => {
   return (
-    
     <button
-    className={className}
-    style={style}
-     
+      className={`bg-black text-black-50 ${customClassName}`}
+      style={customStyle}
       {...props}
-      
     >
       {children}
     </button>
   );
 };
 
-export default SwipperButton;
+export default BackButton;

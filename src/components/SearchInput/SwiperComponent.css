@@ -1,5 +1,21 @@
 /* SwiperComponent.css */
-
+.search__tags::after {
+  right: 0;
+  transform: translateX(50%);
+  background: linear-gradient(270deg,#304b82 48.04%,rgba(48,75,130,0));
+}
+.search__tags::after, .search__tags::before {
+  content: "";
+    position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+}
+.search__tags::before {
+  left: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg,#304b82 48.04%,rgba(48,75,130,0));
+}
 .swiper-container {
   position: relative;
   width: 100%;
@@ -10,11 +26,12 @@
   margin: 20px auto;
   box-shadow: 4px 0 0 rgba(0, 0, 0, 0.1), 1px 0 0 rgba(0, 0, 0, 0.1);
   display: flex;
+
 }
 
 .swiper-slide {
-  width: auto;
-  white-space: nowrap;
+  width: auto !important;
+    white-space: nowrap;
   margin-right: 10px;
   height: 2.2rem;
 }
@@ -30,4 +47,5 @@
   text-align: center;
   cursor: pointer;
   border: none;
+  
 }

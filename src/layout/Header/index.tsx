@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header header--home">
       <div className="container-fluid v-container">
-        <div className="row align-center mb-60">
+        <div className="row align-center mb-16">
           <div className="col-10 col-lg-6">
             <div className="header__logo">
               <a
@@ -44,16 +44,15 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <div style={{
-            width:'728px',
-            margin:'auto',
-        
-          }}>
-          <SearcInput />
-          <SwiperComponent />
-
+          <div
+            style={{
+              width: "728px",
+              margin: "auto",
+            }}
+          >
+            <SearcInput />
+            <SwiperComponent />
           </div>
-         
         </div>
       </div>
     </div>
