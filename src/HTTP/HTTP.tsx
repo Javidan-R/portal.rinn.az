@@ -10,12 +10,12 @@ export const GETAPIData = (url: string)=>{
     return HTTP.get(url);
 }
 
-export const POSTAPIData = (url: string , data:string)=>{
-    return HTTP.post(url ,data);
-}
-export const DeleteAPIData = (url: string , id:number)=>{
-    return HTTP.delete(`${url}/${id}`);
-}
-export const PUTAPIData = (url: string,data:string ,id:string)=>{
-    return HTTP.put(`${url}/${id}` ,data);
-}
+// export const POSTAPIData = (url: string , data:string)=>{
+//     return HTTP.post(url ,data);
+// }
+// export const DeleteAPIData = (url: string , id:number)=>{
+//     return HTTP.delete(`${url}/${id}`);
+// }
+// export const PUTAPIData = (url: string,data:string ,id:string)=>{
+//     return HTTP.put(`${url}/${id}` ,data);
+// }

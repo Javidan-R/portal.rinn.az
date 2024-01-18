@@ -1,92 +1,194 @@
 {
-    "information" :[
+  "information": [
+    {
+      "id": 22,
+      "telefon": "1655 Çağrı Mərkəzi",
+      "email": "mincom@mincom.gov.az",
+      "text": ""
+    }
+  ],
+  "organisations": [
+    {
+      "organisationsId": 30,
+      "name": "“AzInTelecom” MMC",
+      "photo": "./src/assets/images/organisations/AzInTelecom.png",
+      "web": "www.azintelecom.az",
+      "tel1": "(+994 12) 200-00-20",
+      "tel2": 157,
+      "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
+      "serviceName": [
         {
-            "id":22,
-            "telefon":"1655 Çağrı Mərkəzi",
-            "email":"mincom@mincom.gov.az",
-            "text": ""
-        }
-    ],
-    "organisations":[
-        {
-            "id":30,
-            "name": "“AzInTelecom” MMC",
-            "photo":"./src/assets/images/organisations/AzInTelecom.png",
-            "web" :"www.azintelecom.az",
-            "tel1":"(+994 12) 200-00-20",
-            "tel2":157,
-            "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
-            "services":[
-                    {
-                        "id":1,
-                        "image":"./src/assets/images/services/Imei.png",
-                        "title":"IMEI Qeydiyyat"
-                    },
-                    {
-                        "id":2,
-                        "image":"./src/assets/images/services/Mobiltarifler.png",
-                        "title":"Mobil cihazların qeydiyyat tarifləri"
-                    },
-                    {
-                        "id":3,
-                        "image":"./src/assets/images/services/Imeiyoxlama.png",
-                        "title":"IMEI yoxlama"
-                    },
-                    {
-                        "id":4,
-                        "image":"./src/assets/images/services/Mobiltarifler.png",
-                        "title":"Vətəndaşların adına olan mobil nömrələr barədə "
-                    },
-                    {
-                        "id":4,
-                        "image":"./src/assets/images/services/Nomredasinma.png",
-                        "title":"Mobil nömrə daşınması xidməti vasitəsiylə digər "
-                    }
-
-
-            ]
-
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
         },
         {
-            "id":64,
-            "name": "“Aztelekom” MMC",
-            "photo":"./src/assets/images/organisations/AzInTelecom.png",
-            "web" :"www.aztelekom.az/ ",
-            "tel1":"(+994 12) 344-00-00",
-            "tel2":	170,
-            "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
-            "services":[
-                    {
-                        "id":1,
-                        "image":"./src/assets/images/services/Imei.png",
-                        "title":"IMEI Qeydiyyat"
-                    },
-                    {
-                        "id":2,
-                        "image":"./src/assets/images/services/Mobiltarifler.png",
-                        "title":"Mobil cihazların qeydiyyat tarifləri"
-                    },
-                    {
-                        "id":3,
-                        "image":"./src/assets/images/services/Imeiyoxlama.png",
-                        "title":"IMEI yoxlama"
-                    },
-                    {
-                        "id":4,
-                        "image":"./src/assets/images/services/Mobiltarifler.png",
-                        "title":"Telefon nömrəsi üzrə axtarış"
-                    },
-                    {
-                        "id":4,
-                        "image":"./src/assets/images/services/Nomredasinma.png",
-                        "title":"Mobil nömrə daşınması xidməti vasitəsiylə digər "
-                    }
-
-
-            ]
-
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 4,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
+          "name": "“AzInTelecom” MMC",
+          "link": "search-phone-number-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 5,
+          "image": "./src/assets/images/services/Nomredasinma.png",
+          "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
+          "name": "“AzInTelecom” MMC",
+          "link": "search-phone-number-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
         }
-    ]
-   
-    
+      ]
+    },
+    {
+      "organisationsId": 64,
+      "name": "“Aztelekom” MMC",
+      "photo": "./src/assets/images/organisations/Aztelekom.png",
+      "web": "www.aztelekom.az/ ",
+      "tel1": "(+994 12) 344-00-00",
+      "tel2": 170,
+      "email": "aztelekom@aztelekom.az",
+      "desc": "Azərbaycanın milli rabitə operatoru olan “Aztelekom” MMC fərdi və korporativ müştərilərə, rabitə operatorlarına və digər istifadəçilərə müxtəlif rabitə xidmətləri göstərir.Bu gün “Aztelekom“ MMC ən ucqar kəndlər də daxil olmaqla, respublikanın regionlarında genişzolaqlı internet xidmətləri təqdim edir. Regionlarda əhalinin internetə olan tələbatı və istəyi nəzərə alınaraq 2004-cü ildə “Aztelekom”un internet provayderi yaradılıb, 2005-ci ildə portativ daşınan telefon CDMA simsiz rabitə xidməti istismara verilib. Hazırda “Aztelekom” MMC öz tabeliyində 57 yerli Telekommunikasiya müəssisəsi, Beynəlxalq Avtomat Telefon Stansiyası və Kabel Təsərrüfatına Xidmət Mərkəzini birləşdirir.",
+      "serviceName": [
+        {
+          "serviceId": 6,
+          "image": "./src/assets/images/services/telefon.png",
+          "name": "“Aztelekom” MMC",
+          "title": "Telefon nömrəsi üzrə axtarış",
+          "link": "search-phone-number-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 7,
+          "image": "./src/assets/images/services/klassifikator.png",
+          "name": "“Aztelekom” MMC",
+          "title": "Klassifikator üzrə idarələrin axtarışı",
+          "link": "search-offices-classifier-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 8,
+          "image": "./src/assets/images/services/idareleruzremelumat.png",
+          "name": "“Aztelekom” MMC",
+          "title": "İdarələr üzrə ətraflı məlumat",
+          "link": "detailed-information-departments-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 9,
+          "image": "./src/assets/images/services/poctgonder.png",
+          "name": "“Aztelekom” MMC",
+          "title": "İdarələr üzrə ətraflı məlumat",
+          "link": "detailed-information-departments-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "organisationsId": 1094,
+      "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+      "photo": "./src/assets/images/organisations/Rina.png",
+      "web": "https://mincom.gov.az/az/",
+      "tel1": "+994 (012) 598-58-58 ",
+      "tel2": "+994 (012) 598-58-58 ",
+      "email": "mincom@mincom.gov.az",
+      "desc": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+      "serviceName": [
+        {
+          "serviceId": 10,
+          "image": "./src/assets/images/services/avtomobil.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Ümumi istifadədə olan avtomobil yolları ilə iriqabaritli və ağırçəkili nəqliyyat vasitələrinin hərəkət etməsi və onların hərəkətinə xüsusi icazənin verilməsi",
+          "link": "permission-movement-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 11,
+          "image": "./src/assets/images/services/uygunluqsert.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Uyğunluq sertifikatının verilməsi",
+          "link": "issuing-certificate-conformity-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 12,
+          "image": "./src/assets/images/services/avadanliq.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Avadanlıqların mülki dövriyyəsinə xüsusi icazənin verilməsi",
+          "link": "issuance-special-permit-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "organisationsId": 1090,
+      "name": "Dövlət Radiotezliklər İdarəsi",
+      "photo": "./src/assets/images/organisations/Radiotezlik.png",
+      "web": "www.dri.az",
+      "tel1": "(+994 12) 493-59-72",
+      "tel2": "",
+      "email": "dri@dri.az",
+      "desc": "Dövlət Radiotezliklər İdarəsi (DRİ) ölkə ərazisində mülki məqsədlər üçün istifadəsinə icazə verilən radiotezlik spektrinin idarəçiliyini yerinə yetirir və ölkənin efir təhlükəsizliyinin təmin edilməsi istiqamətində müvafiq təşkilati-texniki tədbirləri həyata keçirir.Radioelektron vasitələrin (REV) maneəsiz istifadəsi üzrə radiomonitorinq işləri aparılır, REV-lərin inventarizasiyası keçirilir, REV-lərin istismarının icazə şərtlərinə uyğunluğunun təmin edilməsi məqsədilə texniki nəzarət işləri yerinə yetirilir.Radiotezliklər üzrə Dövlət Komissiyasının qərarlarına əsasən ölkə ərazisində hüquqi və fiziki şəxslər, xarici şirkətlər, diplomatik nümayəndəliklər üçün radiotezliklərin ayrılması, radiotezlik nominallarının və REV-lərin uçotunun aparılması, radiotezliklərdən istifadəyə müvafiq icazələrin verilməsi təmin edilir. Eyni zamanda, radiotezliklərdə istifadəsi nəzərdə tutulan REV-lərin texniki xüsusiyyətləri nəzərə alınmaqla, elektromaqnit uzlaşması işləri icra olunur.Ölkə ərazisində yayımlanan televiziya və FM radioproqramlarının qəbul vəziyyəti araşdırılır və kənar yayımların ölkə ərazisinə nüfuzetmə vəziyyəti nəzarətdə saxlanılır.Ölkənin sərhədyanı ərazilərində radiotezliklərdən maneəsiz istifadənin təmin edilməsi üçün qonşu ölkələrin aidiyyəti qurumları ilə tezliklərin koordinasiyası həyata keçirilir.",
+      "serviceName": [
+        {
+          "serviceId": 13,
+          "image": "./src/assets/images/services/radiomane.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radiomaneələrlə bağlı müraciət",
+          "link": "appeal-radio-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 14,
+          "image": "./src/assets/images/services/calculator.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
+          "link": "calculator",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 15,
+          "image": "./src/assets/images/services/radioelektron.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
+          "link": "registration-radio-electronic-devices-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    }
+  ]
 }

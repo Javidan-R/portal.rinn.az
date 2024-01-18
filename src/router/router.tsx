@@ -59,29 +59,29 @@ export const router = createBrowserRouter([
         element:<Services/>,
       },
       {
-        path: 'categories/:id',
+        path: '/categories/:id',
         element: <Categories />,
         children: []
       },
       {
-        path: "infomation",
+        path: "/infomation",
         element: <Information />,
       },
 
       {
-        path: "imei-check-service",
+        path: "/services/imei-check-service",
         element: <ImeiCheck />,
       },
       {
-        path: "msqs-service",
+        path: "/services/mcqs-service",
         element: <Mcqs />,
       },
       {
-        path: "imei-tariff-service",
+        path: "/services/imei-tariff-service",
         element: <ImeiTariff />,
       },
       {
-        path: "calculator",
+        path: "/services/calculator",
         element: <Calculator />,
       },
       {
@@ -89,27 +89,27 @@ export const router = createBrowserRouter([
         element: <Faq />,
       },
       {
-        path: "issuance-special-permit-service",
+        path: "/services/issuance-special-permit-service",
         element: <IssuanceSpecialPermit />,
       },
       {
-        path: "search-phone-number-service",
+        path: "/services/search-phone-number-service",
         element : <SearchPhoneNumber/>
       },
       {
-        path: "appeal-radio-service",
+        path: "/services/appeal-radio-service",
         element : <AppealRadio />
       },
       {
-        path: "issuing-certificate-conformity-service",
+        path: "/services/issuing-certificate-conformity-service",
         element : <IssuingCertificateConformity />
       },
       {
-        path: "postal-tracking-service",
+        path: "/services/postal-tracking-service",
         element : <PostalTracking />
       },
       {
-        path: "permission-movement-service",
+        path: "/services/permission-movement-service",
         element : <PermissionMovement />
       },
       {
@@ -117,15 +117,15 @@ export const router = createBrowserRouter([
         element : <SearchOfficesClassifier />
       },
       {
-        path: "street-search-service",
+        path: "/services/street-search-service",
         element : <StreetSearch />
       },
       {
-        path: "detailed-information-departments-service",
+        path: "/services/detailed-information-departments-service",
         element : <DetailedInfoDep />
       },
       {
-        path: "registration-radio-electronic-devices-service",
+        path: "/services/registration-radio-electronic-devices-service",
         element : <RegistrationRadio />
       },
    ],

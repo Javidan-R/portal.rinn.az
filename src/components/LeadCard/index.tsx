@@ -21,7 +21,7 @@ export const LeadCard: FC<LeadCardProps> = ({ name, desc, image, customWidth = '
             <div className="flex-none">
               <img src={image} alt="icon" className="h-12 w-12 object-contain" />
             </div>
-            <article className={`ml-2  w-60 text-wrap hover:text-balance  `}>
+            <article className={`ml-2  w-60 text-wrap   `}>
               <div className="font-bold overflow-hidden truncate text-base font-bold mb-1">{name}</div>
               <div className="w-auto text-xs opacity-60 ">{desc}</div>
             </article>

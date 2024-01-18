@@ -1,3 +1,5 @@
+// BackButton.tsx
+
 import React, { ButtonHTMLAttributes, ReactNode, CSSProperties } from "react";
 
 interface BackButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,7 +11,7 @@ interface BackButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const BackButton: React.FC<BackButtonProps> = ({ customClassName, customStyle, children, ...props }) => {
   return (
     <button
-      className={`bg-black text-black-50 ${customClassName}`}
+      className={`flex flex-row flex-nowrap justify-center gap-2 items-center align-center rounded-lg outline-none border-none cursor-pointer ${customClassName}`}
       style={customStyle}
       {...props}
     >
