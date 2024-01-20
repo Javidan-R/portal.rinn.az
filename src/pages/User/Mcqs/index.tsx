@@ -1,34 +1,46 @@
 import { PagesCard } from "../../../components/PagesCard";
 import Steps from "../../../components/Steps";
 import ServiceHeading from "../../../components/ServiceHeading";
+import imei from  "../../../../src/assets/images/services/Imei.png"
 const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/services", name: "Bütün xidmətlər" },
   {
     link: "/mcqs-service",
     name: "Mobil cihazların qeydiyyat sistemi",
-  },
+  }
 ];
+
+const mcqs = [
+  {
+    "serviceId": 1,
+    "image": imei,
+    "title": "IMEI Qeydiyyat",
+    "name": "“AzInTelecom” MMC",
+    "link": "mcqs-service",
+    "sing": "Qeydiyyatsız",
+    "pay": "Ödənişsiz"
+  }
+];
+
 export const Mcqs = () => {
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
         <ServiceHeading
-          mainLink={"/"}
+          mainLink="/services"
           backButtonProps={{
-            customClassName:
-              "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
-            customStyle: undefined,
+            customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
+            customStyle: undefined
           }}
           breadcrumbItems={breadcrumbItems}
-        >
-          <section>
-            <PagesCard />
-          </section>
-          <section>
-            <Steps />
-          </section>
-        </ServiceHeading>
+        />
+        <section>
+          <PagesCard services={mcqs} />
+        </section>
+        <section>
+          <Steps />
+        </section>
       </div>
     </div>
   );

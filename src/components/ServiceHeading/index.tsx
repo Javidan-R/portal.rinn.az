@@ -1,4 +1,4 @@
-import React, { FC, ReactNode,  } from 'react';
+import React, { FC,  } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 import BackButton from '../atoms/Button/BackButton';
@@ -15,13 +15,9 @@ interface ServiceHeadingProps {
     customStyle?: React.CSSProperties;
   };
   breadcrumbItems: BreadcrumbItem[];
-  children:ReactNode
 }
 
-
-
-const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, breadcrumbItems,children}) => {
-  
+const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, breadcrumbItems,}) => {
   return (
     <div>
       <section className="flex justify-start gap-10 py-4">
@@ -37,7 +33,6 @@ const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, br
          <Breadcrumb items={breadcrumbItems}/>
         </div>
       </section>
-      {children}
     </div>
   );
 };

@@ -1,29 +1,33 @@
-import React, { useState, useEffect, FC, } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { IoMdArrowRoundDown, IoMdArrowRoundUp } from "react-icons/io";
-import { GETAPIData } from "../../HTTP/HTTP";
 import { Service } from "../../types/type";
-import { CompanyName } from "./CompanyName";
+import CompanyName from "./CompanyName";
 
-export const PagesCard: FC = () => {
-  const [service, setService] = useState<Service[]>([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await GETAPIData("/db.json"); 
-        setService(response.data.organisations[0].serviceName[4]);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
+interface PagesCardProps {
+  services: Service[];
+}
+
+export const PagesCard: FC<PagesCardProps> = ({ services }) => {
   return (
     <div className="w-full card p-6 bg-white border rounded-xl">
-      <CompanyName service={service}  />
-      <Dvider />
-      <div className="px-5">
-      <CompanyData  />
-      </div>
+      {services.map((service) => (
+        <>
+          <CompanyName
+            key={service.serviceId}
+            image={service.image}
+            name={service.name}
+            title={service.title}
+          />
+          <Dvider />
+          <div className="px-5">
+            <CompanyData>
+            {service.sing}
+            {service.pay}
+
+            </CompanyData>
+          </div>
+        </>
+      ))}
     </div>
   );
 };
@@ -55,7 +59,10 @@ const CompanyData = () => {
     <>
       {isSmallScreen && (
         <>
-          <div className="flex justify-between py-4" onClick={toggleMoreDropdown}>
+          <div
+            className="flex justify-between py-4"
+            onClick={toggleMoreDropdown}
+          >
             <div>
               <h3 className="font-bold text-2xl">Xidmət Haqqında</h3>
             </div>

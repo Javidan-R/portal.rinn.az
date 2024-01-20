@@ -36,7 +36,8 @@ export const Services: FC = () => {
             customStyle: undefined,
           }}
           breadcrumbItems={breadcrumbItems}
-        >
+        />
+      
           <section>
           <PageHeader img={pageimg} text={"Bütün xidmətlər"} />
         </section>
@@ -59,7 +60,6 @@ export const Services: FC = () => {
           </div>
           </section>
 
-        </ServiceHeading>
         
       </div>
     </div>

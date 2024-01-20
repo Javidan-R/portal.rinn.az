@@ -23,7 +23,6 @@ export interface Organisation {
     linkTo?: string;
   }
   export interface Service {
-    serviceName: any;
     serviceId: number;
     image: string;
     title: string;
@@ -31,7 +30,7 @@ export interface Organisation {
     link: string;
     sing: string;
     pay: string;
-  }[]
+  }
   
   export interface CardProps extends Service {
     desc?:string;
@@ -47,3 +46,31 @@ export interface ServicesCardProps {
     link:string    
 
   }
+
+
+  
+  export interface ServiceHeadingProps {
+    mainLink: string;
+    backButtonProps: BackButtonProps;
+    breadcrumbItems: BreadcrumbItem[];
+    children: React.ReactNode;
+  }
+  
+  export interface BackButtonProps {
+    customClassName?: string;
+    customStyle?: React.CSSProperties;
+  }
+  
+  export interface BreadcrumbItem {
+    link: string;
+    name: string;
+  }
+  
+
+  
+export interface AccProps  {
+  title:string;
+  text?:string;
+  curOpen?:number | null;
+  onOpen?:()=>void;
+}

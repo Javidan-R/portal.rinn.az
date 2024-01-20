@@ -1,28 +1,23 @@
-import { FC } from "react";
-import { Service } from "../../types/type";
+import React, { FC } from "react";
 
 interface CompanyNameProps {
-  service: Service;
+  image: string;
+  name: string;
+  title: string;
 }
 
-export const CompanyName: FC<CompanyNameProps> = ({ service }) => {
+const CompanyName: FC<CompanyNameProps> = ({ image, name, title }) => {
   return (
-    <>
-      <div className="flex items-center align-center justify-start gap-6 h-[56px]">
-        <div className="hidden md:block">
-          <img
-            src={service.image}
-            alt="logo"
-            className="max-w-full h-auto object-cover"
-          />
-        </div>
-        <div className="">
-          <span className="text-lg font-medium text-[#304b82]">
-            {service.name}
-          </span>
-          <h1 className="text-2xl font-bold">{service.title}</h1>
-        </div>
+    <div className="flex items-center align-center justify-start gap-6 h-[56px]">
+      <div className="hidden md:block">
+        <img src={image} alt="logo" className="max-w-full h-auto object-cover" />
       </div>
-    </>
+      <div className="">
+        <span className="text-lg font-medium text-[#304b82]">{name}</span>
+        <h1 className="text-2xl font-bold">{title}</h1>
+      </div>
+    </div>
   );
 };
+
+export default CompanyName;

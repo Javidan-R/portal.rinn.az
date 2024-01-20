@@ -1,5 +1,5 @@
 import PageHeader from "../../../components/PageHeader";
-import pageimg from "../../../assets/images/services/services.svg";
+import pageimg from '../../../assets/images/services/services.svg';
 import OrganisationCard from "../../../components/OrganisationCard";
 import ServiceHeading from "../../../components/ServiceHeading";
 import { useState, useEffect, useMemo } from "react";
@@ -31,14 +31,8 @@ export const Organisations = () => {
   const renderOrganisationCards = useMemo(
     () =>
       organisationName.map((organisation) => (
-        <Link
-          to={`/services/${organisation.link}`}
-          key={organisation.organisationsId}
-        >
-          <OrganisationCard
-            servicesCount={organisation.serviceName.length}
-            {...organisation}
-          />
+        <Link to={`/services/${organisation.link}`} key={organisation.organisationsId}>
+          <OrganisationCard servicesCount={organisation.serviceName.length} {...organisation} />
         </Link>
       )),
     [organisationName]
@@ -50,21 +44,17 @@ export const Organisations = () => {
         <ServiceHeading
           mainLink={"/"}
           backButtonProps={{
-            customClassName:
-              "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
+            customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
             customStyle: undefined,
           }}
           breadcrumbItems={breadcrumbItems}
-        >
-          <section>
-            <PageHeader img={pageimg} text={"Bütün Qurumlar"} />
-          </section>
-        </ServiceHeading>
+        />
 
+        <section>
+          <PageHeader img={pageimg} text={"Bütün Qurumlar"} />
+        </section>
         <section className="mt-6">
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {renderOrganisationCards}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">{renderOrganisationCards}</div>
         </section>
       </div>
     </div>

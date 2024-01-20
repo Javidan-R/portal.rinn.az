@@ -51,7 +51,7 @@ export const Home: React.FC = () => {
               title={""}
               link={""}
               sing={""}
-              pay={""} serviceName={undefined}            />
+              pay={""}            />
             <LeadCard
               key={2}
               name="Qurumlar"
@@ -62,7 +62,7 @@ export const Home: React.FC = () => {
               title={""}
               link={""}
               sing={""}
-              pay={""} serviceName={undefined}            />
+              pay={""}            />
             <LeadCard
               key={3}
               name="Sürətli Kömək"
@@ -73,7 +73,7 @@ export const Home: React.FC = () => {
               title={""}
               link={""}
               sing={""}
-              pay={""} serviceName={undefined}            />
+              pay={""}            />
           </div>
         </div>
 
