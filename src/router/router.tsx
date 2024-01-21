@@ -4,6 +4,7 @@ import { ErrorBoundary, ProtectedRoute } from "../features";
 import ErrorPage from "../pages/Error";
 import Layout from "../layout/Layout";
 import {
+  About,
   AppealRadio,
   Calculator,
   Categories,
@@ -12,13 +13,14 @@ import {
   Home,
   ImeiCheck,
   ImeiTariff,
-  Information,
   IssuanceSpecialPermit,
   IssuingCertificateConformity,
   Mcqs,
+  NumberTransferred,
   Organisations,
   PermissionMovement,
   PostalTracking,
+  Privacy,
   RegistrationRadio,
   SearchOfficesClassifier,
   SearchPhoneNumber,
@@ -63,11 +65,6 @@ export const router = createBrowserRouter([
         element: <Categories />,
         children: []
       },
-      {
-        path: "/infomation",
-        element: <Information />,
-      },
-
       {
         path: "/services/imei-check-service",
         element: <ImeiCheck />,
@@ -127,6 +124,19 @@ export const router = createBrowserRouter([
       {
         path: "/services/registration-radio-electronic-devices-service",
         element : <RegistrationRadio />
+      },
+     
+      {
+        path: "/services/numbers-transferred-service",
+        element : <NumberTransferred />
+      },
+      {
+        path: "/information/22",
+        element : <About/>
+      },
+      {
+        path: "/information/23",
+        element : <Privacy/>
       },
    ],
   },

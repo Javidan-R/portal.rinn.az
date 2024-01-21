@@ -15,17 +15,17 @@ const Footer = () => {
                   <div className=" font-medium text-xl mb-1">Portal</div>
                   <ul className=" list-none p-0 m-0">
                     <li className="">
-                      <Link to="/az/information/23" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
+                      <Link to="/information/23" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
                         Haqqımızda
                       </Link>
                     </li>
                     <li className="">
-                      <Link to="/az/information/22" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
+                      <Link to="/information/22" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
                         Məxfilik siyasəti
                       </Link>
                     </li>
                     <li className="">
-                      <Link to="/az/faq" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
+                      <Link to="/faq" className="footer-menu-item__link cursor-pointer font-medium text-lg text-white opacity-50 flex items-center">
                         FAQ
                       </Link>
                     </li>
