@@ -2,6 +2,7 @@ import { PagesCard } from "../../../components/PagesCard";
 import Steps from "../../../components/Steps";
 import ServiceHeading from "../../../components/ServiceHeading";
 import imei from  "../../../../src/assets/images/services/Imei.png"
+import TransitionSection from "../../../components/Widgets/TransitionSection";
 const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/services", name: "Bütün xidmətlər" },
@@ -37,12 +38,15 @@ export const Mcqs = () => {
           }}
           breadcrumbItems={breadcrumbItems}
         />
+        <TransitionSection>
         <section>
           <PagesCard services={mcqs} />
         </section>
         <section>
           <Steps />
         </section>
+        </TransitionSection>
+        
       </div>
     </div>
   );

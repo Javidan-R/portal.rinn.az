@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import styles from "./Accordion.module.css";
 import { AccProps } from "../../../types/type";
 import { AccordionItem } from "./AccordionItem";

@@ -6,6 +6,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { GETAPIData } from "../../../HTTP/HTTP";
 import { Organisation } from "../../../types/type";
+import TransitionSection from "../../../components/Widgets/TransitionSection";
 
 const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
@@ -41,6 +42,7 @@ export const Organisations = () => {
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
+    
         <ServiceHeading
           mainLink={"/"}
           backButtonProps={{
@@ -49,13 +51,15 @@ export const Organisations = () => {
           }}
           breadcrumbItems={breadcrumbItems}
         />
-
+    <TransitionSection>
         <section>
           <PageHeader img={pageimg} text={"Bütün Qurumlar"} />
         </section>
         <section className="mt-6">
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">{renderOrganisationCards}</div>
         </section>
+        </TransitionSection>
+        
       </div>
     </div>
   );

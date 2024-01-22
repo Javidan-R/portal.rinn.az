@@ -1,10 +1,25 @@
 import { PagesCard } from "../../../components/PagesCard"
 import ServiceHeading from "../../../components/ServiceHeading"
+import TransitionSection from "../../../components/Widgets/TransitionSection";
+import imeiyoxlama from '../../../assets/images/services/Imeiyoxlama.png'
+
 const breadcrumbItems = [
   { link: '/', name: 'Home' },
   { link: '/services', name: 'Services' },
   { link: '/imei-check-service', name: 'IMEI Check Service' },
 ];
+
+const imeiCheck = [
+  {
+    "serviceId": 3,
+          "image": imeiyoxlama,
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+  }
+]
 export const ImeiCheck = () => {
   return (
     <div className="bg-gray-100">
@@ -13,12 +28,15 @@ export const ImeiCheck = () => {
           customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
           customStyle: undefined
         }} breadcrumbItems={breadcrumbItems}/>
+        <TransitionSection>
         <section>
-          <PagesCard/>
+          <PagesCard services={imeiCheck}/>
         </section>
         <section className="bg-[#fff]   shadow-md">
           <ImeiCheckService />
         </section>
+        </TransitionSection>
+        
       </div>
     </div>
   )

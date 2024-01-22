@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useFormik } from 'formik';
 import InputMask from 'react-input-mask';
 import nomredasima from '../../../../src/assets/images/services/Nomredasinma.png';
 import { PagesCard } from '../../../components/PagesCard';
 import ServiceHeading from '../../../components/ServiceHeading';
+import TransitionSection from '../../../components/Widgets/TransitionSection';
 
 interface SelectProps {
   name: string;
@@ -58,20 +59,23 @@ const Select: React.FC<SelectProps> = ({ name, value, onChange, onBlur, options 
   </div>
 );
 
-const Input: React.FC<InputProps> = ({ name, value, onChange, onBlur, placeholder, error }) => (
+export const Input:FC<InputProps> = ({ name, value, onChange, onBlur, placeholder, error }) => {
+  return(
+    
   <div className="form__group">
-    <input
-      className={`v-input ${error ? 'error' : ''}`}
-      placeholder={placeholder}
-      type="text"
-      name={name}
-      value={value}
-      onChange={onChange}
-      onBlur={onBlur}
-    />
-    {error && <p className="error-message">{error}</p>}
-  </div>
-);
+  <input
+    className={`v-input ${error ? 'error' : ''}`}
+    placeholder={placeholder}
+    type="text"
+    name={name}
+    value={value}
+    onChange={onChange}
+    onBlur={onBlur}
+  />
+  {error && <p className="error-message">{error}</p>}
+</div>
+  )
+  };
 
 interface MobileNumberFormProps {
   onSubmit: (mobileNumber: string) => void;
@@ -166,12 +170,16 @@ export const NumberTransferred = () => {
           }}
           breadcrumbItems={BreadcrumbItems}
         />
+        <TransitionSection>
         <section>
           <PagesCard services={Mcqs} />
         </section>
-        <div>
-          <MobileNumberForm onSubmit={(mobileNumber: string) => { /* Handle form submission */ }} />
-        </div>
+        <section className="bg-white rounded-xl mt-6">
+        <MobileNumberForm onSubmit={(mobileNumber: string) => { mobileNumber }} />
+      </section>
+        
+        </TransitionSection>
+       
       </div>
     </div>
   );

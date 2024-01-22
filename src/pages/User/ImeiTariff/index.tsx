@@ -2,22 +2,23 @@ import React from "react";
 import { PagesCard } from "../../../components/PagesCard";
 import { ImeiTariffService } from "./ImeiTariffService";
 import ServiceHeading from "../../../components/ServiceHeading";
-import imeiyoxlama from '../../../assets/images/services/Imeiyoxlama.png'
+import mobiltarif from '../../../assets/images/services/Mobiltarifler.png'
+import TransitionSection from "../../../components/Widgets/TransitionSection";
 const breadcrumbItems = [
-  { link: '/', name: 'Home' },
-  { link: '/services', name: 'Services' },
-  { link: '/imei-check-service', name: 'IMEI Tariff Service' },
+  { link: '/', name: 'Əsas Səhifə' },
+  { link: '/services', name: 'Xidmətlər' },
+  { link: '/imei-tariff-service', name: 'Mobil cihazların qeydiyyat tarifləri' },
 ];
 const imeitarif = [
   {
-    "serviceId": 3,
-    "image": imeiyoxlama,
-    "title": "IMEI yoxlama",
+    "serviceId": 2,
+    "image": mobiltarif,
+    "title": "Mobil cihazların qeydiyyat tarifləri",
     "name": "“AzInTelecom” MMC",
-    "link": "imei-check-service",
+    "link": "imei-tariff-service",
     "sing": "Qeydiyyatsız",
     "pay": "Ödənişsiz"
-  },
+  }
 ]
 export const ImeiTariff: React.FC = () => (
   <div className="bg-gray-100">
@@ -26,12 +27,15 @@ export const ImeiTariff: React.FC = () => (
           customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
           customStyle: undefined
         }} breadcrumbItems={breadcrumbItems}/>
+        <TransitionSection>
         <section>
           <PagesCard services={imeitarif}/>
         </section>
       <section className="bg-white rounded-xl mt-6">
         <ImeiTariffService />
       </section>
+        </TransitionSection>
+      
     </div>
   </div>
 );

@@ -32,7 +32,7 @@ const ServicesCard: FC<ServicesCardProps> = ({ image, title, name, sing ,link })
         
 
         <div className="mt-2 ">
-          <div className="text-base font-medium">{name}</div>
+          <div className="text-base font-medium mb-1">{name}</div>
           <div className="line-clamp-2 font-black text-xl max-w-full h-auto leading-5 h-[42px]">{title}</div>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import {FC, useEffect, useState } from "react";
 import { IoMdArrowRoundDown, IoMdArrowRoundUp } from "react-icons/io";
 import { Service } from "../../types/type";
 import CompanyName from "./CompanyName";

@@ -1,6 +1,7 @@
 import { AccProps } from "../../../types/type";
 import ServiceHeading from "../../../components/ServiceHeading";
 import { Accordion } from "./Accordion";
+import TransitionSection from "../../../components/Widgets/TransitionSection";
 const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/faq", name: "FAQ" },
@@ -37,10 +38,13 @@ export const Faq = () => {
           }}
           breadcrumbItems={breadcrumbItems}
         />
+        <TransitionSection>
         <section>
         <Accordion data={faqs} />
 
         </section>
+        </TransitionSection>
+       
       </div>
       </div>
     </>

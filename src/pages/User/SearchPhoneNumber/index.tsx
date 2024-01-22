@@ -22,7 +22,7 @@ export const SearchPhoneNumber = () => {
 
 
   function handleSelect(city: City | null): void {
-    throw new Error("Function not implemented.");
+        throw new Error("Function not implemented.");
   }
 
   return (

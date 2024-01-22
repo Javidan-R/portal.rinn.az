@@ -1,38 +1,51 @@
-import { HiOutlineArrowNarrowLeft } from "react-icons/hi"
-import { Link } from "react-router-dom"
-import { PagesCard } from "../../../components/PagesCard"
-import BackButton from "../../../components/atoms/Button/BackButton"
-import Breadcrumb from "../../../components/Common/BredCrumb"
+import { PagesCard } from "../../../components/PagesCard";
+import ServiceHeading from "../../../components/ServiceHeading";
+import TransitionSection from "../../../components/Widgets/TransitionSection";
+import avtombil from "../../../assets/images/services/avtomobil.png"
 
+const breaditems=[
+  { link: "/", name: "Əsas səhifə" },
+  { link: "/services", name: "Bütün xidmətlər" },
+  {
+    link: "/permission-movement-servic",
+    name: "Poçt göndərişlərinin izlənməsi",
+  },
+]
+
+const permissionMovement  = [
+  {
+    "serviceId": 10,
+          "image": avtombil,
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Ümumi istifadədə olan avtomobil yolları ilə iriqabaritli və ağırçəkili nəqliyyat vasitələrinin hərəkət etməsi və onların hərəkətinə xüsusi icazənin verilməsi",
+          "link": "permission-movement-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+  }
+]
 export const PostalTracking = () => {
   return (
     <div className="bg-gray-100">
-      <div className="container-fluid v-container">
-        <section className="flex justify-start gap-10 py-4">
-          <Link to="/">
-            <BackButton>
-              <HiOutlineArrowNarrowLeft className="text-xl font-bold" style={{ fontWeight: "bolder" }} />
-              <span className="lg:block sm:none"> Geri</span>
-            </BackButton>
-          </Link>
-          <Breadcrumb
-            items={[
-              { link: "/", name: "Əsas səhifə" },
-              { link: "/services", name: "Bütün xidmətlər" },
-              { link: "/imei-check-service", name: "Poçt göndərişlərinin izlənməsi" },
-            ]}
-          />
-        </section>
+    <div className="container-fluid v-container">
+    <ServiceHeading mainLink={"services"} backButtonProps={{
+          customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
+          customStyle: undefined
+        }} breadcrumbItems={breaditems}/>
+        <TransitionSection>
         <section>
-          <PagesCard />
+          <PagesCard services={permissionMovement}/>
         </section>
-        <section className="bg-[#fff]   shadow-md">
-          <PostalTrackingService />
-        </section>
-      </div>
+      <section className="bg-white rounded-xl mt-6">
+      </section>
+      </TransitionSection>
+      <section className="bg-[#fff]   shadow-md">
+      <PostalTrackingService />
+    </section>
+      
     </div>
-  )
-}
+  </div>
+  );
+};
 
 const PostalTrackingService: React.FC = () => {
   return (
@@ -42,7 +55,7 @@ const PostalTrackingService: React.FC = () => {
           <form className="form">
             <div className="form__group">
               <label className="v-label block mb-2" htmlFor="imeiCheck">
-              İzlənmə nömrəsi
+                İzlənmə nömrəsi
               </label>
               <div className="form__wrapper flex flex-col lg:flex-row items-center">
                 <input
@@ -51,14 +64,13 @@ const PostalTrackingService: React.FC = () => {
                   type="text"
                   id="imeiCheck"
                 />
-               
+
                 <hr className="divider lg:hidden md:hidden sm:block my-4" />
                 <button className="btn btn--dark bg-[#304b82] text-white px-9 py-3 rounded-md">
                   Yoxla
                 </button>
               </div>
             </div>
-           
           </form>
         </div>
       </div>

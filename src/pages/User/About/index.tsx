@@ -2,6 +2,7 @@ import ServiceHeading from "../../../components/ServiceHeading";
 import mainlogoblue from "../../../assets/images/services/mainlogo-blue.svg";
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import TransitionSection from "../../../components/Widgets/TransitionSection";
 const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/informatin/23", name: "AZINTELECOM" },
@@ -19,10 +20,13 @@ export const About = () => {
           }}
           breadcrumbItems={breadcrumbItems}
         />
+        <TransitionSection>
         <section>
           <InformationHeader image={mainlogoblue} />
           <AboutComponent />
         </section>
+        </TransitionSection>
+        
       </div>
     </div>
   );

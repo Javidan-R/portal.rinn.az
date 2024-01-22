@@ -1,9 +1,9 @@
-import React, { FC, ReactNode } from "react";
+import  { FC, ReactNode } from "react";
 import styles from "./Accordion.module.css";
-import { AccProps } from "../../../types/type";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-interface AccordionItemProps extends AccProps {
+interface AccordionItemProps  {
+  title:string;
   index: number;
   curOpen: number | null;
   onOpen: (index: number | null) => void;

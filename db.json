@@ -50,7 +50,7 @@
           "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
           "name": "“AzInTelecom” MMC",
           "link": "search-phone-number-service",
-          "sing": "Qeydiyyatsız",
+          "sing": "Qeydiyyatlı",
           "pay": "Ödənişsiz"
         },
         {
@@ -170,15 +170,7 @@
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         },
-        {
-          "serviceId": 14,
-          "image": "./src/assets/images/services/calculator.png",
-          "name": "Dövlət Radiotezliklər İdarəsi",
-          "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
-          "link": "calculator",
-          "sing": "Qeydiyyatsız",
-          "pay": "Ödənişsiz"
-        },
+        
         {
           "serviceId": 15,
           "image": "./src/assets/images/services/radioelektron.png",
