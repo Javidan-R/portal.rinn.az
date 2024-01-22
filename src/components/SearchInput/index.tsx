@@ -1,20 +1,36 @@
-import React from 'react';
-const SearchInput = () => {
+// SearchInput.tsx
+import React, { useState } from 'react';
+
+interface SearchInputProps {
+  onSearch: (searchCriteria: string) => void;
+}
+
+const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = () => {
+    if (onSearch) {
+      onSearch(searchTerm);
+    }
+  };
+
   return (
     <div className="row justify-center">
       <div className="col-12 col-lg-7 header__search-col">
         <div className="margin-home search">
-          <div className="search__input ">
+          <div className="search__input">
             <input
               placeholder="Hansı xidməti axtarırsınız?"
               className="v-input"
               type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button className="search__button">
+            <button className="search__button" onClick={handleSearch}>
               <img
                 src="https://portal.rinn.az/img/search.9f2c397b.svg"
                 alt="search"
-                className='ml-[3px]  w-[1.6rem]'
+                className="ml-[3px] w-[1.6rem]"
               />
             </button>
             <div className="search__advanced-icon">

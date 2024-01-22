@@ -22,6 +22,39 @@ body {
 .v-container {
   max-width: 1300px;
 }
+/* styles.css */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+
+
+.header--home-lg {
+  animation-name: fadeInDown;
+}
+
+.header--not-home-lg {
+  animation-name: fadeOutUp;
+}
 
 .header {
   max-width: 100%;
@@ -33,7 +66,8 @@ body {
   background-clip: padding-box;
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
-  transition: all 0.5s ease;
+  transition: height 0.5s ease-in-out;
+
 
 
 }
@@ -213,8 +247,25 @@ img {
   width: 1.25rem;
   height: 1.25rem;
 }
+
+/* styles.css */
+/* Digər kodlar ... */
+
+.search-components {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.search-components.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 992px) {
   .header--home {
+    animation-duration: 1s;
+
     padding-bottom: 16.0625rem;
     .header__logo {
       img {
@@ -248,7 +299,9 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
+  .header {
+    animation: fadeInOut 1s ease-in-out;
+  }
   .header__logo {
     height: 70px;
     img {

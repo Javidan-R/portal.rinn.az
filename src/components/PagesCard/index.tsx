@@ -20,11 +20,7 @@ export const PagesCard: FC<PagesCardProps> = ({ services }) => {
           />
           <Dvider />
           <div className="px-5">
-            <CompanyData>
-            {service.sing}
-            {service.pay}
-
-            </CompanyData>
+            <CompanyData />
           </div>
         </>
       ))}

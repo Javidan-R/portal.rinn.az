@@ -1,5 +1,3 @@
-// NumberTransferred.tsx
-
 import React from 'react';
 import { useFormik } from 'formik';
 import InputMask from 'react-input-mask';
@@ -107,7 +105,7 @@ const MobileNumberForm: React.FC<MobileNumberFormProps> = ({ onSubmit }) => {
   const { handleSubmit, handleChange, handleBlur, values, errors } = formik;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='bg-white rounded-xl shadow-xl border  border-1 mt-10 mb-4 p-6'>
       <div className="number-checked">
         <div className="number-checked__wrapper">
           <div className="row">
@@ -138,13 +136,7 @@ const MobileNumberForm: React.FC<MobileNumberFormProps> = ({ onSubmit }) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
               >
-                {() => (
-                  <Input
-                    name="mobileNumber"
-                    placeholder="Nömrənizi daxil edin"
-                    error={errors.mobileNumber}
-                  />
-                )}
+                
               </InputMask>
             </div>
             <div className="col-12 d-lg-none d-block">

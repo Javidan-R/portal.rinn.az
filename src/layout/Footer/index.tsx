@@ -5,7 +5,7 @@ import MainLogo from '../../assets/images/MainLogo.svg';
 const Footer = () => {
   const currentDate = new Date().getFullYear();
   return (
-    <div className="footer bg-[#14142b] text-white  lg:block md:hidden sm:hidden ">
+    <div className="footer bg-[#14142b] text-white  lg:block hidden">
       <div className="container-fluid v-container ">
         <div className="grid grid-cols-12 pt-12 ">
           <div className="col-span-9">

@@ -23,11 +23,13 @@ const mcqs = [
   }
 ];
 
+
 export const Mcqs = () => {
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
         <ServiceHeading
+
           mainLink="/services"
           backButtonProps={{
             customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",

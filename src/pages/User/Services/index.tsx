@@ -47,9 +47,7 @@ export const Services: FC = () => {
             organisations.map((organisation) => (
                   organisation.serviceName.map((service) => (
                     <Link to={`/services/${service.link}`} key={service.serviceId}>
-                      <ServicesCard {...service}>
-                        
-                      </ServicesCard>
+                      <ServicesCard {...service} />
                     </Link>
                   ))
             ))
