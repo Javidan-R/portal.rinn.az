@@ -110,7 +110,7 @@ export const router = createBrowserRouter([
         element : <PermissionMovement />
       },
       {
-        path: "search-offices-classifier-service",
+        path: "/services/search-offices-classifier-service",
         element : <SearchOfficesClassifier />
       },
       {

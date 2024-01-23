@@ -1,27 +1,12 @@
-import React, { FC } from 'react';
 import { useFormik } from 'formik';
 import InputMask from 'react-input-mask';
 import nomredasima from '../../../../src/assets/images/services/Nomredasinma.png';
 import { PagesCard } from '../../../components/PagesCard';
 import ServiceHeading from '../../../components/ServiceHeading';
 import TransitionSection from '../../../components/Widgets/TransitionSection';
-
-interface SelectProps {
-  name: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  onBlur: (event: React.FocusEvent<HTMLSelectElement>) => void;
-  options: string[];
-}
-
-interface InputProps {
-  name: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: (event: React.FocusEvent<HTMLInputElement>) => void;
-  placeholder: string;
-  error?: string;
-}
+import Select  from '../../../components/atoms/SelectOption';
+import PrimaryButton from '../../../components/atoms/Button/PrimaryButton';
+// import Input from '../../../components/atoms/Input/Input';
 
 const BreadcrumbItems = [
   { link: '/', name: 'Əsas səhifə' },
@@ -44,38 +29,6 @@ const Mcqs = [
   },
 ];
 
-const Select: React.FC<SelectProps> = ({ name, value, onChange, onBlur, options }) => (
-  <div className="select">
-    <div className="select__name" title={value}>
-      <div>{value}</div>
-    </div>
-    <select name={name} onChange={onChange} onBlur={onBlur} value={value}>
-      {options.map((option) => (
-        <option key={option} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
-  </div>
-);
-
-export const Input:FC<InputProps> = ({ name, value, onChange, onBlur, placeholder, error }) => {
-  return(
-    
-  <div className="form__group">
-  <input
-    className={`v-input ${error ? 'error' : ''}`}
-    placeholder={placeholder}
-    type="text"
-    name={name}
-    value={value}
-    onChange={onChange}
-    onBlur={onBlur}
-  />
-  {error && <p className="error-message">{error}</p>}
-</div>
-  )
-  };
 
 interface MobileNumberFormProps {
   onSubmit: (mobileNumber: string) => void;
@@ -135,21 +88,21 @@ const MobileNumberForm: React.FC<MobileNumberFormProps> = ({ onSubmit }) => {
             <div className="col-lg-3 col-12">
               <InputMask
                 mask="999-99-99"
+                name={'numberTransfer'}
                 maskChar={null}
                 value={values.mobileNumber}
                 onChange={handleChange}
                 onBlur={handleBlur}
-              >
-                
-              </InputMask>
+              />
+      
             </div>
             <div className="col-12 d-lg-none d-block">
               <hr className="divider my-30" />
             </div>
             <div className="col-lg-2 col-12 d-sm-flex d-md-block justify-center pl-0">
-              <button type="submit" className="btn btn--dark form__btn">
-                Yoxla
-              </button>
+              <PrimaryButton type="submit">
+              Yoxla
+              </PrimaryButton>
             </div>
           </div>
         </div>

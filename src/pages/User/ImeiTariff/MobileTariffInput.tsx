@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
+import Input from "../../../components/atoms/Input/Input";
 
 export interface MobileTariffInputProps {
   label: string;
@@ -7,9 +8,13 @@ export interface MobileTariffInputProps {
 }
 
 export const MobileTariffInput: React.FC<MobileTariffInputProps> = ({
-  label, placeholder, manufacturers,
+  label,
+  placeholder,
+  manufacturers,
 }) => {
-  const [selectedManufacturer, setSelectedManufacturer] = useState<string | null>(null);
+  const [selectedManufacturer, setSelectedManufacturer] = useState<
+    string | null
+  >(null);
   const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -23,15 +28,18 @@ export const MobileTariffInput: React.FC<MobileTariffInputProps> = ({
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
       setDropdownOpen(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -42,13 +50,14 @@ export const MobileTariffInput: React.FC<MobileTariffInputProps> = ({
           {label}
         </label>
         <div className="relative" ref={dropdownRef}>
-          <input
-            type="text"
-            id="manufacturerName"
-            className="w-full border border-gray-300 rounded-md px-3 py-2 mt-2"
+          <Input
+            name={"mobiletarif"}
+            type={"text"}
+            id={"manufacturerName"}
             placeholder={placeholder}
             readOnly
             onClick={toggleDropdown}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 mt-2"
           />
           <img
             className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"

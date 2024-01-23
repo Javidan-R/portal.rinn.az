@@ -23,7 +23,7 @@ const imeitarif = [
 export const ImeiTariff: React.FC = () => (
   <div className="bg-gray-100">
     <div className="container-fluid v-container">
-    <ServiceHeading mainLink={"services"} backButtonProps={{
+    <ServiceHeading mainLink={"/services"} backButtonProps={{
           customClassName: "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
           customStyle: undefined
         }} breadcrumbItems={breadcrumbItems}/>

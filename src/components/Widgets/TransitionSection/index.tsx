@@ -17,8 +17,8 @@ interface TransitionSectionProps {
   }, []);
 
   const transitionStyles = {
-    transition: "transform 1s ease, opacity 0.5s ease",
-    transitionDelay: "0.2s",
+    transition: "transform 1s ease, opacity 0.6s ease",
+    transitionDelay: "0.1s",
     transform: isContentVisible ? "translatex(0)" : "translatex(100%)",
     opacity: isContentVisible ? 1 : 0,
   };
