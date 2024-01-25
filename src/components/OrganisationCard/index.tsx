@@ -9,7 +9,7 @@ const OrganisationCard: FC<OrganisationCardProps> = ({
   photo,
   customStyles,
   additionalComponent,
-  linkTo = "/organisaton",
+  organisationsId,
 }) => {
   return (
     <div
@@ -27,7 +27,7 @@ const OrganisationCard: FC<OrganisationCardProps> = ({
           </div>
           <div className="flex items-center">
             {additionalComponent}
-            <Link to={linkTo}>
+            <Link to={`/organisations/${organisationsId}`}>
               <button className="font-normal text-[#0f52ba] text-md">Ətraflı Məlumat</button>
             </Link>
           </div>

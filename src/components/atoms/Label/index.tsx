@@ -1,10 +1,11 @@
 interface LabelProps {
-    htmlFor: string;
+    htmlFor?: string;
     text: string;
+    className:string
   }
   
-  const Label: React.FC<LabelProps> = ({ htmlFor, text }) => (
-    <label htmlFor={htmlFor} className="v-label">
+  const Label: React.FC<LabelProps> = ({ htmlFor, text , className }) => (
+    <label htmlFor={htmlFor} className={`v-label ${className}`}>
       {text}
     </label>
   );

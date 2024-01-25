@@ -3,7 +3,6 @@ import pageimg from '../../../assets/images/services/services.svg';
 import OrganisationCard from "../../../components/OrganisationCard";
 import ServiceHeading from "../../../components/ServiceHeading";
 import { useState, useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
 import { GETAPIData } from "../../../HTTP/HTTP";
 import { Organisation } from "../../../types/type";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
@@ -32,9 +31,7 @@ export const Organisations = () => {
   const renderOrganisationCards = useMemo(
     () =>
       organisationName.map((organisation) => (
-        <Link to={`/services/${organisation.link}`} key={organisation.organisationsId}>
-          <OrganisationCard servicesCount={organisation.serviceName.length} {...organisation} />
-        </Link>
+          <OrganisationCard servicesCount={organisation.serviceName.length} {...organisation} key={organisation.organisationsId} /> 
       )),
     [organisationName]
   );

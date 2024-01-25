@@ -15,12 +15,12 @@ export interface Organisation {
   }
   
   export interface OrganisationCardProps {
+    organisationsId: number;
     photo: string;
     name: string;
     servicesCount: number;
     customStyles?: CSSProperties;
     additionalComponent?: ReactNode;
-    linkTo?: string;
   }
   export interface Service {
     serviceId: number;

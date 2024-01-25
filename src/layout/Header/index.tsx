@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MainLogo from "../../assets/images/MainLogo.svg";
 import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
-import Footer from "../Footer";
+import { MobileFooter } from "../Footer/MobileFooter";
 
 interface HeaderProps {}
 
@@ -27,17 +27,17 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header
-      className={`header bg-white py-2 shadow-md lg:transition-all lg:duration-1000 lg:ease-in-out ${
+      className={`header bg-white py-2 shadow-md sm:h-30rem lg:transition-all lg:duration-1000 lg:ease-in-out ${
         isHomePage
-          ? "lg:h-[32rem] header--home-lg"
-          : "lg:h-[20rem] header--not-home-lg"
+          ? "lg:h-[32rem] sm:h-[23rem] header--home-lg"
+          : "lg:h-[20rem] sm:h-30rem header--not-home-lg"
       }`}
     >
-      <div className="container mx-auto px-2">
+      <div className="v-container mx-auto px-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="w-48 md:w-64 lg:w-auto">
-            <a href="/" aria-current="page">
+            <Link to="/" aria-current="page">
               <img
                 alt="logo"
                 src={MainLogo}
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = () => {
                   verticalAlign: "middle",
                 }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-14">
-            <a href="tel:1655" className="flex justify-center gap-4">
+            <Link to="tel:1655" className="flex justify-center gap-4">
               <img
                 src="https://portal.rinn.az/img/call.859bda17.svg"
                 alt="call"
@@ -81,7 +81,7 @@ const Header: React.FC<HeaderProps> = () => {
               <b className="text-white font-extrabold font-semibold text-base">
                 1655 Çağrı Mərkəzi
               </b>
-            </a>
+            </Link>
             <button
               className="flex item-center justify-center align-center py-[13px] px-[14px] text-[0.875rem] text-#304b82 cursor-pointer font-semibold bg-white border border-solid border-#304b82 rounded-md"
               onClick={toggleHeaderSize}
@@ -93,32 +93,24 @@ const Header: React.FC<HeaderProps> = () => {
             </button>
           </div>
         </div>
-        <div
-          className="m-auto mt-16"
-          style={{
-            maxWidth: isHomePage ? "50rem" : "100%",
-            transition: isHomePage
-              ? "max-width 0.7s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
-              : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",
-            filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)", // Grayscale effect
-          }}
-        >
-          <SearchInput onSearch={() => {}} />
-          <SwiperComponent />
+        <div className="relative flex items-center justify-center lg:top-10 mt-6 v-container">
+          <div
+            className={` lg:absolute lg:z-50 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
+            style={{
+              maxWidth: isHomePage ? "46rem" : "100%", // Only for large screens
+              width: "100%", // Full width for small screens
+              transition: isHomePage
+                ? "max-width 0.5s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
+                : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",
+              filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
+            }}
+          >
+            <SearchInput onSearch={() => {}} />
+            <SwiperComponent />
+          </div>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-white transition-transform transform ease-in-out duration-300">
-            <div className="p-4 transition-transform transform ease-in-out duration-300">
-              <div className="flex justify-end">
-                <div className="cursor-pointer" onClick={toggleMobileMenu}>
-                  Close Menu
-                </div>
-              </div>
-              <Footer />
-            </div>
-          </div>
-        )}
+        {isMobileMenuOpen && <MobileFooter onClose={toggleMobileMenu} />}
       </div>
     </header>
   );

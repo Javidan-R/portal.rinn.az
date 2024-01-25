@@ -82,7 +82,7 @@ export const router = createBrowserRouter([
         element: <Calculator />,
       },
       {
-        path: "faq",
+        path: "/faq",
         element: <Faq />,
       },
       {

@@ -99,35 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="modal hidden">
-        <div className="modal--lg hidden">
-          <div className="modal__content">
-            <div className="modal__header flex justify-between items-center">
-              <div className="modal__title"></div>
-              <button type="button" className="modal__close bg-none border-none cursor-pointer">
-                <img src="/img/modal-close.efba9567.svg" alt="" />
-              </button>
-            </div>
-            <div className="modal__body flex justify-center items-center">
-              <div className="container">
-                <div className="grid grid-cols-12">
-                  <div className="col-span-12">
-                    <div className="modal__content">
-                      <div className="modal-text"></div>
-                      <div className="modal-bottom"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="modal__footer">
-              <div className="modal-button flex justify-center">
-                <button className="btn bg-white">Bağla</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

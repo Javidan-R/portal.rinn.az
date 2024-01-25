@@ -78,8 +78,7 @@ const MobileNumberForm: React.FC<MobileNumberFormProps> = ({ onSubmit }) => {
                 value={values.prefix}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                options={['050', '051', '055', '010', '099', '070', '077', '066']}
-              />
+                options={['050', '051', '055', '010', '099', '070', '077', '066']} placeholder={''}              />
               {errors.prefix && <p className="error-message">{errors.prefix}</p>}
             </div>
             <div className="col-12 d-lg-none d-block mt-24">

@@ -209,30 +209,10 @@ img {
 }
 
 
-.v-input {
-  width: 100%;
-  font-family: Font-Medium;
-  letter-spacing: .0625rem;
-  color: #14142b;
-  border: 1px solid #c2c2c2;
-  border-radius: 8px;
-  outline: none;
-  padding: .875rem 1.25rem;
-  box-sizing: border-box;
-  font-size: .75rem;
-  line-height: 1.25rem;
-  transition: all .5s ease;
-}
-.v-input::placeholder {
-  font-size: .8125rem;
-  color: #959595;
-  opacity: .5;
-}
-
 .search__advanced-icon {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 30px;
   transform: translateY(-50%);
   right: 24px;
   align-items: center;
@@ -318,3 +298,34 @@ img {
   }
 }
 
+/* MODAL */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out; /* Add a fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

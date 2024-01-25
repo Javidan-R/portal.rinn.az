@@ -1,17 +1,25 @@
-// SearchInput.tsx
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
+import SearchAdvanced from './SearchAdvanced';
 
 interface SearchInputProps {
   onSearch: (searchCriteria: string) => void;
 }
 
-const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
+const SearchInput: FC<SearchInputProps> = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
   const handleSearch = () => {
     if (onSearch) {
       onSearch(searchTerm);
     }
+  };
+
+  const handleAdvancedSearch = () => {
+    // Perform advanced search
   };
 
   return (
@@ -21,7 +29,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
           <div className="search__input">
             <input
               placeholder="Hansı xidməti axtarırsınız?"
-              className="v-input"
+              className={`w-full  ${!isDropdownOpen ? " rounded-tl-lg rounded-rt-lg": "rounded-lg"} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-5 box-border text-xm leading-4 transition-all duration-500 ease-in-out`}
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -33,13 +41,21 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
                 className="ml-[3px] w-[1.6rem]"
               />
             </button>
-            <div className="search__advanced-icon">
-              <img
-                src="https://portal.rinn.az/img/filter.6f5fda6c.svg"
-                alt="filter"
-              />
-              <span className="d-none d-md-block">Ətraflı axtarış</span>
-            </div>
+            <div className="search__advanced-icon" onClick={toggleDropdown}>
+                <img
+                  src="https://portal.rinn.az/img/filter.6f5fda6c.svg"
+                  alt="filter"
+                />
+                <span className="d-none d-md-block">Ətraflı axtarış</span>
+              </div>
+
+         
+            {isDropdownOpen && (
+              <>
+            
+                <SearchAdvanced onSearch={handleAdvancedSearch} />
+                </>
+            )}
           </div>
         </div>
       </div>
