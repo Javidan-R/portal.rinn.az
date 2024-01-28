@@ -2,7 +2,7 @@ import  { FC } from "react";
 
 interface CompanyNameProps {
   image: string;
-  name: string;
+  name?: string;
   title: string;
 }
 

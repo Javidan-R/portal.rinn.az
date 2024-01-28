@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { ErrorBoundary, ProtectedRoute } from "../features";
 import ErrorPage from "../pages/Error";
 import Layout from "../layout/Layout";
+
 import {
   About,
   AppealRadio,
@@ -25,6 +26,7 @@ import {
   SearchOfficesClassifier,
   SearchPhoneNumber,
   Services,
+  SingleOrganisation,
   StreetSearch,
 } from "../pages/User";
 // import Categories from "../pages/User/Categories";
@@ -55,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: "/organisations",
         element: <Organisations />,
+      },
+      {
+        path: "/organisations/:id",  
+        element: <SingleOrganisation />,
       },
       {
         path: "/services",

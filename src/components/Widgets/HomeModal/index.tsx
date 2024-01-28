@@ -1,4 +1,3 @@
-// HomeModal.tsx
 import React, { useState } from "react";
 import Label from "../../atoms/Label";
 import Select from "../../atoms/SelectOption";
@@ -7,8 +6,19 @@ interface HomeModalProps {
   onClose: () => void;
 }
 
+interface FormData {
+  direction: string;
+  institution: string;
+  fullName: string;
+  email: string;
+  requestType: string;
+  service: string;
+  mobileNumber: string;
+  text: string;
+}
+
 const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     direction: "",
     institution: "",
     fullName: "",
@@ -38,88 +48,96 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
       <div className="modal">
         <div className="modal--lg modal__dialog">
           <div className="modal__content">
-            <div className="modal__header">
-              <div className="modal__title">Əks əlaqə</div>
-              <button type="button" className="modal__close" onClick={onClose}>
-                <img src="https://portal.rinn.az/img/modal-close.efba9567.svg" alt="" />
-              </button>
-            </div>
-            <div className="modal__body d-flex justify-center align-center">
-              <form className="form" onSubmit={handleSubmit}>
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="form__group mb-20">
-                        <Label className="v-label" text="İstiqamət" />
-                        {/* Assume options for "direction" */}
-                        <Select
-                          name="direction"
-                          value={formData.direction}
-                          onChange={(value) => handleSelectChange("direction", value)}
-                          options={["Option 1", "Option 2", "Option 3"]}
-                          placeholder="Müraciətin istiqamətini seçin"
-                        />
-                      </div>
-                      <div className="form__group mb-20">
-                        <Label className="v-label" text="Qurum" />
-                        {/* Use the Select component */}
-                        <Select
-                          name="institution"
-                          value={formData.institution}
-                          onChange={(value) => handleSelectChange("institution", value)}
-                          options={["Option 1", "Option 2", "Option 3"]}
-                          placeholder="Qurumun adını seçin"
-                        />
-                      </div>
-                      <div className="form__group mb-20">
-                        <Label className="v-label" text="Ad, soyad" />
-                        <input
-                          type="text"
-                          className="v-input"
-                          placeholder="Ad, soyadınızı daxil edin"
-                          name="fullName"
-                          value={formData.fullName}
-                          onChange={handleChange}
-                        />
-                      </div>
-                      <div className="form__group mb-20">
-                        <Label className="v-label" text=" E-mail " />
-                        <input
-                          className="v-input"
-                          placeholder="E-mail daxil edin"
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      {/* ... (Other form fields) ... */}
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div className="modal__footer">
-              <div className="btn-group">
-                <div className="row">
-                  <div className="col-12 d-flex justify-center">
-                    <button className="btn btn--black mr-12 px-25 py-12" onClick={onClose}>
-                      Bağla
-                    </button>
-                    <button type="submit" className="btn btn--dark px-25 py-12">
-                      Göndər
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ModalHeader onClose={onClose} />
+            <ModalBody
+              formData={formData}
+              handleChange={handleChange}
+              handleSelectChange={handleSelectChange}
+            />
+            <ModalFooter onClose={onClose} onSubmit={handleSubmit} />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+interface ModalHeaderProps {
+  onClose: () => void;
+}
+
+const ModalHeader: React.FC<ModalHeaderProps> = ({ onClose }) => (
+  <div className="modal__header">
+    <div className="modal__title">Əks əlaqə</div>
+    <button type="button" className="modal__close" onClick={onClose}>
+      <img src="https://portal.rinn.az/img/modal-close.efba9567.svg" alt="" />
+    </button>
+  </div>
+);
+
+interface ModalBodyProps {
+  formData: FormData;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  handleSelectChange: (name: string, value: string) => void;
+}
+
+const ModalBody: React.FC<ModalBodyProps> = ({ formData, handleSelectChange }) => (
+  <div className="modal__body d-flex justify-center align-center">
+    <form className="form" onSubmit={(e) => e.preventDefault()}>
+      <div className="container">
+        <div className="row">
+          {/* ... (Other form fields) ... */}
+          <FormField label="Qurum" id="institution">
+            <Select
+              name="institution"
+              value={formData.institution}
+              onChange={(e) => handleSelectChange("institution", e.target.value)}
+              options={["Option 1", "Option 2", "Option 3"]} // Add your options here
+              placeholder="Qurumun adını seçin"
+            />
+          </FormField>
+          {/* ... (Other form fields) ... */}
+        </div>
+      </div>
+    </form>
+  </div>
+);
+
+interface FormFieldProps {
+  label: string;
+  id?: string;
+  children: React.ReactNode;
+}
+
+const FormField: React.FC<FormFieldProps> = ({ label, id, children }) => (
+  <div className="col-lg-6">
+    <div className="form__group mb-20" id={id}>
+      <Label className="v-label" text={label} />
+      {children}
+    </div>
+  </div>
+);
+
+interface ModalFooterProps {
+  onClose: () => void;
+  onSubmit: (e: React.FormEvent) => void;
+}
+
+const ModalFooter: React.FC<ModalFooterProps> = ({ onClose, onSubmit }) => (
+  <div className="modal__footer">
+    <div className="btn-group">
+      <div className="row">
+        <div className="col-12 d-flex justify-center">
+          <button className="btn btn--black mr-12 px-25 py-12" onClick={onClose}>
+            Bağla
+          </button>
+          <button type="submit" className="btn btn--dark px-25 py-12" onClick={onSubmit}>
+            Göndər
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default HomeModal;

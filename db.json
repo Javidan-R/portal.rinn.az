@@ -7,63 +7,64 @@
       "text": ""
     }
   ],
-    "organisations": [
-      {
-        "organisationsId": 30,
-        "name": "“AzInTelecom” MMC",
-        "photo": "./src/assets/images/organisations/AzInTelecom.png",
-        "web": "www.azintelecom.az",
-        "tel1": "(+994 12) 200-00-20",
-        "tel2": 157,
-        "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
-        "serviceName": [
+      "organisations": [
+        {
+          "organisationsId": 30,
+          "name": "“AzInTelecom” MMC",
+          "photo": "./src/assets/images/organisations/AzInTelecom.png",
+          "web": "www.azintelecom.az",
+          "tel1": "(+994 12) 200-00-20",
+          "tel2": 157,
+          "email":"info@azintelecom.az",
+          "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
+          "serviceName": [
+            {
+              "serviceId": 1,
+              "image": "./src/assets/images/services/Imei.png",
+              "title": "IMEI Qeydiyyat",
+              "name": "“AzInTelecom” MMC",
+              "link": "mcqs-service",
+              "sing": "Qeydiyyatsız",
+              "pay": "Ödənişsiz"
+            },
           {
-            "serviceId": 1,
-            "image": "./src/assets/images/services/Imei.png",
-            "title": "IMEI Qeydiyyat",
+            "serviceId": 2,
+            "image": "./src/assets/images/services/Mobiltarifler.png",
+            "title": "Mobil cihazların qeydiyyat tarifləri",
             "name": "“AzInTelecom” MMC",
-            "link": "mcqs-service",
+            "link": "imei-tariff-service",
             "sing": "Qeydiyyatsız",
             "pay": "Ödənişsiz"
           },
-        {
-          "serviceId": 2,
-          "image": "./src/assets/images/services/Mobiltarifler.png",
-          "title": "Mobil cihazların qeydiyyat tarifləri",
-          "name": "“AzInTelecom” MMC",
-          "link": "imei-tariff-service",
-          "sing": "Qeydiyyatsız",
-          "pay": "Ödənişsiz"
-        },
-        {
-          "serviceId": 3,
-          "image": "./src/assets/images/services/Imeiyoxlama.png",
-          "title": "IMEI yoxlama",
-          "name": "“AzInTelecom” MMC",
-          "link": "imei-check-service",
-          "sing": "Qeydiyyatsız",
-          "pay": "Ödənişsiz"
-        },
-        {
-          "serviceId": 4,
-          "image": "./src/assets/images/services/Mobiltarifler.png",
-          "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
-          "name": "“AzInTelecom” MMC",
-          "link": "search-phone-number-service",
-          "sing": "Qeydiyyatlı",
-          "pay": "Ödənişsiz"
-        },
-        {
-          "serviceId": 5,
-          "image": "./src/assets/images/services/Nomredasinma.png",
-          "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
-          "name": "“AzInTelecom” MMC",
-          "link": "numbers-transferred-service",
-          "sing": "Qeydiyyatsız",
-          "pay": "Ödənişsiz"
-        }
-      ]
-    },
+          {
+            "serviceId": 3,
+            "image": "./src/assets/images/services/Imeiyoxlama.png",
+            "title": "IMEI yoxlama",
+            "name": "“AzInTelecom” MMC",
+            "link": "imei-check-service",
+            "sing": "Qeydiyyatsız",
+            "pay": "Ödənişsiz"
+          },
+          {
+            "serviceId": 4,
+            "image": "./src/assets/images/services/Mobiltarifler.png",
+            "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
+            "name": "“AzInTelecom” MMC",
+            "link": "search-phone-number-service",
+            "sing": "Qeydiyyatlı",
+            "pay": "Ödənişsiz"
+          },
+          {
+            "serviceId": 5,
+            "image": "./src/assets/images/services/Nomredasinma.png",
+            "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
+            "name": "“AzInTelecom” MMC",
+            "link": "numbers-transferred-service",
+            "sing": "Qeydiyyatsız",
+            "pay": "Ödənişsiz"
+          }
+        ]
+      },
     {
       "organisationsId": 64,
       "name": "“Aztelekom” MMC",
@@ -113,6 +114,39 @@
       ]
     },
     {
+      "organisationsId": 28,
+      "name": "“Azərpoçt” MMC",
+      "photo": "./src/assets/images/organisations/Azerpoct.png",
+      "web": "www.azerpost.az",
+      "tel1": "(+994 12) 498 80 00",
+      "tel2": "169",
+      "email": "office@azerpost.az",
+      "desc": "Ölkənin milli poçt operatoru olan “Azərpoçt” MMC hazırda respublika ərazisində ən geniş xidmət şəbəkəsinə malikdir. Əhalinin bütün təbəqələrinə və eləcə də, hüquqi şəxslərə münasib qiymətlərlə ənənəvi və qeyri-ənənəvi poçt xidmətləri və poçt-maliyyə xidmətləri göstərilMəktublar, poçt kartları, banderollar, bağlamalar və kiçik paketlərin daşınması, ölkədədaxili pul köçürmələri, teleqram, sekoqram və faks göndərilməsi ənənəvi poçt xidmətlərinə daxildir.Poçt filiallarında “SmartPay” ödəniş sistemi vasitəsilə kommunal, mobil, rabitə və bir çox digər xidmətlər üzrə ödəniş etmək mümkündür.“Azərpoçt” MMC-nin 63 poçt filialı, 7 rabitə qovşağı, 3 törəmə müəssisəsi, 1497 poçt şöbəsi və 89 poçt agentliyi var.",
+      "serviceName": [
+        {
+          "serviceId": 10,
+          "image": "./src/assets/images/services/poctgonder.png",
+          "name": "“Azərpoçt” MMC",
+          "title":
+            "Poçt göndərişlərinin izlənilməsi",
+          "link": "postal-tracking-service  ",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "organisationsId": 29,
+      "name": "Azərbaycan Yerüstü Nəqliyyat Agentliyi",
+      "photo": "./src/assets/images/organisations/danx.png",
+      "web": "www.danx.gov.az",
+      "tel1": "(+994 12) 566-51-66",
+      "tel2": "",
+      "email": "office@danx.gov.az",
+      "desc": "Azərbaycan Yerüstü Nəqliyyat Agentliyi avtomobil nəqliyyatı sahəsində tənzimləməni həyata keçirir. Həmçinin, avtomobil nəqliyyatı ilə daşımalara və digər avtomobil nəqliyyatı xidmətlərinə ehtiyacın təmin edilməsinə nəzarət edir.Ölkədaxili, həmçinin beynəlxalq sərnişin və yükdaşımalara dair normalara riayət edilməsinə nəzarət edir.",
+      "serviceName": []
+    },
+    {
       "organisationsId": 1094,
       "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
       "photo": "./src/assets/images/organisations/Rina.png",
@@ -123,7 +157,7 @@
       "desc": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
       "serviceName": [
         {
-          "serviceId": 10,
+          "serviceId": 29,
           "image": "./src/assets/images/services/avtomobil.png",
           "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
           "title": "Ümumi istifadədə olan avtomobil yolları ilə iriqabaritli və ağırçəkili nəqliyyat vasitələrinin hərəkət etməsi və onların hərəkətinə xüsusi icazənin verilməsi",
@@ -152,6 +186,96 @@
       ]
     },
     {
+      "organisationsId": 27,
+      "name": "“Bakı Taksi Xidməti” MMC",
+      "photo": "./src/assets/images/organisations/Btx.png ",
+      "web": "",
+      "tel1": "(+994 12) 511-14-54",
+      "tel2": "1000",
+      "email": "info@btx.az",
+      "desc": "“Bakı Taksi Xidməti” Məhdud Məsuliyyətli Cəmiyyəti Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinin tabeliyində olmaqla, nizamnamə əsasında fəaliyyət göstərir.Şirkət Bakı şəhəri və Abşeron yarımadası ilə yanaşı, Heydər Əliyev Beynəlxalq Aeroportundan şəhərin istənilən nöqtəsinə təhlükəsiz, komfortlu və taksometrlə təyin edilən standart qiymətlərlə sərnişin daşıma xidməti təşkil edir.Taksi sifarişi üçün 1000 qısa nömrəsi fəaliyyət göstərir.",
+      "serviceName": [
+       
+      ]
+    },
+    {
+      "organisationsId": 32,
+      "name": "“Bakı Telefon Rabitəsi” MMC (BAKTELECOM)",
+      "photo": "./src/assets/images/organisations/Baktelecom.png",
+      "web": "www.baktelecom.az",
+      "tel1": "(+994 12) 498-08-55",
+      "tel2": "155",
+      "email": "contactus@baktelecom.az",
+      "desc": "“Bakı Telefon Rabitəsi” MMC (BAKTELECOM) Bakı şəhəri ərazisində dövlət orqanlarına, korporativ və fərdi seqmentdən olan müştərilərə ən müasir simli və simsiz texnologiyalar vasitəsilə stasionar telefon, genişzolaqlı internet, rəqəmsal TV və bir sıra digər telekommunikasiya və multimedia xidmətləri göstərir.2001-ci ildə “BAKTELECOM”un nəzdində “Bakİnternet” internet provayderi yaradılıb. 2017-ci ildən başlayaraq Bakı şəhərindəki istirahət parkları və bağlarda, 17 məkanda İctimai internet xidmətini təmin edib. Bu vaxta qədər milyonlarla istifadəçi pulsuz internetdən istifadə edib.“BAKTELECOM”un tabeliyində rabitə qurğularının layihələndirilməsi sahəsində ixtisaslaşmış təşkilat olan “Azərrabitəlayihə” MMC, eləcə də telekommunikasiya operatoru “Azeurotel” MMC də fəaliyyət göstərir.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 42,
+      "name": "Dövlət Dəniz və Liman Agentliyi",
+      "photo": "./src/assets/images/organisations/Ddla.png",
+      "web": "www.ardda.gov.az",
+      "tel1": "(+994 12) 497-44-05",
+      "tel2": "",
+      "email": "contact@ardda.gov.az",
+      "desc": "Dövlət Dəniz və Liman Agentliyi Azərbaycan ərazisində dəniz nəqliyyatı üzrə dövlət siyasətinin formalaşmasında, həyata keçirilməsində və inkişafında iştirak edir, bu sahədə tənzimləməni və nəzarəti həyata keçirir.Dəniz üzgüçülüyünün təhlükəsizliyi, dənizdə insan həyatının və sağlamlığının qorunması, dəniz ətraf mühitinin mühafizəsi, habelə dənizçilərin hazırlanması sahəsində tədbirlər görür.Eyni zamanda, dəniz limanlarında fəaliyyətin tənzimlənməsində iştirak edir və dəniz üzgüçülüyünün təhlükəsizliyi ilə bağlı naviqasiya, mayak, bələdçi, kanal, lövbər və gəmi yığımı xidmətləri göstərir.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 51,
+      "name": "Elektron Təhlükəsizlik Xidməti",
+      "photo": "./src/assets/images/organisations/Etx.png",
+      "web": "www.cert.az",
+      "tel1": "(+994 12) 493-20-56",
+      "tel2": "1654",
+      "email": "info@cert.az",
+      "desc": "Elektron Təhlükəsizlik Xidməti (ETX) kibertəhlükəsizlik sahəsində informasiya infrastrukturunun subyektlərinin fəaliyyətini koordinasiya edir.Qurum informasiya sistemlərinin və şəbəkələrinin, kompüter avadanlıqlarının və onların proqram təminatının təhlükəsizliyinə qarşı yönəldilmiş kiberhücumlar, qanunsuz müdaxilələr, ziyanverici proqramlar barədə məlumatları toplayıb təhlil edir.Mövcud və yarana biləcək elektron təhlükələr barədə ölkə səviyyəsində məlumatlandırmanı həyata keçirir, kibertəhlükəsizlik sahəsində istifadəçilərin maarifləndirilməsini təmin edir. Ümumi internet trafikində qlobal kiberhücumların qarşısını almaq məqsədi ilə milli internet operatoru ilə birlikdə Nazirlik ilə razılaşdırılmış qabaqlayıcı tədbirlər həyata keçirir. ETX-nin yayılması qadağan edilən informasiyanın internet informasiya ehtiyatlarında yerləşdirilməsi halları ilə bağlı qanunla müəyyən edilmiş tədbirləri görmək səlahiyyəti var.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 60,
+      "name": "İnformasiya-Kommunikasiya Texnologiyalarının Tətbiqi və Tədrisi Mərkəzi",
+      "photo": "./src/assets/images/organisations/Iktlab.png",
+      "web": "www.e-training.az",
+      "tel1": "(+994 12) 505-01-13",
+      "tel2": "",
+      "email": "info@iktlab.az",
+      "desc": "İnformasiya-Kommunikasiya Texnologiyalarının Tətbiqi və Tədrisi Mərkəzi əhali, dövlət qulluqçuları və dövlət müəssisələrinin əməkdaşları üçün informasiya texnologiyaları və elektron idarəçilik üzrə təlimlər təşkil edir.İnsan resurslarının davamlı inkişafına, “Elektron hökumət” həllərinin tətbiqinə, “elektron hökumət” xidmətlərinin təkmilləşdirilməsinə dəstək verir.Mərkəz əhalinin informasiya texnologiyalarından təhlükəsiz istifadə mədəniyyətinin yüksəldilməsi istiqamətində işlər aparır, audio, video, HD standartlı video-studiya vasitəsilə multimedia xidmətləri təşkil edir. Mərkəzin əsas binası Bakı şəhərində yerləşir, o cümlədən ölkə üzrə 15 regionda fəaliyyət göstərir. Onlayn Təhsil Portalı (www.e-training.az) vasitəsilə bütün regional mərkəzlər üçün real vaxt rejimində distant təlimlər keçirilir.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 65,
+      "name": "İnnovasiya və Rəqəmsal İnkişaf Agentliyi",
+      "photo": "./src/assets/images/organisations/Iria.png",
+      "web": "https://www.digital.gov.az/",
+      "tel1": "(+99412) 310 14 00",
+      "tel2": "",
+      "email": "",
+      "desc": "İnnovasiya və Rəqəmsal İnkişaf Agentliyi rəqəmsal transformasiya sahəsində fəaliyyəti təşkil edir və həyata keçirilməsinə nəzarət edir.Fiziki və hüquqi şəxslərə müasir texnologiyaların və texnoloji həllərin əldə olunmasında yardım göstərir. İnnovasiya yönümlü elmi tədqiqatları və innovativ layihələri (o cümlədən startapları) təşviq edir. Startaplara maliyyə dəstəyi üçün innovasiya təşəbbüskarlığını təbliğ edir.Həmçinin, yüksək texnologiyalar, nüvə elmləri, nüvə texnologiyaları və nüvə energetikası sahəsində kompleks tədbirləri, elmi, elmi-texniki, innovasiya fəaliyyətini və müvafiq sınaq təcrübələrini həyata keçirir.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 1088,
+      "name": "“Radio-Televiziya Yayımı və Peyk Rabitəsi” İstehsalat Birliyi (Teleradio)",
+      "photo": "./src/assets/images/organisations/Teleradio.jpg",
+      "web": "www.teleradio.az",
+      "tel1": "(+994 12) 498-77-80",
+      "tel2": "",
+      "email": "info@teleradio.az",
+      "desc": "“Teleradio” İB respublikada radio-televiziyanın yerüstü yayımını, analoq və rəqəmsal Radio rabitəsi (Radio rele xətləri), radio-televiziya proqramlarının peykdən yayımını, Peyk rabitəsi (Səs, Data, İnternet və s.) kanallarının təşkili xidmətləri təmin edir.“Teleradio” yerüstü efir rəqəmli televiziya yayımı, eyni zamanda, analoq televiziya və radio yayımı, Up-link, IP TV, HD formatlı yayım xidmətləri də göstərir.FM Radio və TV vericilərin anten-fider sistemlərinin layihələndirilməsi və istismarı həyata keçirilir. Özəl Radio və TV şirkətlərinin, Neft Konsorsiumunda iştirak edən şirkətlərin və digər radio-rabitə istifadəçilərinin avadanlıqlarına texniki xidmət göstərilir.Hazırda “Teleradio” İB Azərbaycan ərazisində DVB-T standartlı rəqəmli TV yayım şəbəkəsinin qurulması layihəsini reallaşdırır.İşğaldan azad olunan ərazilərdə radio və televiziya yayımı məqsədilə 2020-ci il dekabrın 31-də “Teleradio” İB-nin mütəxəssisləri Şuşa Radio-Televiziya Yayım Stansiyasının işini bərpa ediblər.Respublika üzrə yayımı həyata keçirilən 10 telekanal və 2 radio Şuşa, Xankəndi şəhərləri və Xocalı rayonu, eləcə də ətraf yaşayış məntəqələrinə yayımlanır.2021-ci il oktyabrın 4-də Kəlbəcər şəhərində 17 metrlik yeni metal qüllə istismara verilib. Bununla da Kəlbəcər şəhəri və rayonun ətraf 15 kəndində 8 TV və 1 radionun yayımı təmin olunub.",
+      "serviceName": []
+    },
+    {
+      "organisationsId": 1089,
+      "name": "Dövlət Mülki Aviasiya Agentliyi",
+      "photo": "./src/assets/images/organisations/Dmaa.png",
+      "web": "www.caa.gov.az",
+      "tel1": "(+99412) 598 51 91",
+      "tel2": "",
+      "email": "hq@caa.gov.az",
+      "desc": "Dövlət Mülki Aviasiya Agentliyi Azərbaycan ərazisində mülki aviasiya üzrə dövlət nəzarətini və tənzimləməni həyata keçirir, beynəlxalq müqavilələrlə bağlı danışıqlarda iştirak edir, xarici ölkələrin aidiyyəti qurumları ilə qarşılıqlı əlaqədə fəaliyyət göstərir.Agentlik ölkənin sertifikatlaşdırılmış aviaşirkətlərini təyin edir və hökumətlərarası sazişlərə əsasən, respublika daxilində və respublikanın hüdudlarından kənarda onların uçuş marşrutlarını təsdiq edir.Bu marşrutların istismarı üçün müvafiq icazələr verir, habelə xarici dövlətlərin hava gəmilərinə Azərbaycanın mülki aviasiya hava limanlarına uçuş etmək üçün icazələr verir.Aviasiya texnikası və avadanlığı da daxil olmaqla, bütün mülki aviasiya subyektlərinin milli və beynəlxalq tələblərə uyğun olaraq icbari qaydada sertifikatlaşdırılmasına, həmçinin sertifikatların şərtlərinə riayət edilməsinə nəzarət edir.Azərbaycanın hava məkanında mülki hava gəmilərinin uçuş qaydalarını və digər normativ hüquqi aktları aidiyyəti qurumlarla birgə işləyib hazırlayır, mülki hava gəmilərinin dövlət qeydiyyatını həyata keçirir, müvafiq şəhadətnamə və vəsiqələr verir.",
+      "serviceName": []
+    },
+    {
       "organisationsId": 1090,
       "name": "Dövlət Radiotezliklər İdarəsi",
       "photo": "./src/assets/images/organisations/Radiotezlik.png",
@@ -159,7 +283,7 @@
       "tel1": "(+994 12) 493-59-72",
       "tel2": "",
       "email": "dri@dri.az",
-      "desc": "Dövlət Radiotezliklər İdarəsi (DRİ) ölkə ərazisində mülki məqsədlər üçün istifadəsinə icazə verilən radiotezlik spektrinin idarəçiliyini yerinə yetirir və ölkənin efir təhlükəsizliyinin təmin edilməsi istiqamətində müvafiq təşkilati-texniki tədbirləri həyata keçirir.Radioelektron vasitələrin (REV) maneəsiz istifadəsi üzrə radiomonitorinq işləri aparılır, REV-lərin inventarizasiyası keçirilir, REV-lərin istismarının icazə şərtlərinə uyğunluğunun təmin edilməsi məqsədilə texniki nəzarət işləri yerinə yetirilir.Radiotezliklər üzrə Dövlət Komissiyasının qərarlarına əsasən ölkə ərazisində hüquqi və fiziki şəxslər, xarici şirkətlər, diplomatik nümayəndəliklər üçün radiotezliklərin ayrılması, radiotezlik nominallarının və REV-lərin uçotunun aparılması, radiotezliklərdən istifadəyə müvafiq icazələrin verilməsi təmin edilir. Eyni zamanda, radiotezliklərdə istifadəsi nəzərdə tutulan REV-lərin texniki xüsusiyyətləri nəzərə alınmaqla, elektromaqnit uzlaşması işləri icra olunur.Ölkə ərazisində yayımlanan televiziya və FM radioproqramlarının qəbul vəziyyəti araşdırılır və kənar yayımların ölkə ərazisinə nüfuzetmə vəziyyəti nəzarətdə saxlanılır.Ölkənin sərhədyanı ərazilərində radiotezliklərdən maneəsiz istifadənin təmin edilməsi üçün qonşu ölkələrin aidiyyəti qurumları ilə tezliklərin koordinasiyası həyata keçirilir.",
+      "desc": "Dövlət Radiotezliklər İdarəsi (DRİ) ölkə ərazisində mülki məqsədlər üçün istifadəsinə icazə verilən radiotezlik spektrinin idarəçiliyini yerinə yetirir və ölkənin efir təhlükəsizliyinin təmin edilməsi istiqamətində müvafiq təşkilati-texniki tədbirləri həyata keçiRadioelektron vasitələrin (REV) maneəsiz istifadəsi üzrə radiomonitorinq işləri aparılır, REV-lərin inventarizasiyası keçirilir, REV-lərin istismarının icazə şərtlərinə uyğunluğunun təmin edilməsi məqsədilə texniki nəzarət işləri yerinə yetirilir.Radiotezliklər üzrə Dövlət Komissiyasının qərarlarına əsasən ölkə ərazisində hüquqi və fiziki şəxslər, xarici şirkətlər, diplomatik nümayəndəliklər üçün radiotezliklərin ayrılması, radiotezlik nominallarının və REV-lərin uçotunun aparılması, radiotezliklərdən istifadəyə müvafiq icazələrin verilməsi təmin edilir. Eyni zamanda, radiotezliklərdə istifadəsi nəzərdə tutulan REV-lərin texniki xüsusiyyətləri nəzərə alınmaqla, elektromaqnit uzlaşması işləri icra olunur.Ölkə ərazisində yayımlanan televiziya və FM radioproqramlarının qəbul vəziyyəti araşdırılır və kənar yayımların ölkə ərazisinə nüfuzetmə vəziyyəti nəzarətdə saxlanılır.Ölkənin sərhədyanı ərazilərində radiotezliklərdən maneəsiz istifadənin təmin edilməsi üçün qonşu ölkələrin aidiyyəti qurumları ilə tezliklərin koordinasiyası həyata keçirilir.",
       "serviceName": [
         {
           "serviceId": 13,
@@ -170,17 +294,37 @@
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         },
-        
+        {
+          "serviceId": 14,
+          "image": "./src/assets/images/services/calculator.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
+          "link": "calculator",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
         {
           "serviceId": 15,
-          "image": "./src/assets/images/services/radioelektron.png",
+          "image": "./sec/assets/images/services/radioelektron.png",
           "name": "Dövlət Radiotezliklər İdarəsi",
-          "title": "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
+          "title":
+            "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
           "link": "registration-radio-electronic-devices-service",
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         }
       ]
-    }
+    },
+    {
+      "organisationsId": 1091,
+      "name": "Azərbaycan Respublikasının Kosmik Agentliyi (Azərkosmos)",
+      "photo": "./src/assets/images/organisations/Azerkosmos.jpg",
+      "web": "www.azercosmos.az",
+      "tel1": "(+994 12) 310-00-55",
+      "tel2": "",
+      "email": "info@azercosmos.az",
+      "desc": "“Azərkosmos” telekommunikasiya peykinin hazırlanması, orbitə çıxarılması, idarə olunması və istismar işlərinin həyata keçirilməsini təmin ed“Azərkosmos”un idarəçiliyində olan ilk milli telekommunikasiya peykimiz “Azerspace-1” vasitəsilə yüksək etibarlı peyk əsaslı teleradio yayımı, DTH (Direct-to-Home), səs, video və məlumatların ötürülməsi xidmətləri göstərilir. “Azerspace-1” peyki Afrika, Avropa, Mərkəzi Asiya və Yaxın Şərqdə 50-dən artıq ölkəni birləşdirən ortaq məkanda mühüm informasiya ötürücüsü funksiyasını yerinə yetirir.2014-cü ildə Yer səthinin məsafədən müşahidə peyki olan “Azersky”, 2018-ci ildə isə “Azerspace-2” peyki istifadəyə verilib.“Azərkosmos”un peyk əsaslı xidmətlərdən istifadə edilə bilməsi əlavə dəyər yaradır.“Azərkosmos“ Bureau Veritas tərəfindən 2013-cü ilin yanvar ayında ISO 9001:2008 uyğunluq sertifikatına və 2017-ci ildə ISO 27001 – İnformasiya Təhlükəsizliyi Standartı sertifikatına layiq görülüb.",
+      "serviceName": []
+    }    
   ]
 }

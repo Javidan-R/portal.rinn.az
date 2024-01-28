@@ -9,8 +9,12 @@ const PageHeader: FC<PageHeaderProps> = ({ img, text }) => {
   return (
     <div className="row shadow-lg  bg-white border mt-8 p-6 rounded-xl ">
       <div className="flex justify-center  align-center items-center gap-4">
-      <img src={img} alt="" />
-      <h3 className="text-3xl font-semibold">{text}</h3>
+        <img
+          src={img}
+          alt={text}
+          className="max-w-full h-auto object-contain w-[4.5rem]"
+        />
+        <h3 className="text-3xl font-semibold">{text}</h3>
       </div>
     </div>
   );

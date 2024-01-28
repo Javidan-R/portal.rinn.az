@@ -10,9 +10,11 @@ interface SelectProps {
   children?: React.ReactNode;
   placeholder:string;
   className?:string;
+  width:number;
+  
 }
 
-const Select: React.FC<SelectProps> = ({ name, value, onChange, onBlur, options ,placeholder ,className }) => {
+const Select: React.FC<SelectProps> = ({ name, value, onChange, onBlur, options ,placeholder ,className , width }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSelect = () => {
@@ -20,7 +22,7 @@ const Select: React.FC<SelectProps> = ({ name, value, onChange, onBlur, options 
   };
 
   return (
-    <div className="relative  w-80 my-2">
+    <div className={`relative  w-{${width}} my-2`}>
       <div
         className="select__name px-4 py-3 border border-gray-300 rounded-md flex items-center justify-between transition duration-300 ease-in-out focus-within:border-blue-500 cursor-pointer"
         onClick={toggleSelect}

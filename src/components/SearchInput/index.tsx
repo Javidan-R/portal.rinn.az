@@ -1,27 +1,37 @@
-import React, { FC, useState } from 'react';
+import  { FC, useState } from 'react';
 import SearchAdvanced from './SearchAdvanced';
+import { Organisation } from '../../types/type';
 
 interface SearchInputProps {
   onSearch: (searchCriteria: string) => void;
+  organisations: Organisation[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ onSearch }) => {
+const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [filteredOrganisations, setFilteredOrganisations] = useState<Organisation[]>(organisations);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
   const handleSearch = () => {
+    const filteredOrganisations = organisations.filter((org) =>
+      org.serviceName.some((service) =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+  
+    // Now you can use the filteredOrganisations as needed
+    setFilteredOrganisations(filteredOrganisations);
+  
     if (onSearch) {
       onSearch(searchTerm);
     }
   };
-
-  const handleAdvancedSearch = () => {
-    // Perform advanced search
+  const handleFilter = (filteredOrganisations: Organisation[]) => {
+    setFilteredOrganisations(filteredOrganisations);
   };
-
   return (
     <div className="row justify-center">
       <div className="col-12 col-lg-7 header__search-col">
@@ -52,9 +62,8 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch }) => {
          
             {isDropdownOpen && (
               <>
-            
-                <SearchAdvanced onSearch={handleAdvancedSearch} />
-                </>
+          <SearchAdvanced organisations={organisations} onFilter={handleFilter} />
+             </>
             )}
           </div>
         </div>

@@ -4,9 +4,9 @@ import  telefon from "../../../assets/images/services/telefon.png";
 import SearchPhoneNumberService from "./SearchPhoneNumberService.1";
 
 const breadcrumbItems = [
-  { link: "/", name: "Home" },
-  { link: "/services", name: "Services" },
-  { link: "/search-phone-number-service", name: "IMEI Tariff Service" },
+  { link: "/", name: "Əsas səhifə" },
+  { link: "/services", name: "Xidmətlər" },
+  { link: "/search-phone-number-service", name: "Telefon nömrəsi üzrə axtarış" },
 ];
 const searchPhoneNumber =[ {
   "serviceId": 6,
@@ -18,13 +18,6 @@ const searchPhoneNumber =[ {
   "pay": "Ödənişsiz"
 },]
 export const SearchPhoneNumber = () => {
-
-
-
-  function handleSelect(city: City | null): void {
-        throw new Error("Function not implemented.");
-  }
-
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -41,7 +34,7 @@ export const SearchPhoneNumber = () => {
             <PagesCard services={searchPhoneNumber} />
           </section>
 
-        <SearchPhoneNumberService onSelect={handleSelect} />
+        <SearchPhoneNumberService/>
       </div>
     </div>
   );

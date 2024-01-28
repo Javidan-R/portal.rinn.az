@@ -4,10 +4,14 @@ import MainLogo from "../../assets/images/MainLogo.svg";
 import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
+import { GETAPIData } from "../../HTTP/HTTP";
+import { Organisation } from "../../types/type";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const [organisations, setOrganisations] = useState<Organisation[]>([]);
+
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
   const [isHeaderExpanded, setHeaderExpanded] = useState(true);
@@ -24,6 +28,18 @@ const Header: React.FC<HeaderProps> = () => {
   const toggleHeaderSize = () => {
     setHeaderExpanded(!isHeaderExpanded);
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await GETAPIData("organisations");
+        setOrganisations(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <header
@@ -33,7 +49,7 @@ const Header: React.FC<HeaderProps> = () => {
           : "lg:h-[20rem] sm:h-30rem header--not-home-lg"
       }`}
     >
-      <div className="v-container mx-auto px-2">
+      <div className="v-container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="w-48 md:w-64 lg:w-auto">
@@ -105,7 +121,7 @@ const Header: React.FC<HeaderProps> = () => {
               filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
             }}
           >
-            <SearchInput onSearch={() => {}} />
+            <SearchInput onSearch={() => { } } organisations={organisations} />
             <SwiperComponent />
           </div>
         </div>

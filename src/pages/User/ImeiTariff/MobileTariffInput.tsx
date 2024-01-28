@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Input from "../../../components/atoms/Input/Input";
+import Label from "../../../components/atoms/Label";
 
 export interface MobileTariffInputProps {
   label: string;
@@ -12,7 +13,7 @@ export const MobileTariffInput: React.FC<MobileTariffInputProps> = ({
   placeholder,
   manufacturers,
 }) => {
-  const [selectedManufacturer, setSelectedManufacturer] = useState<
+  const [, setSelectedManufacturer] = useState<
     string | null
   >(null);
   const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
@@ -46,9 +47,7 @@ export const MobileTariffInput: React.FC<MobileTariffInputProps> = ({
   return (
     <div className="col-lg-8 p-2 relative ">
       <div className="bg-white rounded-lg ">
-        <label htmlFor="manufacturerName" className="text-lg font-semibold">
-          {label}
-        </label>
+        <Label text= {label}  htmlFor="manufacturerName" className="text-lg font-semibold"/>
         <div className="relative" ref={dropdownRef}>
           <Input
             name={"mobiletarif"}

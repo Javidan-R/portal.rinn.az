@@ -11,6 +11,7 @@ export interface Organisation {
     tel1: string;
     tel2: number;
     desc: string;
+    email:string;
     serviceName: Service[];
   }
   
@@ -21,15 +22,16 @@ export interface Organisation {
     servicesCount: number;
     customStyles?: CSSProperties;
     additionalComponent?: ReactNode;
+    children:ReactNode;
   }
   export interface Service {
     serviceId: number;
     image: string;
     title: string;
-    name: string;
+    name?: string;
     link: string;
     sing: string;
-    pay: string;
+    pay?: string;
   }
   
   export interface CardProps extends Service {
@@ -39,7 +41,7 @@ export interface Organisation {
   
 export interface ServicesCardProps {
     image: string;
-    name: string;
+    name?: string;
     title: string;
     desc?: string;
     sing: string;
@@ -73,4 +75,11 @@ export interface AccProps  {
   text?:string;
   curOpen?:number | null;
   onOpen?:()=>void;
+}
+
+
+export interface City {
+  id: number;
+  name: string;
+  phoneNumber?: string;
 }

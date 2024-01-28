@@ -1,4 +1,5 @@
 import  { FC, useState } from "react";
+import Input from "../../../components/atoms/Input/Input";
 
 interface City {
   id: number;
@@ -23,9 +24,7 @@ const SearchPhoneNumberService: FC<SearchPhoneNumberProps> = ({ onSelect }) => {
     // Add more cities as needed
   ];
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+
 
   const handleSelect = (city: City) => {
     setSelectedCity(city);
@@ -40,6 +39,7 @@ const SearchPhoneNumberService: FC<SearchPhoneNumberProps> = ({ onSelect }) => {
       onSelect({ ...selectedCity, phoneNumber: formattedPhoneNumber });
     } else {
       setSearchResult(null);
+      setInputValue("")
       onSelect(null);
     }
   };
@@ -90,13 +90,12 @@ const SearchPhoneNumberService: FC<SearchPhoneNumberProps> = ({ onSelect }) => {
         </div>
 
         <form className="flex flex-col gap-4">
-          <input
-            type="text"
-            className="border border-gray-300 px-4 py-2 rounded-md"
-            placeholder="Enter 7 digits"
-            value={selectedCity ? selectedCity.phoneNumber : ""}
-            readOnly
-          />
+          <Input                    
+          type="text"
+          className="border border-gray-300 px-4 py-2 rounded-md"
+          placeholder="Enter 7 digits"
+          value={selectedCity ? selectedCity.phoneNumber : ""}
+          readOnly name={""}          />
 
           <button
             type="button"

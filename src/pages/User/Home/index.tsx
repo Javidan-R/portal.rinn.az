@@ -11,21 +11,14 @@ export const Home: React.FC = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [isModalOpen, setModalOpen] = useState(false);
 
-
   const toggleModal = () => {
     setModalOpen(!isModalOpen);
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await GETAPIData("/db.json");
-        setOrganisations(response.data.organisations);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
+    GETAPIData("organisations").then((res) => {
+      setOrganisations(res.data);
+    });
   }, []);
 
   const shuffleArray = (array: Service[]) => {
@@ -48,7 +41,9 @@ export const Home: React.FC = () => {
         <div className="v-container mx-auto p-4">
           {/* HomeCard Section */}
           <TransitionSection className=" lg:flex lg:justify-center m-auto">
-            <div className="m-auto lg:absolute   lg:bottom-[-35px]   lg:w-full lg:max-w-[1100px] sm:bottom-[10px] h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7 ">
+            {/* This Componen is make to effect right to left*/}
+            <div className="m-auto relative lg:absolute  lg:bottom-[-35px] lg:w-full lg:max-w-[1100px] h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7 ">
+              {/* First Cards Section */}
               <LeadCard
                 key={1}
                 name="Elektron Xidmətlər"
@@ -87,6 +82,7 @@ export const Home: React.FC = () => {
                 pay=""
               />
             </div>
+            {/* Modal toggle area */}
             {isModalOpen && <HomeModal onClose={toggleModal} />}
           </TransitionSection>
 
@@ -113,7 +109,7 @@ export const Home: React.FC = () => {
           </TransitionSection>
         </div>
       </div>
-
+      {/* Categories Area */}
       <div className="bg-[#e5e7ee] ">
         <div className="v-container mx-auto p-4">
           <TransitionSection>
@@ -129,15 +125,15 @@ export const Home: React.FC = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                  {shuffledServices.map((service) => (
-                    <ServicesCard key={service.serviceId} {...service} />
-                  ))}
-                </div>
+                {shuffledServices.map((service) => (
+                  <ServicesCard key={service.serviceId} {...service} />
+                ))}
+              </div>
             </section>
           </TransitionSection>
         </div>
       </div>
-
+      {/* Most used Services */}
       <div className="bg-[#F6F7F9] ">
         <div className="v-container mx-auto p-4">
           <TransitionSection>

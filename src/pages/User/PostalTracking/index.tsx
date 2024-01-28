@@ -1,7 +1,7 @@
 import { PagesCard } from "../../../components/PagesCard";
 import ServiceHeading from "../../../components/ServiceHeading";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
-import avtombil from "../../../assets/images/services/avtomobil.png";
+import poct from "../../../assets/images/services/poctgonder.png";
 
 const breaditems = [
   { link: "/", name: "Əsas səhifə" },
@@ -15,11 +15,11 @@ const breaditems = [
 const permissionMovement = [
   {
     serviceId: 10,
-    image: avtombil,
-    name: "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+    image: poct,
+    name: "Poçt göndərişlərinin izlənilməsi",
     title:
-      "Ümumi istifadədə olan avtomobil yolları ilə iriqabaritli və ağırçəkili nəqliyyat vasitələrinin hərəkət etməsi və onların hərəkətinə xüsusi icazənin verilməsi",
-    link: "permission-movement-service",
+      "postal-tracking-service",
+    link: "postal-tracking-service  ",
     sing: "Qeydiyyatsız",
     pay: "Ödənişsiz",
   },

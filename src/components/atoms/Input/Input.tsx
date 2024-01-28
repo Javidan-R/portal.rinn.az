@@ -3,7 +3,7 @@ import React, { InputHTMLAttributes, useRef, useEffect, FC } from 'react';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   type: string;
-  placeholder: string;
+  placeholder?: string;
   required?: boolean;
   min?: number;
   max?: number;
@@ -74,3 +74,8 @@ const Input: FC<InputProps> = ({
 };
 
 export default Input;
+
+
+
+
+

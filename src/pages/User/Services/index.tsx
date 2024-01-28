@@ -19,14 +19,14 @@ export const Services: FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await GETAPIData("/db.json");
-        setOrganisations(response.data.organisations);
+        const response = await GETAPIData("organisations");
+        setOrganisations(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
     fetchData();
-  }, []);
+  }, [organisations]);
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">

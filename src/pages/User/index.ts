@@ -2,6 +2,7 @@ export {Home} from './Home';
 export {Services} from './Services'
 export {Categories} from './Categories'
 export {Organisations} from './Organisations'
+export { SingleOrganisation } from "./Organisations/SingleOrganisation";
 export {Calculator} from './Calculator'
 export {Faq} from './Faq'
 export {About} from './About'

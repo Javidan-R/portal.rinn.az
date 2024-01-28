@@ -1,7 +1,13 @@
-import {FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { IoMdArrowRoundDown, IoMdArrowRoundUp } from "react-icons/io";
 import { Service } from "../../types/type";
 import CompanyName from "./CompanyName";
+import telimat from "../../assets/images/services/telimat.png";
+import reqlament from "../../assets/images/services/reqlament.png";
+import qanun from "../../assets/images/services/qanun.png";
+import ekselaqe from "../../assets/images/services/ekselaqe.svg";
+import coins from "../../assets/images/services/coins.svg";
+import identity from "../../assets/images/services/identity.svg";
 
 interface PagesCardProps {
   services: Service[];
@@ -82,10 +88,10 @@ function CompanyDataRow() {
     <div className="grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-4 ">
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2  ">
         <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1   ">
-          <div className="flex items-center justify-center gap-4 border-r-2">
+          <div className="flex items-center justify-center gap-4 border-r-2 py-4 ">
             <div className="services-data__icon">
               <img
-                src="https://portal.rinn.az/img/identity-card.a828aa59.svg"
+                src={identity}
                 alt="service"
                 className="max-w-full h-auto object-contain"
               />
@@ -97,16 +103,16 @@ function CompanyDataRow() {
           </div>
         </div>
         <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1">
-          <div className=" flex items-center justify-center gap-4">
+          <div className=" flex items-center justify-center gap-4 px-4 py-4 w-[200px]">
             {/* The hidden class ensures that this div is hidden on small screens */}
             <div className="services-data__icon">
               <img
-                src="https://portal.rinn.az/img/coins.a71428dd.svg"
+                src={coins}
                 alt="service"
                 className="max-w-full h-auto object-contain"
               />
             </div>
-            <div className="leading-5">
+            <div className="leading-5 ">
               <div>Dövlət rüsumu</div>
               <span className="font-bold">Ödənişli</span>
             </div>
@@ -116,46 +122,44 @@ function CompanyDataRow() {
       <div className="col-span-1 sm:col-span-1    md:col-span-1 lg:col-span-3 md:hidden lg:hidden block">
         <Dvider />
       </div>
-      <div className="col-span-1 sm:col-span-1 md:col-span-4 lg:col-span-3     ">
+      <DataInstructions/>
+    </div>
+  );
+}
+
+
+function DataInstructions() {
+  return(
+    <div className="col-span-1 sm:col-span-1 md:col-span-4 lg:col-span-3     ">
         <div className="flex flex-col lg:flex-row  md:flex-col sm:flex-col lg:justify-end sm:justify-start  lg:gap-12 sm:gap-5">
           <div
             style={{ cursor: "pointer", opacity: 1 }}
             className="flex lg:justify-center  sm:justify-start align-center py-4 lg:gap-4 sm:gap-0 lg:border-none sm: border-b-2"
           >
             <a href="" className="flex justify-center align-center gap-4 ">
-              <img
-                src="https://portal.rinn.az/img/contact.2e002628.svg"
-                alt="icon"
-              />
+              <img src={telimat} alt="telimat" />
               <span>Təlimat</span>
             </a>
           </div>
           <div className="opacity-0.5 flex lg:justify-center  sm:justify-start align-center py-4 gap-4 lg:border-none sm: border-b-2">
-            <img
-              src="https://portal.rinn.az/img/contact.2e002628.svg"
-              alt="icon"
-            />
+            <img src={reqlament} alt="reqlament" />
             <span>Reqlament</span>
           </div>
           <div
             style={{ cursor: "pointer", opacity: 1 }}
             className="flex lg:justify-center  sm:justify-start align-center  py-4 gap-4 lg:border-none sm: border-b-2"
           >
-            <img
-              src="https://portal.rinn.az/img/contact.2e002628.svg"
-              alt="icon"
-            />
+            <img src={qanun} alt="qanun" />
             <span>Qanunvericilik</span>
           </div>
-          <div className="opacity-0.5 flex lg:justify-center  sm:justify-start align-center  py-4 gap-4 lg:border-none sm: border-b-2">
-            <img
-              src="https://portal.rinn.az/img/contact.2e002628.svg"
-              alt="contact"
-            />
-            <span>Əks Əlaqə</span>
+          <div onClick={()=>{}} className="opacity-0.5  lg:border-none sm: border-b-2">
+            <div className="flex lg:justify-center  sm:justify-start align-center  py-4 gap-4">
+              <img src={ekselaqe} alt="contact" />
+              <span>Əks Əlaqə</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+  )
+  
 }

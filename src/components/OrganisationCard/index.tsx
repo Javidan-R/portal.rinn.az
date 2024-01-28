@@ -10,6 +10,7 @@ const OrganisationCard: FC<OrganisationCardProps> = ({
   customStyles,
   additionalComponent,
   organisationsId,
+  
 }) => {
   return (
     <div

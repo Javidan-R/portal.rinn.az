@@ -20,7 +20,7 @@ const ServicesCard: FC<ServicesCardProps> = ({
             {sing === "Qeydiyyatlı" && sing.length > 0 && (
               <div className="flex justify-between items-start">
                 <img
-                  src={image}
+                  src={`../../${image}`}
                   alt={title}
                   className="max-w-full h-auto object-contain"
                 />
@@ -31,7 +31,7 @@ const ServicesCard: FC<ServicesCardProps> = ({
             )}
             {sing === "Qeydiyyatsız" && (
               <img
-                src={image}
+                src={`../../${image}`}
                 alt={title}
                 className="max-w-full h-auto object-contain"
               />
@@ -39,7 +39,9 @@ const ServicesCard: FC<ServicesCardProps> = ({
           </div>
 
           <div className="mt-2 ">
+            {name && 
             <div className="text-base font-medium mb-1">{name}</div>
+            }
             <div className="line-clamp-2 font-black text-xl max-w-full h-auto leading-5 h-[42px]">
               {title}
             </div>

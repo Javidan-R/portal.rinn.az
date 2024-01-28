@@ -1,6 +1,6 @@
 // Mcqs.tsx
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { PagesCard } from '../../../components/PagesCard';
 import Steps from '../../../components/Steps';
 import ServiceHeading from '../../../components/ServiceHeading';
