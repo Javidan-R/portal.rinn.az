@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Category, Organisation } from '../types/type';
+import { Category, Organisation, Service } from '../types/type';
 const HTTP = axios.create({
     baseURL: import.meta.env.VITE_BASE_URL,
     headers: {
@@ -34,6 +34,22 @@ export const getSingleDataCategories = async (url: string, id: number) => {
     );
     if (category) {
       return { success: true, data: category };
+    } else {
+      return { success: false, error: "Organization not found" };
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return { success: false, error: "Failed to fetch data" };
+  }
+};
+export const getSingleDataService = async (url: string, id: number) => {
+  try {
+    const response = await HTTP.get(url);
+    const service = response.data.find(
+      (ser: Service) => ser.serviceId === id
+    );
+    if (service) {
+      return { success: true, data: service };
     } else {
       return { success: false, error: "Organization not found" };
     }

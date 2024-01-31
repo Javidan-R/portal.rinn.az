@@ -27,28 +27,28 @@ async function login(data: LoginData): Promise<string> {
   });
 }
 
-const sectionStyles = {
-  heading: {
-    color: "var(--DarkPurple, #11142D)",
-    textAlign: "center",
-    fontFamily: "Cairo",
-    fontSize: "50px",
-    fontStyle: "normal",
-    fontWeight: 700,
-    lineHeight: "normal",
-  },
-  description: {
-    width: "80%",
-    color: "var(--DarkPurple, #11142D)",
-    textAlign: "center",
-    fontFamily: "Open Sans",
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "normal",
-    margin: "auto",
-  },
-};
+// const sectionStyles = {
+//   heading: {
+//     color: "var(--DarkPurple, #11142D)",
+//     textAlign: "center",
+//     fontFamily: "Cairo",
+//     fontSize: "50px",
+//     fontStyle: "normal",
+//     fontWeight: 700,
+//     lineHeight: "normal",
+//   },
+//   description: {
+//     width: "80%",
+//     color: "var(--DarkPurple, #11142D)",
+//     textAlign: "center",
+//     fontFamily: "Open Sans",
+//     fontSize: "16px",
+//     fontStyle: "normal",
+//     fontWeight: 400,
+//     lineHeight: "normal",
+//     margin: "auto",
+//   },
+// };
 
 interface PageSectionProps {
   children: React.ReactNode;
@@ -80,7 +80,7 @@ export const Login = () => {
 
   return (
     <div className="m-auto p-6">
-      <LoginForm handleSubmit={handleSubmit} />
+      <LoginForm handleSubmit={()=>handleSubmit} />
 
       <PageSection>
         <div>

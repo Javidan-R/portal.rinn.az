@@ -17,7 +17,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
     setIsDropdownOpen((prev) => !prev);
   };
   const handleSearch = () => {
-    const filteredOrganisations = organisations.filter((org) =>
+    organisations.filter((org) =>
       org.serviceName.some((service) =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase())
       )

@@ -10,7 +10,7 @@ interface SelectProps {
   children?: React.ReactNode;
   placeholder:string;
   className?:string;
-  width:number;
+  width?:number;
   
 }
 

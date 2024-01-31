@@ -77,11 +77,11 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({ onClose }) => (
 
 interface ModalBodyProps {
   formData: FormData;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  handleChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   handleSelectChange: (name: string, value: string) => void;
 }
 
-const ModalBody: React.FC<ModalBodyProps> = ({ formData, handleSelectChange }) => (
+const ModalBody: React.FC<ModalBodyProps> = ({ formData, }) => (
   <div className="modal__body d-flex justify-center align-center">
     <form className="form" onSubmit={(e) => e.preventDefault()}>
       <div className="container">
@@ -91,10 +91,9 @@ const ModalBody: React.FC<ModalBodyProps> = ({ formData, handleSelectChange }) =
             <Select
               name="institution"
               value={formData.institution}
-              onChange={(e) => handleSelectChange("institution", e.target.value)}
+              onChange={()=>{}}
               options={["Option 1", "Option 2", "Option 3"]} // Add your options here
-              placeholder="Qurumun adını seçin"
-            />
+              placeholder="Qurumun adını seçin" width={0}            />
           </FormField>
           {/* ... (Other form fields) ... */}
         </div>

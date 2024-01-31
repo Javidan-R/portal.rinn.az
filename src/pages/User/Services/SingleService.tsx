@@ -12,9 +12,7 @@ export const SingleService: FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getSingleDataService("organisations", Number(id));
-        console.log(response.data);
-        
+        const response = await getSingleDataService("organisations", Number(id));        
         setOrganisation(response.data);
       } catch (error) {
         console.error("Error fetching single organisation data:", error);

@@ -12,8 +12,6 @@ const CategoriesCard: FC<CategoriesCardProps> = ({
   desc,
   categoriesId,
 }) => {
-  const buttonClass =
-    "w-[90.8px] h-[30px] font-normal text-sm leading-none text-blue-700 bg-blue-100 rounded-md px-2 py-1 h-5";
 
   return (
     <Link to={`/categories/${categoriesId}`}>

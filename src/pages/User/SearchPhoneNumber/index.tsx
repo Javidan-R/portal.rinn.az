@@ -34,7 +34,7 @@ export const SearchPhoneNumber = () => {
             <PagesCard services={searchPhoneNumber} />
           </section>
 
-        <SearchPhoneNumberService/>
+        <SearchPhoneNumberService onSelect={()=>{}}/>
       </div>
     </div>
   );

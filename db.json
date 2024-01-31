@@ -488,7 +488,7 @@
         },
         {
           "serviceId": 15,
-          "image": "./sec/assets/images/services/radioelektron.png",
+          "image": "./src/assets/images/services/radioelektron.png",
           "name": "Dövlət Radiotezliklər İdarəsi",
           "title":
             "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",

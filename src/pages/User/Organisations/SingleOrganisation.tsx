@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getSingleData, getSingleDataOrganisation } from "../../../HTTP/HTTP";
+import {  getSingleDataOrganisation } from "../../../HTTP/HTTP";
 import { Organisation, Service } from "../../../types/type";
 import PageHeader from "../../../components/PageHeader";
 import ServiceHeading from "../../../components/ServiceHeading";

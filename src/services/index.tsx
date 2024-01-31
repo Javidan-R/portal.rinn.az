@@ -7,7 +7,3 @@ export async function getCategories() {
     return data;
   }
 
-function Error(arg0: string) {
-  throw new Error("Function not implemented.");
-}
-   
