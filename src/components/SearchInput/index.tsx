@@ -1,13 +1,14 @@
 import  { FC, useState } from 'react';
 import SearchAdvanced from './SearchAdvanced';
-import { Organisation } from '../../types/type';
+import { Category, Organisation } from '../../types/type';
 
 interface SearchInputProps {
   onSearch: (searchCriteria: string) => void;
   organisations: Organisation[];
+  categories:Category[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations }) => {
+const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [filteredOrganisations, setFilteredOrganisations] = useState<Organisation[]>(organisations);
@@ -62,7 +63,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations }) => {
          
             {isDropdownOpen && (
               <>
-          <SearchAdvanced organisations={organisations} onFilter={handleFilter} />
+          <SearchAdvanced organisations={organisations} onFilter={handleFilter} categories={categories} />
              </>
             )}
           </div>

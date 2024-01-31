@@ -1,0 +1,123 @@
+/* LoginForm.css */
+
+/* Center the form */
+.flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .h-screen {
+    height: 100vh;
+  }
+  
+  /* Style the form container */
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .p-8 {
+    padding: 2rem;
+  }
+  
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Style the form heading */
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Style the form labels */
+  .text-gray-700 {
+    color: #4a5568;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Style the form inputs */
+  .w-full {
+    width: 100%;
+  }
+  
+  .p-3 {
+    padding: 0.75rem;
+  }
+  
+  .border {
+    border-width: 1px;
+  }
+  
+  .focus\:outline-none:focus {
+    outline: none;
+  }
+  
+  .focus\:border-indigo-500:focus {
+    border-color: #667eea;
+  }
+  
+  /* Style the submit button */
+  .bg-indigo-500 {
+    background-color: #667eea;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hover\:bg-indigo-700:hover {
+    background-color: #5a67d8;
+  }
+  
+  /* Ensure the button is rounded */
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  
+  /* Add more styles as needed */
+  

@@ -5,12 +5,13 @@ import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
 import { GETAPIData } from "../../HTTP/HTTP";
-import { Organisation } from "../../types/type";
+import { Category, Organisation } from "../../types/type";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
+  const [categories,setCategories] = useState<Category[]>([])
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
@@ -33,12 +34,23 @@ const Header: React.FC<HeaderProps> = () => {
       try {
         const response = await GETAPIData("organisations");
         setOrganisations(response.data);
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
+    const fetchCategories = async () => {
+      try {
+        const response = await GETAPIData("categories");
+        setCategories(response.data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+  
+    fetchCategories();
   }, []);
 
   return (
@@ -121,7 +133,7 @@ const Header: React.FC<HeaderProps> = () => {
               filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
             }}
           >
-            <SearchInput onSearch={() => { } } organisations={organisations} />
+            <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} />
             <SwiperComponent />
           </div>
         </div>

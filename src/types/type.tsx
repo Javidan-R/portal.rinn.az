@@ -83,3 +83,15 @@ export interface City {
   name: string;
   phoneNumber?: string;
 }
+
+
+
+export interface Category {
+  categoriesId:number,
+  serviceId: Key | null | undefined;
+  id: Key | null | undefined;
+  image:string,
+  title:string,
+  desc:string,
+  serviceName: Service[];
+}[]

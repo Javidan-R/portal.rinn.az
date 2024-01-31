@@ -6,6 +6,7 @@ import ServicesCard from "../../../components/ServicesCard";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
 import { Organisation, Service } from "../../../types/type";
 import HomeModal from "../../../components/Widgets/HomeModal";
+import { Categories } from "..";
 
 export const Home: React.FC = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
@@ -33,7 +34,7 @@ export const Home: React.FC = () => {
   const allServices: Service[] = organisations.flatMap(
     (organisation) => organisation.serviceName
   );
-  const shuffledServices: Service[] = shuffleArray(allServices).slice(5, 11);
+  const shuffledServices: Service[] = shuffleArray(allServices).slice(4, 10);
 
   return (
     <div>
@@ -110,36 +111,20 @@ export const Home: React.FC = () => {
         </div>
       </div>
       {/* Categories Area */}
-      <div className="bg-[#e5e7ee] ">
+      <div className="bg-[#e5e7ee]  sm:pb-40 lg:pb-2">
         <div className="v-container mx-auto p-4">
           <TransitionSection>
-            <section
-              id="categories"
-              className="pt-6 md:pt-10 pb-8  sm:h-auto md:h-96 lg:h-[27rem] "
-            >
-              <div className="container mx-auto">
-                <div className="h-20">
-                  <h3 className="font-semibold text-3xl text-#14142b">
-                    Elektron xidmət kateqoriyaları
-                  </h3>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {shuffledServices.map((service) => (
-                  <ServicesCard key={service.serviceId} {...service} />
-                ))}
-              </div>
-            </section>
+           <Categories/>
           </TransitionSection>
         </div>
       </div>
       {/* Most used Services */}
-      <div className="bg-[#F6F7F9] ">
+      <div className="bg-[#F6F7F9]  h-auto  sm:pb-72 lg:pb-2">
         <div className="v-container mx-auto p-4">
           <TransitionSection>
             <section
               id="most-used"
-              className="sm:h-auto md:h-96 lg:h-[574px] bg-[#F6F7F9] py-16"
+              className="sm:h-100 md:h-96 lg:h-[574px] bg-[#F6F7F9] py-16"
             >
               <div className="container mx-auto">
                 <div className="h-20">

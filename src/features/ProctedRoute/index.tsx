@@ -11,7 +11,7 @@ interface ProtectedRouteProps {
 
 export const ProtectedRoute: FC<ProtectedRouteProps> = ({
 	expectedRole,
-	redirectPath = '/auth/login',
+	redirectPath = '/',
 	children,
 }) => {
 	const currentRole = getUserRole();

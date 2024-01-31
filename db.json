@@ -7,6 +7,189 @@
       "text": ""
     }
   ],
+  "categories":[
+    {
+      "categoriesId":34,
+      "title":"Dövlət və qanunvericilik",
+      "desc" :"Xidmət üzrə qanunvericilik tələbləri",
+      "image":"./src/assets/images/categories/dovlet.png",
+      "serviceName": [ {
+        "serviceId": 12,
+        "image": "./src/assets/images/services/avadanliq.png",
+        "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+        "title": "Avadanlıqların mülki dövriyyəsinə xüsusi icazənin verilməsi",
+        "link": "issuance-special-permit-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      }]
+
+      
+    },
+    {
+      "categoriesId":38,
+      "title":"Telekommunikasiya",
+      "desc" :"Telefon (məftilli), simsiz telefon, respublikadaxili və beynəlxalq telekommunikasiya xidməti, internet xidməti, televiziya və radio yayımı xidmətləri ",
+      "image":"./src/assets/images/categories/telekommunikasiya.png",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+      {
+        "serviceId": 2,
+        "image": "./src/assets/images/services/Mobiltarifler.png",
+        "title": "Mobil cihazların qeydiyyat tarifləri",
+        "name": "“AzInTelecom” MMC",
+        "link": "imei-tariff-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 3,
+        "image": "./src/assets/images/services/Imeiyoxlama.png",
+        "title": "IMEI yoxlama",
+        "name": "“AzInTelecom” MMC",
+        "link": "imei-check-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 4,
+        "image": "./src/assets/images/services/Mobiltarifler.png",
+        "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
+        "name": "“AzInTelecom” MMC",
+        "link": "search-phone-number-service",
+        "sing": "Qeydiyyatlı",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 5,
+        "image": "./src/assets/images/services/Nomredasinma.png",
+        "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
+        "name": "“AzInTelecom” MMC",
+        "link": "numbers-transferred-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 13,
+        "image": "./src/assets/images/services/radiomane.png",
+        "name": "Dövlət Radiotezliklər İdarəsi",
+        "title": "Radiomaneələrlə bağlı müraciət",
+        "link": "appeal-radio-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 14,
+        "image": "./src/assets/images/services/calculator.png",
+        "name": "Dövlət Radiotezliklər İdarəsi",
+        "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
+        "link": "calculator",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      },
+      {
+        "serviceId": 11,
+        "image": "./src/assets/images/services/uygunluqsert.png",
+        "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+        "title": "Uyğunluq sertifikatının verilməsi",
+        "link": "issuing-certificate-conformity-service",
+        "sing": "Qeydiyyatsız",
+        "pay": "Ödənişsiz"
+      }
+    ]
+    },  
+    {
+      "categoriesId":1064,
+      "title":"Poçt",
+      "desc" :"Poçt göndərişlərinin izlənilməsi, poçt koduna görə küçə adının tapılması",
+      "image":"./src/assets/images/categories/poct.png",
+      "serviceName":[
+        {
+          "serviceId": 10,
+          "image": "./src/assets/images/services/poctgonder.png",
+          "name": "“Azərpoçt” MMC",
+          "title":
+            "Poçt göndərişlərinin izlənilməsi",
+          "link": "postal-tracking-service  ",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "categoriesId":35,
+      "title":"Ümumi məlumat",
+      "desc" :"Fəalliyyət istiqamətləri barədə məlumatlar",
+      "image":"./src/assets/images/categories/umumi.png",
+      "serviceName":[
+        {
+          "serviceId": 7,
+          "image": "./src/assets/images/services/klassifikator.png",
+          "name": "“Aztelekom” MMC",
+          "title": "Klassifikator üzrə idarələrin axtarışı",
+          "link": "search-offices-classifier-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 8,
+          "image": "./src/assets/images/services/idareleruzremelumat.png",
+          "name": "“Aztelekom” MMC",
+          "title": "İdarələr üzrə ətraflı məlumat",
+          "link": "detailed-information-departments-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 15,
+          "image": "./sec/assets/images/services/radioelektron.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title":
+            "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
+          "link": "registration-radio-electronic-devices-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      
+      ]
+    },
+    {
+      "categoriesId":37,
+      "title":"İş və karyera",
+      "desc" :"İş və karyera imkanı",
+      "image":"./src/assets/images/categories/is.png",
+      "serviceName":[
+      ]
+    },
+    {
+      "categoriesId":1065,
+      "title":"Nəqliyyat",
+      "desc" :"Dənizçilərə sertifikatların verilməsi, minimum heyət tərkibi haqqında şəhadətnamənin verilməsi",
+      "image":"./src/assets/images/categories/neqliyyat.png",
+      "serviceName":[
+        {
+          "serviceId": 29,
+          "image": "./src/assets/images/services/avtomobil.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Ümumi istifadədə olan avtomobil yolları ilə iriqabaritli və ağırçəkili nəqliyyat vasitələrinin hərəkət etməsi və onların hərəkətinə xüsusi icazənin verilməsi",
+          "link": "permission-movement-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+
+      ]
+    }
+
+    
+
+  ],
       "organisations": [
         {
           "organisationsId": 30,

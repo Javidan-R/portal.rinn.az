@@ -8,7 +8,6 @@ import {
   About,
   AppealRadio,
   Calculator,
-  Categories,
   DetailedInfoDep,
   Faq,
   Home,
@@ -29,6 +28,8 @@ import {
   SingleOrganisation,
   StreetSearch,
 } from "../pages/User";
+import { SingleCategory } from "../pages/User/Categories/SingleCategory";
+import { Role } from "../models";
 // import Categories from "../pages/User/Categories";
 // import { AuthLayout } from '../features/layout/Auth';
 // import { Login } from '../pages/Auth';
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute expectedRole={null} redirectPath="/auth/login">
+      <ProtectedRoute expectedRole={Role.GUEST} redirectPath="/">
         <Layout />
       </ProtectedRoute>
     ),
@@ -68,8 +69,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/categories/:id',
-        element: <Categories />,
-        children: []
+        element: <SingleCategory/>,
       },
       {
         path: "/services/imei-check-service",

@@ -13,10 +13,11 @@ const ServicesCard: FC<ServicesCardProps> = ({
     "w-[90.8px] h-[30px] font-normal text-sm leading-none text-blue-700 bg-blue-100 rounded-md px-2 py-1 h-5";
 
   return (
+    <Link to={`/services/${link}`}>
+
     <div className="p-5 bg-white border border-solid border-gray-200  cursor-pointer shadow-md  lg:h-[160px]    w-auto flex items-center w-full flex items-center rounded-lg">
-      <Link to={`/services/${link}`}>
-        <div className="card p-2 h-full flex flex-col items-start">
-          <div className="w-full mb-3 h-[45px]">
+        <div className="card w-full p-1 h-full flex flex-col items-start">
+          <div className="w-full  h-[40px]">
             {sing === "Qeydiyyatlı" && sing.length > 0 && (
               <div className="flex justify-between items-start">
                 <img
@@ -38,17 +39,18 @@ const ServicesCard: FC<ServicesCardProps> = ({
             )}
           </div>
 
-          <div className="mt-2 ">
+          <div className="mt-3 ">
             {name && 
             <div className="text-base font-medium mb-1">{name}</div>
             }
-            <div className="line-clamp-2 font-black text-xl max-w-full h-auto leading-5 h-[42px]">
+            <div className="line-clamp-3 font-black text-xl max-w-full leading-5">
               {title}
             </div>
           </div>
         </div>
-      </Link>
     </div>
+    </Link>
+
   );
 };
 

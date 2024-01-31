@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import Select from '../atoms/SelectOption';
 import PrimaryButton from '../atoms/Button/PrimaryButton';
 import Checkbox from '../atoms/Checkbox';
-import { Organisation } from '../../types/type';
+import { Category, Organisation } from '../../types/type';
 
 interface SearchAdvancedProps {
   organisations: Organisation[];
+  categories:Category[]
   onFilter: (filters: Organisation[]) => void;
 }
 
-const SearchAdvanced: React.FC<SearchAdvancedProps> = ({ organisations, onFilter }) => {
+const SearchAdvanced: React.FC<SearchAdvancedProps> = ({ organisations, onFilter,categories }) => {
   const [paid, setPaid] = useState(false);
   const [dontPaid, setDontPaid] = useState(false);
   const [registered, setRegistered] = useState(false);
@@ -55,17 +56,9 @@ const SearchAdvanced: React.FC<SearchAdvancedProps> = ({ organisations, onFilter
   };
 
   const organizationOptions = organisations.map((org) => org.name);
+  const categoryOptions = categories.map((cat)=>cat.title)
 
-  const categoryOptions = [
-    'Dövlət və qanunvericilik',
-    'Ümumi məlumat',
-    'İş və karyera',
-    'Telekommunikasiya',
-    'Poçt',
-    'Nəqliyyat',
-    // Add other category options
-  ];
-
+ 
   return (
     <div className="absolute bg-white px-6 top-10 w-full z-999 sm:absolute sm:999">
       <form action="" className="form">

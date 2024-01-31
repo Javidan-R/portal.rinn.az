@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getSingleData } from "../../../HTTP/HTTP";
+import { getSingleData, getSingleDataOrganisation } from "../../../HTTP/HTTP";
 import { Organisation, Service } from "../../../types/type";
 import PageHeader from "../../../components/PageHeader";
 import ServiceHeading from "../../../components/ServiceHeading";
@@ -25,7 +25,7 @@ export const SingleOrganisation: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getSingleData("organisations", Number(id));
+        const response = await getSingleDataOrganisation("organisations", Number(id));
         setOrganisation(response.data);
       } catch (error) {
         console.error("Error fetching single organisation data:", error);
