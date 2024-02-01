@@ -15,7 +15,6 @@ const Header: React.FC<HeaderProps> = () => {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
-  const [isHeaderExpanded, setHeaderExpanded] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,9 +25,7 @@ const Header: React.FC<HeaderProps> = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const toggleHeaderSize = () => {
-    setHeaderExpanded(!isHeaderExpanded);
-  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -110,23 +107,25 @@ const Header: React.FC<HeaderProps> = () => {
                 1655 Çağrı Mərkəzi
               </b>
             </Link>
+            <Link to="/auth">
             <button
               className="flex item-center justify-center align-center py-[13px] px-[14px] text-[0.875rem] text-#304b82 cursor-pointer font-semibold bg-white border border-solid border-#304b82 rounded-md"
-              onClick={toggleHeaderSize}
             >
               <img
                 src="https://portal.rinn.az/img/asan-login.d86aada9.svg"
                 alt="asan-login"
               />
             </button>
+            </Link>
+           
           </div>
         </div>
         <div className="relative flex items-center justify-center lg:top-10 mt-6 v-container">
           <div
             className={` lg:absolute lg:z-50 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
             style={{
-              maxWidth: isHomePage ? "46rem" : "100%", // Only for large screens
-              width: "100%", // Full width for small screens
+              maxWidth: isHomePage ? "46rem" : "100%", 
+              width: "100%", 
               transition: isHomePage
                 ? "max-width 0.5s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
                 : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",

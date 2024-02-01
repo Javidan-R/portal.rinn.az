@@ -6,5 +6,5 @@ export const getUserRole = (): Role | null => {
     return role as Role;
   }
 
-  return null;
+  return Role.GUEST;
 };

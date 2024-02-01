@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>question-mark-circle-fill</title>
+    <defs>
+        <path d="M13,12.8369 L13,13.9999 C13,14.5529 12.553,14.9999 12,14.9999 C11.447,14.9999 11,14.5529 11,13.9999 L11,11.9999 C11,11.4469 11.447,10.9999 12,10.9999 C12.827,10.9999 13.5,10.3269 13.5,9.4999 C13.5,8.6729 12.827,7.9999 12,7.9999 C11.173,7.9999 10.5,8.6729 10.5,9.4999 C10.5,10.0529 10.053,10.4999 9.5,10.4999 C8.947,10.4999 8.5,10.0529 8.5,9.4999 C8.5,7.5699 10.07,5.9999 12,5.9999 C13.93,5.9999 15.5,7.5699 15.5,9.4999 C15.5,11.0799 14.44,12.4029 13,12.8369 M12,17.9999 C11.447,17.9999 11,17.5529 11,16.9999 C11,16.4469 11.447,15.9999 12,15.9999 C12.553,15.9999 13,16.4469 13,16.9999 C13,17.5529 12.553,17.9999 12,17.9999 M12,1.9999 C6.486,1.9999 2,6.4859 2,11.9999 C2,17.5139 6.486,21.9999 12,21.9999 C17.514,21.9999 22,17.5139 22,11.9999 C22,6.4859 17.514,1.9999 12,1.9999" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AsanLogin/UI/Footer" transform="translate(-809.000000, -25.000000)">
+            <g id="Group-5" transform="translate(581.000000, 20.000000)">
+                <g id="Group-4" transform="translate(3.000000, 0.000000)">
+                    <g id="Group-3" transform="translate(223.000000, 0.000000)">
+                        <g id="question-mark-circle-fill" transform="translate(0.000000, 3.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="🎨-Icon-Сolor" fill="#0A44A5" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

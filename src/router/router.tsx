@@ -30,6 +30,7 @@ import {
 } from "../pages/User";
 import { SingleCategory } from "../pages/User/Categories/SingleCategory";
 import { Role } from "../models";
+import AuthenticatedLayout from "../pages/Auth/AuthenticatedLayout";
 // import Categories from "../pages/User/Categories";
 // import { AuthLayout } from '../features/layout/Auth';
 // import { Login } from '../pages/Auth';
@@ -144,6 +145,23 @@ export const router = createBrowserRouter([
         path: "/information/23",
         element : <Privacy/>
       },
+   
    ],
   },
+  {
+    path:'/auth',
+    element:(
+      <ProtectedRoute expectedRole={Role.GUEST} redirectPath="/auth/login">
+        <AuthenticatedLayout/>
+      </ProtectedRoute>
+    ),
+    errorElement:<ErrorBoundary/>,
+    children:[
+      {
+        path:"login",
+        element:<AuthenticatedLayout/>
+      }
+    ]
+
+  }
 ]);
