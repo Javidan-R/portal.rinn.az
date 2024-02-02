@@ -1,17 +1,15 @@
-import React, { FC, useState } from "react";
+import  { FC, useState } from "react";
 import backauth from "../../assets/images/auth/backauth.svg";
 import asanlogin from "../../assets/images/auth/asanlogin.svg";
+import question from "../../assets/images/auth/question.svg";
+import asan from "../../assets/images/auth/asan.svg";
 import fin from "../../assets/images/auth/fin.svg";
 import sima from "../../assets/images/auth/sima.svg";
 import asanimza from "../../assets/images/auth/asanimza.svg";
 import simatoken from "../../assets/images/auth/simatoken.svg";
 import bsxm from "../../assets/images/auth/bsxm.svg";
-import question from "../../assets/images/auth/question.svg";
-import asan from "../../assets/images/auth/asan.svg";
-import usericon from "../../assets/images/auth/usericon.svg"
-import passwordicon from "../../assets/images/auth/passwordicon.svg"
 
-import { Link } from "react-router-dom";
+
 
 const auth: AuthData[] = [
   {
@@ -57,47 +55,10 @@ const auth: AuthData[] = [
   },
 ];
 
-interface AuthData {
-  id: number;
-  title: string;
-  desc: string;
-  image: string;
-  detail: string;
-  sign?: boolean;
-  handleButtonClick?:()=>void
-}
+import { AuthData } from "../../types/type";
+import { AuthChoose } from "./AuthChoose";
+import { RegistrationLayout } from "./RegistrationLayout";
 
-interface AuthChooseProps extends AuthData {}
-
-const AuthChoose: FC<AuthChooseProps> = ({title, desc, image, sign ,handleButtonClick }) => (
-  <div className="col-md-12  z-2 mt-6 transition-transform duration-1000 transform hover:scale-105 ">
-    <div className="bg-[#fff] w-full flex fle-row align-center justify-between p-4 transition-colors hover:bg-blue-100 cursor-pointer h-[80px] border rounded-xl shadow-xl">
-      <div className="cursor-pointer text-left flex flex-row items-center gap-4">
-        <img src={image} alt="Fin" className="h-[65px]" />
-        <div>
-          <p className="text-[#0757bc] mb-[10px] text-xl font-semibold ">
-            {title}
-          </p>
-          <p className="text-[#7d7d7d] mt-[10px] text-base ">{desc}</p>
-        </div>
-      </div>
-      <div className="flex justify-center items-center gap-2">
-        {sign && (
-          <button
-            onClick={handleButtonClick}
-            className="bg-[#0c66ff] text-[#fff] w-[75px] h-[32px] text-center pt-[4%] border-none rounded-lg cursor-pointer text-sm"
-          >
-            <p className="mb-1">Qeydiyyat</p>
-          </button>
-        )}
-
-        <button className="text-[#005abc] text-base cursor-pointer">
-          Ətraflı
-        </button>
-      </div>
-    </div>
-  </div>
-);
 
 const AuthenticatedLayout: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -156,88 +117,3 @@ const AuthenticatedLayout: FC = () => {
 
 )}
 export default AuthenticatedLayout;
-
-interface RegistrationLayoutProps {
-  // Add any props you need for registration
-}
-export const RegistrationLayout: FC<RegistrationLayoutProps> = () => {
-  const [formData, setFormData] = useState({
-    pin: "",
-    password: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add your registration logic here
-    console.log("Form submitted with data:", formData);
-  };
-
-  return (
-    <section className="bg-[#fff] relative m-0 text-left text-[#212529]">
-
-        <div className={`bg-[#fff]  w-full  mx-auto min-h-[360px] relative overflow-hidden `}>
-          <div className="row h-full">
-            <div className="col-12 hover-bg-black-10 p-6 lg:p-8 xl:p-10">
-              <h1 className="text-3xl font-bold mb-4 text-center">Giriş səhifəsi</h1>
-              <form
-                className="form-horizontal form-material input-wrapper"
-                onSubmit={handleSubmit}
-              >
-                <div className="finInput flex align-center border border-1 relative w-full p-0    my-3">
-                  <img
-                    className="person-img absolute  w-[25px] ml-[15px] "
-                    src={usericon}
-                  />
-                  <input
-                    className="input-field bg-[#fcfcfe] w-full font-lg  block border-none  py-3 px-4  pl-14"
-                    name="pin"
-                    placeholder="İdentifikasiya nömrəsini daxil edin"
-                    type="text"
-                    value={formData.pin}
-                    onChange={handleChange}
-                  />
-                  <span className="icon icon-alert-circle info-icon FinIcon"></span>
-                </div>
-                <div className="passwordInput flex align-center border border-1 relative w-full p-0 my-3 " >
-                  <img
-                    className="lock-img w-[28px] ml-[15px]"
-                    src={passwordicon}
-                  />
-                  <input
-                    className="input-field bg-[#fcfcfe] w-full font-lg  block border-none  py-3 px-4"
-                    name="password"
-                    placeholder="Şifrənizi daxil edin"
-                    type="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
-                </div>
-                <button
-                  className="btn btn-primary login-button check-fin-login-button w-full bg-blue-600 py-2 rounded-md shadow-lg "
-                  type="submit"
-                >
-                  <p className="text-3xl text-white">İrəli</p>
-                </button>
-              </form>
-              <div
-                className="w-full mt-6"
-                
-              >
-                <Link to="" className=" text-center text-2xl text-blue-600 mt-2">
-                  <p>Şifrəni unutmusunuz?</p>
-                </Link>
-                <Link to="" className="  text-center text-2xl text-blue-600 mt-2">
-                  <p>Qeydiyyat</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-  );
-};

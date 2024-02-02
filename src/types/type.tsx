@@ -95,3 +95,19 @@ export interface Category {
   desc:string,
   serviceName: Service[];
 }[]
+export interface Users {
+  username: string;
+  name:string;
+  password:string;
+}[]
+
+
+export interface AuthData {
+  id: number;
+  title: string;
+  desc: string;
+  image: string;
+  detail: string;
+  sign?: boolean;
+  handleButtonClick?:()=>void
+}

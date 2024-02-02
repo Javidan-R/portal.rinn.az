@@ -7,6 +7,12 @@
       "text": ""
     }
   ],
+  "user" : [
+    {
+      "username" : "cavidan",
+      "password" : "123123"
+    }
+  ],
   "categories":[
     {
       "categoriesId":34,
@@ -207,7 +213,7 @@
               "title": "IMEI Qeydiyyat",
               "name": "“AzInTelecom” MMC",
               "link": "mcqs-service",
-              "sing": "Qeydiyyatsız",
+              "sing": "Qeydiyyatlı",
               "pay": "Ödənişsiz"
             },
           {

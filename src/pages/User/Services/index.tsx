@@ -8,14 +8,15 @@ import { Organisation } from "../../../types/type";
 import pageimg from "../../../assets/images/services/services.svg";
 import { Pagination } from "../../../components/Common/Pagination";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
+import { useSelector } from "react-redux";
 
 const breadcrumbItems = [
   { link: "/", name: "Əsas Səhifə" },
   { link: "/services", name: "Xidmətlər" },
 ];
-
 export const Services: FC = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +27,12 @@ export const Services: FC = () => {
       }
     };
     fetchData();
-  }, [organisations]);
+  }, []);
+
+  // const { isAuthenticated, role } = useSelector(
+  //   (state: { auth: { isAuthenticated: boolean; role: string } }) => state.auth
+  // );
+
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
@@ -47,12 +53,11 @@ export const Services: FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
               {organisations.map((organisation) =>
                 organisation.serviceName.map((service) => (
-                  <Link
-                    to={`/services/${service.link}`}
-                    key={service.serviceId}
-                  >
-                    <ServicesCard {...service} />
-                  </Link>
+                   (service.sing !== 'Qeydiyyatlı') ? (
+                    <Link to={`/services/${service.link}`} key={service.serviceId}>
+                      <ServicesCard {...service} />
+                    </Link>
+                  ) : null
                 ))
               )}
             </div>

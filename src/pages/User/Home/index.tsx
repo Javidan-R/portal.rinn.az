@@ -7,8 +7,11 @@ import TransitionSection from "../../../components/Widgets/TransitionSection";
 import { Organisation, Service } from "../../../types/type";
 import HomeModal from "../../../components/Widgets/HomeModal";
 import { Categories } from "..";
+// import { useSelector } from "react-redux";
 
 export const Home: React.FC = () => {
+  // const auth = useSelector(((state: { auth: { isAuthenticated: false; }; })=>state.auth.isAuthenticated))
+
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -97,6 +100,7 @@ export const Home: React.FC = () => {
                 <div className="h-20">
                   <h3 className="font-semibold text-3xl text-#14142b">
                     Seçilmiş Xidmətlər
+               
                   </h3>
                 </div>
 

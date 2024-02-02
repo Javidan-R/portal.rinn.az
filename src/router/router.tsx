@@ -46,7 +46,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProtectedRoute expectedRole={Role.GUEST} redirectPath="/">
+      <ProtectedRoute expectedRole={Role.GUEST && Role.USER } redirectPath="/">
         <Layout />
       </ProtectedRoute>
     ),
@@ -151,7 +151,7 @@ export const router = createBrowserRouter([
   {
     path:'/auth',
     element:(
-      <ProtectedRoute expectedRole={Role.GUEST} redirectPath="/auth/login">
+      <ProtectedRoute expectedRole={Role.USER} redirectPath="/">
         <AuthenticatedLayout/>
       </ProtectedRoute>
     ),
