@@ -31,6 +31,7 @@ import {
 import { SingleCategory } from "../pages/User/Categories/SingleCategory";
 import { Role } from "../models";
 import AuthenticatedLayout from "../pages/Auth/AuthenticatedLayout";
+import { ServiceResult } from "../pages/User/SearchResult";
 // import Categories from "../pages/User/Categories";
 // import { AuthLayout } from '../features/layout/Auth';
 // import { Login } from '../pages/Auth';
@@ -145,6 +146,10 @@ export const router = createBrowserRouter([
         path: "/information/23",
         element : <Privacy/>
       },
+      {
+        path: "/search-result",
+        element: <ServiceResult/>
+      }
    
    ],
   },

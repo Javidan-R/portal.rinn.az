@@ -1,9 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { useDispatch } from 'react-redux';
 import SwipperButton from "../atoms/Button/SwipperButton";
 import "./SwiperComponent.css";
 import { Service } from "../../types/type";
+import { useNavigate } from "react-router-dom";
+import { setSelectedService } from "../../redux/serviceBtnSlice";
 const buttons = [
   {
     id: 1,
@@ -196,12 +199,24 @@ const buttons = [
   // { id: 13, name: "Sertifikat" },
 ];
 interface SwiperComponentProps {
-  onServiceClick: (serviceName: Service) => void;
+  onServiceClick: (services: Service[]) => void;
 }
-
 const SwiperComponent: React.FC<SwiperComponentProps> = ({
   onServiceClick,
 }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleButtonClick = (services?: Service[]) => {
+    if (services && services.length > 0) {
+      onServiceClick(services); // Pass the entire array to onServiceClick
+      dispatch(setSelectedService(services));
+      console.log(services);
+      
+            navigate("/search-result");
+    }
+  };
+
   return (
     <div className="search__tags">
       <Swiper spaceBetween={10} slidesPerView={7} className="swiper-container">
@@ -216,11 +231,8 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
           >
             <SwipperButton
               className="swiper-button"
-              onClick={() =>
-                item.serviceName && onServiceClick(item.serviceName[0])
-              }
+              onClick={() => item.serviceName && handleButtonClick(item.serviceName)}
             >
-              {" "}
               {item.name}
             </SwipperButton>
           </SwiperSlide>
@@ -229,4 +241,5 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
     </div>
   );
 };
+
 export default SwiperComponent;

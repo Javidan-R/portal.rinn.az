@@ -6,28 +6,26 @@ import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
 import { GETAPIData } from "../../HTTP/HTTP";
 import { Category, Organisation, Service } from "../../types/type";
-import ServiceDetails from "../../components/ServiceDetails";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [categories,setCategories] = useState<Category[]>([])
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const handleServiceClick = (serviceName?: Service) => {
-    if (serviceName) {
-      setSelectedService(serviceName);
-    } else {
-      // Handle the case where serviceName is undefined
-      // For example, you might want to clear the selected service
-      setSelectedService(null);
-    }
-  };
-  
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
   const location = useLocation();
-
+  const handleServiceClick = (serviceName?: Service) => {
+    if (serviceName) {
+      console.log(`Service clicked: ${serviceName.title}`);
+      // You can perform other logic here based on the selected service
+    } else {
+      console.log('No service selected');
+      // Handle the case where serviceName is undefined
+    }
+  };
+  
+ 
   useEffect(() => {
     setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
@@ -35,8 +33,6 @@ const Header: React.FC<HeaderProps> = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -145,7 +141,6 @@ const Header: React.FC<HeaderProps> = () => {
           >
             <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} />
             <SwiperComponent onServiceClick={handleServiceClick} />
-      {selectedService && <ServiceDetails service={selectedService} />}
  
           </div>
         </div>

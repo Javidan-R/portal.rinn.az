@@ -25,6 +25,7 @@ export interface Organisation {
     children:ReactNode;
   }
   export interface Service {
+    length: any;
     serviceId: number;
     image: string;
     title: string;
