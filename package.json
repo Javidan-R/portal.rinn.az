@@ -34,6 +34,7 @@
     "swiper": "^11.0.5"
   },
   "devDependencies": {
+    "@types/node": "^20.11.16",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@types/react-input-mask": "^3.0.5",
@@ -45,7 +46,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "vite": "^5.0.8"
   }
 }

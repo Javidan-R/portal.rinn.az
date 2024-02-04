@@ -1936,10 +1936,10 @@
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   "version" "7.0.15"
 
-"@types/node@*", "@types/node@^18.0.0 || >=20.0.0":
-  "integrity" "sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w=="
-  "resolved" "https://registry.npmjs.org/@types/node/-/node-20.11.5.tgz"
-  "version" "20.11.5"
+"@types/node@*", "@types/node@^18.0.0 || >=20.0.0", "@types/node@^20.11.16":
+  "integrity" "sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-20.11.16.tgz"
+  "version" "20.11.16"
   dependencies:
     "undici-types" "~5.26.4"
 
@@ -6442,7 +6442,7 @@
     "media-typer" "0.3.0"
     "mime-types" "~2.1.24"
 
-"typescript@^5.2.2", "typescript@>=4.2.0":
+"typescript@^5.3.3", "typescript@>=4.2.0":
   "integrity" "sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-5.3.3.tgz"
   "version" "5.3.3"
