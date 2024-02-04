@@ -3,7 +3,7 @@ import  { FC } from "react";
 interface CompanyNameProps {
   image: string;
   name?: string;
-  title: string;
+  title?: string;
 }
 
 const CompanyName: FC<CompanyNameProps> = ({ image, name, title }) => {

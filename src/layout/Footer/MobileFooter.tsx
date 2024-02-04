@@ -37,7 +37,8 @@ export const MobileFooter:FC<MobileFooterPorp> = ({  onClose }) => {
                     <img src={loginmobile} alt="mobile-menu" />
                   </div>
                   <div>
-                    <p>Daxil ol</p>
+
+                    <Link to={'/auth/login'}><p>Daxil ol</p></Link>
                   </div>
                 </div>
               </div>

@@ -15,16 +15,15 @@ const Header: React.FC<HeaderProps> = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
   const location = useLocation();
-  const handleServiceClick = (serviceName?: Service) => {
-    if (serviceName) {
-      console.log(`Service clicked: ${serviceName.title}`);
-      // You can perform other logic here based on the selected service
+  const handleServiceClick = (services?: Service[]) => {
+    if (services && services.length > 0) {
+      console.log('Services clicked:', services.map(service => service.title).join(', '));
+      // Perform other logic here based on the selected services
     } else {
-      console.log('No service selected');
-      // Handle the case where serviceName is undefined
+      console.log('No services selected');
+      // Handle the case where services is undefined or empty
     }
   };
-  
  
   useEffect(() => {
     setIsHomePage(location.pathname === "/");
@@ -129,14 +128,15 @@ const Header: React.FC<HeaderProps> = () => {
         </div>
         <div className="relative flex items-center justify-center lg:top-10 mt-6 v-container">
           <div
-            className={` lg:absolute lg:z-50 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
+            className={` lg:absolute  z-0 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
             style={{
-              maxWidth: isHomePage ? "46rem" : "100%", 
+              maxWidth: isHomePage ? "45.5rem" : "100%", 
               width: "100%", 
               transition: isHomePage
                 ? "max-width 0.5s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
                 : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",
               filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
+              zIndex:'1',
             }}
           >
             <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} />

@@ -1,8 +1,9 @@
 // userSlice.js
 
 import { createSlice } from '@reduxjs/toolkit';
+import { Users } from '../types/type';
 
-const initialState = [
+const initialState:Users[] = [
     {
       "username" : "cavidan",
       "password" : "123123"

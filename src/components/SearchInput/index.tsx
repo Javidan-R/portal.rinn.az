@@ -1,6 +1,7 @@
 import  { FC, useState } from 'react';
 import SearchAdvanced from './SearchAdvanced';
-import { Category, Organisation } from '../../types/type';
+import { Category, Organisation } from '../../types/type'
+
 
 interface SearchInputProps {
   onSearch: (searchCriteria: string) => void;
@@ -12,14 +13,14 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [filteredOrganisations, setFilteredOrganisations] = useState<Organisation[]>(organisations);
-
+ 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
   const handleSearch = () => {
     organisations.filter((org) =>
       org.serviceName.some((service) =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase())
+        service.title?.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
   
@@ -40,7 +41,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
           <div className="search__input">
             <input
               placeholder="Hansı xidməti axtarırsınız?"
-              className={`w-full  ${!isDropdownOpen ? " rounded-tl-lg rounded-rt-lg": "rounded-lg"} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-5 box-border text-xm leading-4 transition-all duration-500 ease-in-out`}
+              className={`w-full h-[60px]  ${!isDropdownOpen ? " rounded-tl-lg rounded-rt-lg": "rounded-lg"} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-4 box-border text-sm font-bold  leading-4 transition-all duration-500 ease-in-out `}
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -59,12 +60,9 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
                 />
                 <span className="d-none d-md-block">Ətraflı axtarış</span>
               </div>
-
          
             {isDropdownOpen && (
-              <>
           <SearchAdvanced organisations={organisations} onFilter={handleFilter} categories={categories} />
-             </>
             )}
           </div>
         </div>

@@ -8,7 +8,6 @@ import { Organisation } from "../../../types/type";
 import pageimg from "../../../assets/images/services/services.svg";
 import { Pagination } from "../../../components/Common/Pagination";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
-import { useSelector } from "react-redux";
 
 const breadcrumbItems = [
   { link: "/", name: "Əsas Səhifə" },

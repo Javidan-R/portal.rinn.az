@@ -1,21 +1,26 @@
 /* SwiperComponent.css */
-.search__tags::after {
-  right: 0;
-  transform: translateX(50%);
-  background: linear-gradient(270deg,#304b82 48.04%,rgba(48,75,130,0));
-}
-.search__tags::after, .search__tags::before {
+
+.search__tags::after,
+.search__tags::before {
   content: "";
-    position: absolute;
+  position: absolute;
   height: 100%;
   top: 0;
   z-index: 2;
 }
+
+.search__tags::after {
+  right: 0;
+  transform: translateX(50%);
+  background: linear-gradient(270deg, #304b82 48.04%, rgba(48, 75, 130, 0));
+}
+
 .search__tags::before {
   left: 0;
   transform: translateX(-50%);
-  background: linear-gradient(90deg,#304b82 48.04%,rgba(48,75,130,0));
+  background: linear-gradient(90deg, #304b82 48.04%, rgba(48, 75, 130, 0));
 }
+
 .swiper-container {
   position: relative;
   width: 100%;
@@ -25,12 +30,27 @@
   gap: 10px;
   margin: 20px auto;
   display: flex;
+}
 
+.swiper-shadow-left,
+.swiper-shadow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Adjust the width of the shadow as needed */
+  transform: translateX(-50%); /* Adjust the transform for left and right */
+  background: linear-gradient(270deg, #304b82 48.04%, rgba(48, 75, 130, 0));
+}
+
+.swiper-shadow-right {
+  right: 0;
+  transform: translateX(50%);
+  background: linear-gradient(270deg, #304b82 48.04%, rgba(48, 75, 130, 0));
 }
 
 .swiper-slide {
   width: auto !important;
-    white-space: nowrap;
+  white-space: nowrap;
   margin-right: 10px;
   height: 2.2rem;
 }
@@ -38,15 +58,14 @@
 .swiper-button {
   padding: 0.5rem 0.9rem;
   border-radius: 1rem;
-    background-color: hsla(0, 0%, 100%, 0.2);
+  background-color: hsla(0, 0%, 100%, 0.2);
   display: inline-block;
   font-size: 0.9rem;
   line-height: 1.125rem;
-  word-spacing: 5px; 
+  word-spacing: 5px;
   letter-spacing: 1px;
   color: #fff;
   text-align: center;
   cursor: pointer;
   border: none;
-  
 }

@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { ServicesCardProps } from "../../types/type";
 import { Link } from "react-router-dom";
-// import { useSelector } from 'react-redux';
 
 const ServicesCard: FC<ServicesCardProps> = ({
   image,
@@ -10,18 +9,10 @@ const ServicesCard: FC<ServicesCardProps> = ({
   sing,
   link,
 }) => {
-  // const { isAuthenticated, role } = useSelector(
-  //   (state: { auth: { isAuthenticated: boolean; role: string } }) => state.auth
-  // );
     const buttonClass =
     "w-[90.8px] h-[30px] font-normal text-sm leading-none text-blue-700 bg-blue-100 rounded-md px-2 py-1 h-5";
-
-  // Check if user is authenticated and has the USER role
-  // const canAccessService = isAuthenticated && role === 'USER' ;
-
   return (
     <Link to={`/services/${link}`}>
-
       <div className="p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md  lg:h-[160px]    w-auto flex items-center w-full flex items-center rounded-lg">
         <div className="card w-full p-1 h-full flex flex-col items-start">
           <div className="w-full  h-[40px]">

@@ -25,13 +25,12 @@ export interface Organisation {
     children:ReactNode;
   }
   export interface Service {
-    length: any;
     serviceId: number;
     image: string;
-    title: string;
+    title?: string;
     name?: string;
-    link: string;
-    sing: string;
+    link?: string;
+    sing?: string;
     pay?: string;
   }
   
@@ -43,11 +42,10 @@ export interface Organisation {
 export interface ServicesCardProps {
     image: string;
     name?: string;
-    title: string;
+    title?: string;
     desc?: string;
-    sing: string;
-    link:string    
-
+    sing?: string;
+    link?:string    
   }
 
 
@@ -98,8 +96,9 @@ export interface Category {
 }[]
 export interface Users {
   username: string;
-  name:string;
+  name?:string;
   password:string;
+  role?:string
 }[]
 
 

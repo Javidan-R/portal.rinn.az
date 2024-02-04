@@ -58,6 +58,8 @@ const auth: AuthData[] = [
 import { AuthData } from "../../types/type";
 import { AuthChoose } from "./AuthChoose";
 import { RegistrationLayout } from "./RegistrationLayout";
+import { Link } from "react-router-dom";
+import PrimaryButton from "../../components/atoms/Button/PrimaryButton";
 
 
 const AuthenticatedLayout: FC = () => {
@@ -68,6 +70,7 @@ const AuthenticatedLayout: FC = () => {
   };
   return(
   <section className="bg-[#fff] relative m-0 text-left text-[#212529]">
+   
   <div className="bg-[#005abc] w-full absolute h-[360px]"></div>
   <div className="absolute top-[240px] w-full h-[180px]">
     <img src={backauth} className="w-full border-none" alt="Asana Login" />
@@ -75,7 +78,15 @@ const AuthenticatedLayout: FC = () => {
   <div className="w-full min-h-screen bg-[#fbfbfb] pt-[50px] pb-[3%]">
     <div className="bg-[#fff] w-full sm:w-[90%] md:w-[80%] lg:w-[90%] xl:w-[60%] 2xl:w-[50%] mx-auto min-h-[660px] relative overflow-hidden rounded-xl shadow-xl v-container">
       <div className="row h-full">
+        
         <div className="col-12 hover-bg-black-10 p-6 lg:p-8 xl:p-10">
+        <div>
+      <div className="w-full">
+        <Link to={"/"}  className="w-full">
+          <PrimaryButton className="bg-[#005abc] rounded-xl border-none px-6 w-40  lg:w-20 md:w-20 fixed z-10">Geri</PrimaryButton>
+        </Link>
+      </div>
+    </div>
           <div className="col-md-12 flex h-[140px] justify-center items-center">
             <img
               src={asanlogin}

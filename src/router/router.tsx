@@ -165,6 +165,12 @@ export const router = createBrowserRouter([
       {
         path:"login",
         element:<AuthenticatedLayout/>
+      },
+      {
+        path:"list-mobile-number-service"
+      },
+      {
+        path:"local-talks-service"
       }
     ]
 

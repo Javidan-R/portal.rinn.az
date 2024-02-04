@@ -4,7 +4,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 interface SelectProps {
   name: string;
   value: string;
-  onChange: (event: ChangeEvent<HTMLSelectElement> | HTMLTextAreaElement) => void;
+  onChange: (event: ChangeEvent<HTMLSelectElement> | HTMLTextAreaElement | React.ChangeEvent<HTMLSelectElement>) => void;
   onBlur?: (event: FocusEvent<HTMLSelectElement>) => void;
   options: string[];
   children?: React.ReactNode;

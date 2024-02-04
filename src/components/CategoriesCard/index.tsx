@@ -23,7 +23,7 @@ const CategoriesCard: FC<CategoriesCardProps> = ({
               <img src={image} alt="icon" className="h-12 w-12 object-contain" />
             </div>
              <article className="ml-4  w-60 text-wrap">
-          <div className="font-extrabold overflow-hidden truncate text-base mb-1">{title}</div>
+          <div className="font-bold overflow-hidden truncate text-base mb-1">{title}</div>
           <div className="w-72 line-clamp-2 max-w-full " style={{fontSize: '.75rem'}}>{desc}</div>
         </article>
           </div>
