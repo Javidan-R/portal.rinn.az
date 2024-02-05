@@ -1,5 +1,5 @@
 export const Pagination = () => {
   return (
-    <div>Pagination</div>
+    <div> </div>
   )
 }

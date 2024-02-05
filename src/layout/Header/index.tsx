@@ -5,11 +5,13 @@ import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
 import { GETAPIData } from "../../HTTP/HTTP";
-import { Category, Organisation, Service } from "../../types/type";
+import { BtnData, Category, Organisation, Service } from "../../types/type";
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const [btnData , SetBtnData]  = useState<BtnData[]>([])
+
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [categories,setCategories] = useState<Category[]>([])
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,6 +56,18 @@ const Header: React.FC<HeaderProps> = () => {
     };
   
     fetchCategories();
+  }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await GETAPIData("buttons");
+        SetBtnData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -139,8 +153,8 @@ const Header: React.FC<HeaderProps> = () => {
               zIndex:'1',
             }}
           >
-            <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} />
-            <SwiperComponent onServiceClick={handleServiceClick} />
+            <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} data={btnData} />
+            <SwiperComponent onServiceClick={handleServiceClick} data={btnData} />
  
           </div>
         </div>

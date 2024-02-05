@@ -1,39 +1,59 @@
-import  { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import SearchAdvanced from './SearchAdvanced';
-import { Category, Organisation } from '../../types/type'
+import { BtnData, Category, Organisation } from '../../types/type';
 
+// import { setSelectedService } from "../../redux/serviceBtnSlice";
 
 interface SearchInputProps {
-  onSearch: (searchCriteria: string) => void;
+  onSearch: (searchCriteria: BtnData[]) => void;
   organisations: Organisation[];
-  categories:Category[];
+  categories: Category[];
+  data: BtnData[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories }) => {
+const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories, data }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [filteredOrganisations, setFilteredOrganisations] = useState<Organisation[]>(organisations);
- 
+  // const dispatch = useDispatch();
+
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
-  const handleSearch = () => {
-    organisations.filter((org) =>
-      org.serviceName.some((service) =>
+  const handleSearch = (searchResults: BtnData[]) => {
+    const filteredServices: BtnData[] = data.reduce((acc: BtnData[], btn) => {
+      const matchingServices = btn.serviceName?.filter((service) =>
         service.title?.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    );
+      );
   
-    // Now you can use the filteredOrganisations as needed
-    setFilteredOrganisations(filteredOrganisations);
+      // Convert each Service to BtnData
+      const matchingBtnData = matchingServices?.map((service) => ({
+        id: service.serviceId, // Assuming serviceId is a suitable id
+        serviceId: service.serviceId,
+        name: btn.name, // Using btn name, you might need to adjust this based on your structure
+        serviceName: [service], // Put the service into an array
+      })) || [];
+  
+      return acc.concat(matchingBtnData);
+    }, []);
   
     if (onSearch) {
-      onSearch(searchTerm);
+      onSearch(filteredServices);
     }
+    console.log('Search results:', searchResults);
+    // if (services && services.length > 0) {
+    //   onServiceClick(services); // Pass the entire array to onServiceClick
+    //   dispatch(setSelectedService(services));
+    //   console.log(services);      
+    //         navigate("/search-result");
+    // }
   };
-  const handleFilter = (filteredOrganisations: Organisation[]) => {
-    setFilteredOrganisations(filteredOrganisations);
+  
+
+
+  const handleFilter = () => {
+    // Handle filtering logic if needed
   };
+
   return (
     <div className="row justify-center">
       <div className="col-12 col-lg-7 header__search-col">
@@ -41,12 +61,12 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
           <div className="search__input">
             <input
               placeholder="Hansı xidməti axtarırsınız?"
-              className={`w-full h-[60px]  ${!isDropdownOpen ? " rounded-tl-lg rounded-rt-lg": "rounded-lg"} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-4 box-border text-sm font-bold  leading-4 transition-all duration-500 ease-in-out `}
+              className={`w-full h-[60px] ${!isDropdownOpen ? 'rounded-tl-lg rounded-rt-lg' : 'rounded-lg'} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-4 box-border text-sm font-bold leading-4 transition-all duration-500 ease-in-out`}
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button className="search__button" onClick={handleSearch}>
+            <button className="search__button" onClick={()=>handleSearch}>
               <img
                 src="https://portal.rinn.az/img/search.9f2c397b.svg"
                 alt="search"
@@ -54,15 +74,19 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations,categories 
               />
             </button>
             <div className="search__advanced-icon" onClick={toggleDropdown}>
-                <img
-                  src="https://portal.rinn.az/img/filter.6f5fda6c.svg"
-                  alt="filter"
-                />
-                <span className="d-none d-md-block">Ətraflı axtarış</span>
-              </div>
-         
+              <img
+                src="https://portal.rinn.az/img/filter.6f5fda6c.svg"
+                alt="filter"
+              />
+              <span className="d-none d-md-block">Ətraflı axtarış</span>
+            </div>
+
             {isDropdownOpen && (
-          <SearchAdvanced organisations={organisations} onFilter={handleFilter} categories={categories} />
+              <SearchAdvanced
+                organisations={organisations}
+                onFilter={handleFilter}
+                categories={categories}
+              />
             )}
           </div>
         </div>

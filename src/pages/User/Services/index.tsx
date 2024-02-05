@@ -52,11 +52,12 @@ export const Services: FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
               {organisations.map((organisation) =>
                 organisation.serviceName.map((service) => (
-                   (service.sing !== 'Qeydiyyatlı') ? (
-                    <Link to={`/services/${service.link}`} key={service.serviceId}>
-                      <ServicesCard {...service} />
-                    </Link>
-                  ) : null
+                  <Link
+                    to={`/services/${service.link}`}
+                    key={service.serviceId}
+                  >
+                    <ServicesCard sing={service.sing} image={service.image} link={service.link} title={service.title} />
+                  </Link>
                 ))
               )}
             </div>

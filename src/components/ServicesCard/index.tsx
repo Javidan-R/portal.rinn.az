@@ -14,14 +14,14 @@ const ServicesCard: FC<ServicesCardProps> = ({
   return (
     <Link to={`/services/${link}`}>
       <div className="p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md  lg:h-[160px]    w-auto flex items-center w-full flex items-center rounded-lg">
-        <div className="card w-full p-1 h-full flex flex-col items-start">
-          <div className="w-full  h-[40px]">
+        <div className="card w-full p-[2px] h-full flex flex-col items-start">
+          <div className="w-[42px] h-[40px]">
             {sing === "Qeydiyyatlı" && sing.length > 0 && (
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start ">
                 <img
                   src={`../../${image}`}
                   alt={title}
-                  className="max-w-full h-auto object-contain"
+                  className="max-w-full h-auto object-contain "
                 />
                 <div className="">
                   <button className={buttonClass}>{sing}</button>
@@ -37,11 +37,11 @@ const ServicesCard: FC<ServicesCardProps> = ({
             )}
           </div>
 
-          <div className="mt-3 ">
+          <div className="mt-4 ">
             {name &&
               <div className="text-base font-medium mb-1">{name}</div>
             }
-            <div className="line-clamp-2 font-bold text-lg max-w-full leading-5">
+            <div className="line-clamp-2 font-black  max-w-full leading-4 my-auto">
               {title}
             </div>
           </div>

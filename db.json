@@ -1,33 +1,33 @@
 {
-  "user" : [
+  "user": [
     {
-      "username" : "cavidan",
-      "password" : "123123"
+      "username": "cavidan",
+      "password": "123123"
     }
   ],
-  "categories":[
+  "categories": [
     {
-      "categoriesId":34,
-      "title":"Dövlət və qanunvericilik",
-      "desc" :"Xidmət üzrə qanunvericilik tələbləri",
-      "image":"./src/assets/images/categories/dovlet.png",
-      "serviceName": [ {
-        "serviceId": 12,
-        "image": "./src/assets/images/services/avadanliq.png",
-        "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
-        "title": "Avadanlıqların mülki dövriyyəsinə xüsusi icazənin verilməsi",
-        "link": "issuance-special-permit-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      }]
-
-      
+      "categoriesId": 34,
+      "title": "Dövlət və qanunvericilik",
+      "desc": "Xidmət üzrə qanunvericilik tələbləri",
+      "image": "./src/assets/images/categories/dovlet.png",
+      "serviceName": [
+        {
+          "serviceId": 12,
+          "image": "./src/assets/images/services/avadanliq.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Avadanlıqların mülki dövriyyəsinə xüsusi icazənin verilməsi",
+          "link": "issuance-special-permit-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
     },
     {
-      "categoriesId":38,
-      "title":"Telekommunikasiya",
-      "desc" :"Telefon (məftilli), simsiz telefon, respublikadaxili və beynəlxalq telekommunikasiya xidməti, internet xidməti, televiziya və radio yayımı xidmətləri ",
-      "image":"./src/assets/images/categories/telekommunikasiya.png",
+      "categoriesId": 38,
+      "title": "Telekommunikasiya",
+      "desc": "Telefon (məftilli), simsiz telefon, respublikadaxili və beynəlxalq telekommunikasiya xidməti, internet xidməti, televiziya və radio yayımı xidmətləri ",
+      "image": "./src/assets/images/categories/telekommunikasiya.png",
       "serviceName": [
         {
           "serviceId": 1,
@@ -38,83 +38,82 @@
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         },
-      {
-        "serviceId": 2,
-        "image": "./src/assets/images/services/Mobiltarifler.png",
-        "title": "Mobil cihazların qeydiyyat tarifləri",
-        "name": "“AzInTelecom” MMC",
-        "link": "imei-tariff-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 3,
-        "image": "./src/assets/images/services/Imeiyoxlama.png",
-        "title": "IMEI yoxlama",
-        "name": "“AzInTelecom” MMC",
-        "link": "imei-check-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 4,
-        "image": "./src/assets/images/services/Mobiltarifler.png",
-        "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
-        "name": "“AzInTelecom” MMC",
-        "link": "search-phone-number-service",
-        "sing": "Qeydiyyatlı",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 5,
-        "image": "./src/assets/images/services/Nomredasinma.png",
-        "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
-        "name": "“AzInTelecom” MMC",
-        "link": "numbers-transferred-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 13,
-        "image": "./src/assets/images/services/radiomane.png",
-        "name": "Dövlət Radiotezliklər İdarəsi",
-        "title": "Radiomaneələrlə bağlı müraciət",
-        "link": "appeal-radio-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 14,
-        "image": "./src/assets/images/services/calculator.png",
-        "name": "Dövlət Radiotezliklər İdarəsi",
-        "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
-        "link": "calculator",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      },
-      {
-        "serviceId": 11,
-        "image": "./src/assets/images/services/uygunluqsert.png",
-        "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
-        "title": "Uyğunluq sertifikatının verilməsi",
-        "link": "issuing-certificate-conformity-service",
-        "sing": "Qeydiyyatsız",
-        "pay": "Ödənişsiz"
-      }
-    ]
-    },  
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 4,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
+          "name": "“AzInTelecom” MMC",
+          "link": "search-phone-number-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 5,
+          "image": "./src/assets/images/services/Nomredasinma.png",
+          "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
+          "name": "“AzInTelecom” MMC",
+          "link": "numbers-transferred-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 13,
+          "image": "./src/assets/images/services/radiomane.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radiomaneələrlə bağlı müraciət",
+          "link": "appeal-radio-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 14,
+          "image": "./src/assets/images/services/calculator.png",
+          "name": "Dövlət Radiotezliklər İdarəsi",
+          "title": "Radiotezlik spektrindən istifadəyə görə birdəfəlik və müddətli (aylıq və ya illik) ödənişlərin hesablanması üzrə kalkulyator",
+          "link": "calculator",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 11,
+          "image": "./src/assets/images/services/uygunluqsert.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Uyğunluq sertifikatının verilməsi",
+          "link": "issuing-certificate-conformity-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
     {
-      "categoriesId":1064,
-      "title":"Poçt",
-      "desc" :"Poçt göndərişlərinin izlənilməsi, poçt koduna görə küçə adının tapılması",
-      "image":"./src/assets/images/categories/poct.png",
-      "serviceName":[
+      "categoriesId": 1064,
+      "title": "Poçt",
+      "desc": "Poçt göndərişlərinin izlənilməsi, poçt koduna görə küçə adının tapılması",
+      "image": "./src/assets/images/categories/poct.png",
+      "serviceName": [
         {
           "serviceId": 10,
           "image": "./src/assets/images/services/poctgonder.png",
           "name": "“Azərpoçt” MMC",
-          "title":
-            "Poçt göndərişlərinin izlənilməsi",
+          "title": "Poçt göndərişlərinin izlənilməsi",
           "link": "postal-tracking-service  ",
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
@@ -122,11 +121,11 @@
       ]
     },
     {
-      "categoriesId":35,
-      "title":"Ümumi məlumat",
-      "desc" :"Fəalliyyət istiqamətləri barədə məlumatlar",
-      "image":"./src/assets/images/categories/umumi.png",
-      "serviceName":[
+      "categoriesId": 35,
+      "title": "Ümumi məlumat",
+      "desc": "Fəalliyyət istiqamətləri barədə məlumatlar",
+      "image": "./src/assets/images/categories/umumi.png",
+      "serviceName": [
         {
           "serviceId": 7,
           "image": "./src/assets/images/services/klassifikator.png",
@@ -149,29 +148,26 @@
           "serviceId": 15,
           "image": "./sec/assets/images/services/radioelektron.png",
           "name": "Dövlət Radiotezliklər İdarəsi",
-          "title":
-            "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
+          "title": "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
           "link": "registration-radio-electronic-devices-service",
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         }
-      
       ]
     },
     {
-      "categoriesId":37,
-      "title":"İş və karyera",
-      "desc" :"İş və karyera imkanı",
-      "image":"./src/assets/images/categories/is.png",
-      "serviceName":[
-      ]
+      "categoriesId": 37,
+      "title": "İş və karyera",
+      "desc": "İş və karyera imkanı",
+      "image": "./src/assets/images/categories/is.png",
+      "serviceName": []
     },
     {
-      "categoriesId":1065,
-      "title":"Nəqliyyat",
-      "desc" :"Dənizçilərə sertifikatların verilməsi, minimum heyət tərkibi haqqında şəhadətnamənin verilməsi",
-      "image":"./src/assets/images/categories/neqliyyat.png",
-      "serviceName":[
+      "categoriesId": 1065,
+      "title": "Nəqliyyat",
+      "desc": "Dənizçilərə sertifikatların verilməsi, minimum heyət tərkibi haqqında şəhadətnamənin verilməsi",
+      "image": "./src/assets/images/categories/neqliyyat.png",
+      "serviceName": [
         {
           "serviceId": 29,
           "image": "./src/assets/images/services/avtomobil.png",
@@ -181,71 +177,67 @@
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
         }
-
       ]
     }
-
-    
-
   ],
-      "organisations": [
+  "organisations": [
+    {
+      "organisationsId": 30,
+      "name": "“AzInTelecom” MMC",
+      "photo": "./src/assets/images/organisations/AzInTelecom.png",
+      "web": "www.azintelecom.az",
+      "tel1": "(+994 12) 200-00-20",
+      "tel2": 157,
+      "email": "info@azintelecom.az",
+      "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
+      "serviceName": [
         {
-          "organisationsId": 30,
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
           "name": "“AzInTelecom” MMC",
-          "photo": "./src/assets/images/organisations/AzInTelecom.png",
-          "web": "www.azintelecom.az",
-          "tel1": "(+994 12) 200-00-20",
-          "tel2": 157,
-          "email":"info@azintelecom.az",
-          "desc": " AzInTelecom MMC rəqəmsal dünyada keyfiyyətə üstünlük verənlərə təhlükəsiz, etibarlı və uyğunlaşa bilən xidmətlər təqdim edir.  Şirkət bulud və biznes həlləri, mərkəzləşdirilmiş informasiya sistemləri və beynəlxalq səs trafiki xidmətləri üzrə fəaliyyət göstərir.   TIER III, ISO 20000, ISO 22301 və ISO 27001 sertifikatlarına layiq görülmüş data mərkəz əsasında AZCLOUD, AZCLOUD Korporativ Həllər və AZCLOUD Hökumət Həlləri adı altında bulud xidmətləri göstərilir. “AzInTelecom” MMC rəqəmsal iqtisadiyyatımızın inkişaf etdirilməsi üçün biznes həlləri xidməti çərçivəsində İT, bulud texnologiyaları və süni intellektə əsaslanan innovativ həllər təklif edir.",
-          "serviceName": [
-            {
-              "serviceId": 1,
-              "image": "./src/assets/images/services/Imei.png",
-              "title": "IMEI Qeydiyyat",
-              "name": "“AzInTelecom” MMC",
-              "link": "mcqs-service",
-              "sing": "Qeydiyyatlı",
-              "pay": "Ödənişsiz"
-            },
-          {
-            "serviceId": 2,
-            "image": "./src/assets/images/services/Mobiltarifler.png",
-            "title": "Mobil cihazların qeydiyyat tarifləri",
-            "name": "“AzInTelecom” MMC",
-            "link": "imei-tariff-service",
-            "sing": "Qeydiyyatsız",
-            "pay": "Ödənişsiz"
-          },
-          {
-            "serviceId": 3,
-            "image": "./src/assets/images/services/Imeiyoxlama.png",
-            "title": "IMEI yoxlama",
-            "name": "“AzInTelecom” MMC",
-            "link": "imei-check-service",
-            "sing": "Qeydiyyatsız",
-            "pay": "Ödənişsiz"
-          },
-          {
-            "serviceId": 4,
-            "image": "./src/assets/images/services/Mobiltarifler.png",
-            "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
-            "name": "“AzInTelecom” MMC",
-            "link": "search-phone-number-service",
-            "sing": "Qeydiyyatlı",
-            "pay": "Ödənişsiz"
-          },
-          {
-            "serviceId": 5,
-            "image": "./src/assets/images/services/Nomredasinma.png",
-            "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
-            "name": "“AzInTelecom” MMC",
-            "link": "numbers-transferred-service",
-            "sing": "Qeydiyyatsız",
-            "pay": "Ödənişsiz"
-          }
-        ]
-      },
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 4,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Vətəndaşların adına olan mobil nömrələr barədə ",
+          "name": "“AzInTelecom” MMC",
+          "link": "search-phone-number-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 5,
+          "image": "./src/assets/images/services/Nomredasinma.png",
+          "title": "Mobil nömrə daşınması xidməti vasitəsiylə digər ",
+          "name": "“AzInTelecom” MMC",
+          "link": "numbers-transferred-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
     {
       "organisationsId": 64,
       "name": "“Aztelekom” MMC",
@@ -308,8 +300,7 @@
           "serviceId": 10,
           "image": "./src/assets/images/services/poctgonder.png",
           "name": "“Azərpoçt” MMC",
-          "title":
-            "Poçt göndərişlərinin izlənilməsi",
+          "title": "Poçt göndərişlərinin izlənilməsi",
           "link": "postal-tracking-service  ",
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
@@ -375,9 +366,7 @@
       "tel2": "1000",
       "email": "info@btx.az",
       "desc": "“Bakı Taksi Xidməti” Məhdud Məsuliyyətli Cəmiyyəti Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinin tabeliyində olmaqla, nizamnamə əsasında fəaliyyət göstərir.Şirkət Bakı şəhəri və Abşeron yarımadası ilə yanaşı, Heydər Əliyev Beynəlxalq Aeroportundan şəhərin istənilən nöqtəsinə təhlükəsiz, komfortlu və taksometrlə təyin edilən standart qiymətlərlə sərnişin daşıma xidməti təşkil edir.Taksi sifarişi üçün 1000 qısa nömrəsi fəaliyyət göstərir.",
-      "serviceName": [
-       
-      ]
+      "serviceName": []
     },
     {
       "organisationsId": 32,
@@ -488,8 +477,7 @@
           "serviceId": 15,
           "image": "./src/assets/images/services/radioelektron.png",
           "name": "Dövlət Radiotezliklər İdarəsi",
-          "title":
-            "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
+          "title": "Radioelektron vasitələrinin qeydiyyatı və icazə vərəqəsinin verilməsi",
           "link": "registration-radio-electronic-devices-service",
           "sing": "Qeydiyyatsız",
           "pay": "Ödənişsiz"
@@ -506,6 +494,258 @@
       "email": "info@azercosmos.az",
       "desc": "“Azərkosmos” telekommunikasiya peykinin hazırlanması, orbitə çıxarılması, idarə olunması və istismar işlərinin həyata keçirilməsini təmin ed“Azərkosmos”un idarəçiliyində olan ilk milli telekommunikasiya peykimiz “Azerspace-1” vasitəsilə yüksək etibarlı peyk əsaslı teleradio yayımı, DTH (Direct-to-Home), səs, video və məlumatların ötürülməsi xidmətləri göstərilir. “Azerspace-1” peyki Afrika, Avropa, Mərkəzi Asiya və Yaxın Şərqdə 50-dən artıq ölkəni birləşdirən ortaq məkanda mühüm informasiya ötürücüsü funksiyasını yerinə yetirir.2014-cü ildə Yer səthinin məsafədən müşahidə peyki olan “Azersky”, 2018-ci ildə isə “Azerspace-2” peyki istifadəyə verilib.“Azərkosmos”un peyk əsaslı xidmətlərdən istifadə edilə bilməsi əlavə dəyər yaradır.“Azərkosmos“ Bureau Veritas tərəfindən 2013-cü ilin yanvar ayında ISO 9001:2008 uyğunluq sertifikatına və 2017-ci ildə ISO 27001 – İnformasiya Təhlükəsizliyi Standartı sertifikatına layiq görülüb.",
       "serviceName": []
-    }    
+    }
+  ],
+  "buttons": [
+    {
+      "id": 1,
+      "name": "Mobil",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişli"
+        },
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "MCQS",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişli"
+        },
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "IMEI",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişli"
+        },
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Poçt göndərişləri",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/kuce.png",
+          "title": "Küçə adına və poçt indeksinə görə küçələrin axtarışı",
+          "name": "“Azərpoçt” MMC",
+          "link": "street-search-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 10,
+          "image": "./src/assets/images/services/poctgonder.png",
+          "name": "“Azərpoçt” MMC",
+          "title": "Poçt göndərişlərinin izlənilməsi",
+          "link": "postal-tracking-service  ",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Telekommunikasiya",
+      "serviceName": [
+        {
+          "serviceId": 1,
+          "image": "./src/assets/images/services/Imei.png",
+          "title": "IMEI Qeydiyyat",
+          "name": "“AzInTelecom” MMC",
+          "link": "mcqs-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişli"
+        },
+        {
+          "serviceId": 2,
+          "image": "./src/assets/images/services/Mobiltarifler.png",
+          "title": "Mobil cihazların qeydiyyat tarifləri",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-tariff-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 3,
+          "image": "./src/assets/images/services/Imeiyoxlama.png",
+          "title": "IMEI yoxlama",
+          "name": "“AzInTelecom” MMC",
+          "link": "imei-check-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 77,
+          "image": "./src/assets/images/services/localtalks.png",
+          "title": "Lokal (şəhər, rayon, daxili) çıxış danışıqlarının statistikası",
+          "name": "“Aztelekom” MMC",
+          "link": "local-talks-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 45,
+          "image": "./src/assets/images/services/listmobile.png",
+          "title": "Vətəndaşların adına olan mobil nömrələr barədə məlumat",
+          "name": "“AzInTelecom” MMC",
+          "link": "list-mobile-number-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Lokal danışıqlar",
+      "serviceName": [
+        {
+          "serviceId": 77,
+          "image": "./src/assets/images/services/localtaks.png",
+          "title": "Lokal (şəhər, rayon, daxili) çıxış danışıqlarının statistikası",
+          "name": "“Aztelekom” MMC",
+          "link": "local-talks-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Telefon",
+      "serviceName": [
+        {
+          "serviceId": 77,
+          "image": "./src/assets/images/services/localtaks.png",
+          "title": "Lokal (şəhər, rayon, daxili) çıxış danışıqlarının statistikası",
+          "name": "“Aztelekom” MMC",
+          "link": "local-talks-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        },
+        {
+          "serviceId": 45,
+          "image": "./src/assets/images/services/listmobile.png",
+          "title": "Vətəndaşların adına olan mobil nömrələr barədə məlumat",
+          "name": "“AzInTelecom” MMC",
+          "link": "list-mobile-number-service",
+          "sing": "Qeydiyyatlı",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Küçə axtarışı",
+      "serviceName": []
+    },
+    { "id": 8, "name": "Borc və İcra ödənişi", "serviceName": [] },
+    { "id": 9, "name": "Şəhadətnamələrin alınması", "serviceName": [] },
+    {
+      "id": 12,
+      "name": "Uyğunluq",
+      "serviceName": [
+        {
+          "serviceId": 11,
+          "image": "./src/assets/images/services/uygunluqsert.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Uyğunluq sertifikatının verilməsi",
+          "link": "issuing-certificate-conformity-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Sertifikat",
+      "serviceName": [
+        {
+          "serviceId": 11,
+          "image": "./src/assets/images/services/uygunluqsert.png",
+          "name": "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi",
+          "title": "Uyğunluq sertifikatının verilməsi",
+          "link": "issuing-certificate-conformity-service",
+          "sing": "Qeydiyyatsız",
+          "pay": "Ödənişsiz"
+        }
+      ]
+    }
   ]
 }

@@ -111,3 +111,10 @@ export interface AuthData {
   sign?: boolean;
   handleButtonClick?:()=>void
 }
+
+export interface BtnData{
+  id: Key | null | undefined;
+  serviceId?: Key | null | undefined;
+  name:string;
+  serviceName:Service[]
+}[]
