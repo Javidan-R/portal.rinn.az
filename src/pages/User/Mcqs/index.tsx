@@ -41,7 +41,6 @@ export const Mcqs = () => {
   };
 
   useEffect(() => {
-    // Sayfa açıldıqdan 0.5 saniyə sonra modalı açmaq üçün
     const timeoutId = setTimeout(() => {
       handleModalOpen();
     }, 500);
