@@ -36,13 +36,7 @@ const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) 
     setSearchResults(filteredServices);
   };
 
-  // const handleResultClick = (services: BtnData[]) => {
-  //   const selectedServices = services.flatMap(btn =>
-  //     btn.serviceName || []
-  //   );
-  //   dispatch(setSelectedBtn(selectedServices));
-  //   navigate('/service-details');
-  // };
+ 
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -93,13 +87,13 @@ const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) 
             )}
 
             {/* Render search results */}
-            {/* {searchResults.map((result, index) => (
+            {searchResults.map((result, index) => (
               <div key={index} onClick={() => handleResultClick([result])}>
                 {result.serviceName.map((item, idx) => (
                   <div key={idx}>{item.title}</div>
                 ))}
               </div>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
