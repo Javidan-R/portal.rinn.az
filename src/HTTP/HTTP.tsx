@@ -10,6 +10,7 @@ const HTTP = axios.create({
 export const GETAPIData = (url: string)=>{
     return HTTP.get(url);
 }
+// eslint-disable-next-line react-refresh/only-export-components
 export const getSingleDataOrganisation = async (url: string, id: number) => {
   try {
     const response = await HTTP.get(url);
@@ -26,6 +27,7 @@ export const getSingleDataOrganisation = async (url: string, id: number) => {
     return { success: false, error: "Failed to fetch data" };
   }
 };
+// eslint-disable-next-line react-refresh/only-export-components
 export const getSingleDataCategories = async (url: string, id: number) => {
   try {
     const response = await HTTP.get(url);
@@ -42,6 +44,7 @@ export const getSingleDataCategories = async (url: string, id: number) => {
     return { success: false, error: "Failed to fetch data" };
   }
 };
+// eslint-disable-next-line react-refresh/only-export-components
 export const getSingleDataService = async (url: string, id: number) => {
   try {
     const response = await HTTP.get(url);
