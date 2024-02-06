@@ -1,9 +1,9 @@
 // servicesSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { BtnData, } from '../types/type';
+import { Service } from '../types/type';
 
 interface ServicesState {
-  selectedService: BtnData[] | null;
+  selectedService: Service[] | null;
 }
 
 const initialState: ServicesState = {
@@ -11,10 +11,10 @@ const initialState: ServicesState = {
 };
 
 const servicesSlice = createSlice({
-  name: 'buttons',
+  name: 'service',
   initialState,
   reducers: {
-    setSelectedService: (state, action: PayloadAction<BtnData[] | null>) => {
+    setSelectedService: (state, action: PayloadAction<Service[] | null>) => {
       state.selectedService = action.payload;
     },
   },

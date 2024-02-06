@@ -1,56 +1,49 @@
-import  { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import SearchAdvanced from './SearchAdvanced';
 import { BtnData, Category, Organisation } from '../../types/type';
-// import { useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
 
 interface SearchInputProps {
+  onSearch: (searchCriteria: BtnData[]) => void;
   organisations: Organisation[];
   categories: Category[];
   data: BtnData[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories, data }) => {
   const [searchResults, setSearchResults] = useState<BtnData[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(prev => !prev);
+    setIsDropdownOpen((prev) => !prev);
   };
 
   const handleSearch = () => {
-    const filteredServices: BtnData[] = data.flatMap(btn =>
-      btn.serviceName?.filter(service =>
+    const filteredServices: BtnData[] = data.reduce((acc: BtnData[], btn) => {
+      const matchingServices = btn.serviceName?.filter((service) =>
         service.title?.toLowerCase().includes(searchTerm.toLowerCase())
-      )?.map(service => ({
+      );
+
+      const matchingBtnData = matchingServices?.map((service) => ({
         id: service.serviceId,
         serviceId: service.serviceId,
         name: btn.name,
         serviceName: [service],
-      })) || []
-    );
+      })) || [];
+
+      return acc.concat(matchingBtnData);
+    }, []);
 
     setSearchResults(filteredServices);
+
+    if (onSearch) {
+      onSearch(filteredServices);
+    }
   };
 
- 
-
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
-        handleSearch();
-      }
-    };
-  
-    document.addEventListener('keydown', handleKeyPress);
-    return () => {
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-  
+  const handleFilter = () => {
+    // Handle filtering logic if needed
+  };
 
   return (
     <div className="row justify-center">
@@ -82,15 +75,19 @@ const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) 
             {isDropdownOpen && (
               <SearchAdvanced
                 organisations={organisations}
-                categories={categories} onFilter={() =>{} }                
+                onFilter={handleFilter}
+                categories={categories}
               />
             )}
-
+            
             {/* Render search results */}
-            {searchResults.map((result, index) => (
-              <div key={index} onClick={() => handleResultClick([result])}>
-                {result.serviceName.map((item, idx) => (
-                  <div key={idx}>{item.title}</div>
+            {searchResults.map((result,index) => (
+              <div key={index}>
+                {/* Render each search result as needed */}
+                {result.serviceName.map((item,index)=>(
+                  <div key={index}>
+                    {item.title}
+                  </div>
                 ))}
               </div>
             ))}
@@ -102,4 +99,6 @@ const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) 
 };
 
 export default SearchInput;
+
+
 

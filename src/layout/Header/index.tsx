@@ -139,7 +139,7 @@ const Header: React.FC<HeaderProps> = () => {
               zIndex:'1',
             }}
           >
-            <SearchInput organisations={organisations} categories={categories} data={btnData} />
+            <SearchInput onSearch={()=>{}} organisations={organisations} categories={categories} data={btnData} />
             <SwiperComponent data={btnData} />
  
           </div>
