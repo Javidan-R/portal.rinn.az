@@ -511,7 +511,7 @@
           "pay": "Ödənişli"
         },
         {
-          "serviceId": 2,
+          "serviceId": 28,
           "image": "./src/assets/images/services/Mobiltarifler.png",
           "title": "Mobil cihazların qeydiyyat tarifləri",
           "name": "“AzInTelecom” MMC",
@@ -544,7 +544,7 @@
           "pay": "Ödənişli"
         },
         {
-          "serviceId": 2,
+          "serviceId": 52,
           "image": "./src/assets/images/services/Mobiltarifler.png",
           "title": "Mobil cihazların qeydiyyat tarifləri",
           "name": "“AzInTelecom” MMC",
@@ -577,7 +577,7 @@
           "pay": "Ödənişli"
         },
         {
-          "serviceId": 2,
+          "serviceId": 90,
           "image": "./src/assets/images/services/Mobiltarifler.png",
           "title": "Mobil cihazların qeydiyyat tarifləri",
           "name": "“AzInTelecom” MMC",
@@ -691,7 +691,7 @@
       "name": "Telefon",
       "serviceName": [
         {
-          "serviceId": 77,
+          "serviceId": 79,
           "image": "./src/assets/images/services/localtaks.png",
           "title": "Lokal (şəhər, rayon, daxili) çıxış danışıqlarının statistikası",
           "name": "“Aztelekom” MMC",
@@ -700,7 +700,7 @@
           "pay": "Ödənişsiz"
         },
         {
-          "serviceId": 45,
+          "serviceId": 48,
           "image": "./src/assets/images/services/listmobile.png",
           "title": "Vətəndaşların adına olan mobil nömrələr barədə məlumat",
           "name": "“AzInTelecom” MMC",

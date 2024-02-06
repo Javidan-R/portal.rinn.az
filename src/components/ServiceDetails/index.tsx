@@ -1,11 +1,11 @@
 import React from "react";
-import { Service } from "../../types/type";
+import { BtnData,  } from "../../types/type";
 import ServiceHeading from "../ServiceHeading";
 import TransitionSection from "../Widgets/TransitionSection";
 import { ServiceDetail } from "./ServiceDetail";
 
 interface ServiceDetailsProps {
-  service: Service[];
+  service: BtnData[];
 }
 // ResultCount component
 const ResultCount: React.FC<{ count: number }> = ({ count }) => (
@@ -42,14 +42,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
               </div>
               {service.map((item) => (
                 <ServiceDetail
-                  key={item.serviceId}
-                  image={item.image}
-                  title={item.title}
-                  name={item.name}
-                  sing={item.sing}
-                  pay={item.pay}
-                  link={item.link}
-                />
+                service={item.serviceName}              />
               ))}
             </div>
           </section>

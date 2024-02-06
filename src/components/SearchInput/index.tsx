@@ -1,58 +1,62 @@
-import { FC, useState } from 'react';
+import  { FC, useState, useEffect } from 'react';
 import SearchAdvanced from './SearchAdvanced';
 import { BtnData, Category, Organisation } from '../../types/type';
-
-// import { setSelectedService } from "../../redux/serviceBtnSlice";
+// import { useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
 
 interface SearchInputProps {
-  onSearch: (searchCriteria: BtnData[]) => void;
   organisations: Organisation[];
   categories: Category[];
   data: BtnData[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories, data }) => {
+const SearchInput: FC<SearchInputProps> = ({ organisations, categories, data }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<BtnData[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
+    setIsDropdownOpen(prev => !prev);
   };
-  const handleSearch = (searchResults: BtnData[]) => {
-    const filteredServices: BtnData[] = data.reduce((acc: BtnData[], btn) => {
-      const matchingServices = btn.serviceName?.filter((service) =>
+
+  const handleSearch = () => {
+    const filteredServices: BtnData[] = data.flatMap(btn =>
+      btn.serviceName?.filter(service =>
         service.title?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-  
-      // Convert each Service to BtnData
-      const matchingBtnData = matchingServices?.map((service) => ({
-        id: service.serviceId, // Assuming serviceId is a suitable id
+      )?.map(service => ({
+        id: service.serviceId,
         serviceId: service.serviceId,
-        name: btn.name, // Using btn name, you might need to adjust this based on your structure
-        serviceName: [service], // Put the service into an array
-      })) || [];
-  
-      return acc.concat(matchingBtnData);
-    }, []);
-  
-    if (onSearch) {
-      onSearch(filteredServices);
-    }
-    console.log('Search results:', searchResults);
-    // if (services && services.length > 0) {
-    //   onServiceClick(services); // Pass the entire array to onServiceClick
-    //   dispatch(setSelectedService(services));
-    //   console.log(services);      
-    //         navigate("/search-result");
-    // }
-  };
-  
+        name: btn.name,
+        serviceName: [service],
+      })) || []
+    );
 
-
-  const handleFilter = () => {
-    // Handle filtering logic if needed
+    setSearchResults(filteredServices);
   };
+
+  // const handleResultClick = (services: BtnData[]) => {
+  //   const selectedServices = services.flatMap(btn =>
+  //     btn.serviceName || []
+  //   );
+  //   dispatch(setSelectedBtn(selectedServices));
+  //   navigate('/service-details');
+  // };
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        handleSearch();
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
+  
 
   return (
     <div className="row justify-center">
@@ -66,7 +70,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button className="search__button" onClick={()=>handleSearch}>
+            <button className="search__button" onClick={handleSearch}>
               <img
                 src="https://portal.rinn.az/img/search.9f2c397b.svg"
                 alt="search"
@@ -84,10 +88,18 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
             {isDropdownOpen && (
               <SearchAdvanced
                 organisations={organisations}
-                onFilter={handleFilter}
-                categories={categories}
+                categories={categories} onFilter={() =>{} }                
               />
             )}
+
+            {/* Render search results */}
+            {/* {searchResults.map((result, index) => (
+              <div key={index} onClick={() => handleResultClick([result])}>
+                {result.serviceName.map((item, idx) => (
+                  <div key={idx}>{item.title}</div>
+                ))}
+              </div>
+            ))} */}
           </div>
         </div>
       </div>
@@ -96,3 +108,4 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
 };
 
 export default SearchInput;
+

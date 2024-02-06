@@ -5,43 +5,27 @@ import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
 import { GETAPIData } from "../../HTTP/HTTP";
-import { BtnData, Category, Organisation, Service } from "../../types/type";
+import { BtnData, Category, Organisation } from "../../types/type";
 
 interface HeaderProps {}
-
 const Header: React.FC<HeaderProps> = () => {
   const [btnData , SetBtnData]  = useState<BtnData[]>([])
-
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [categories,setCategories] = useState<Category[]>([])
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
   const location = useLocation();
-  const handleServiceClick = (services?: Service[]) => {
-    if (services && services.length > 0) {
-      console.log('Services clicked:', services.map(service => service.title).join(', '));
-      // Perform other logic here based on the selected services
-    } else {
-      console.log('No services selected');
-      // Handle the case where services is undefined or empty
-    }
-  };
- 
+
   useEffect(() => {
     setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await GETAPIData("organisations");
         setOrganisations(response.data);
-
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data organisations is header:", error);
       }
     };
 
@@ -51,7 +35,7 @@ const Header: React.FC<HeaderProps> = () => {
         const response = await GETAPIData("categories");
         setCategories(response.data);
       } catch (error) {
-        console.error("Error fetching categories:", error);
+        console.error("Error fetching categories is Header:", error);
       }
     };
   
@@ -63,13 +47,15 @@ const Header: React.FC<HeaderProps> = () => {
         const response = await GETAPIData("buttons");
         SetBtnData(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data buttons is Header:", error);
       }
     };
 
     fetchData();
   }, []);
-
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <header
       className={`header bg-white py-2 shadow-md sm:h-30rem lg:transition-all lg:duration-1000 lg:ease-in-out ${
@@ -153,8 +139,8 @@ const Header: React.FC<HeaderProps> = () => {
               zIndex:'1',
             }}
           >
-            <SearchInput onSearch={() => { } } organisations={organisations} categories={categories} data={btnData} />
-            <SwiperComponent onServiceClick={handleServiceClick} data={btnData} />
+            <SearchInput organisations={organisations} categories={categories} data={btnData} />
+            <SwiperComponent data={btnData} />
  
           </div>
         </div>

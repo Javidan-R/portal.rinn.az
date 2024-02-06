@@ -1,1 +1,36 @@
 /* ModalComponent.css */
+.modal-open {
+    overflow: hidden;
+  }
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .modal {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    animation:  fadeInDown 1s ease-in-out; /* Add a fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,5 +1,3 @@
-// Lead.tsx
-
 import React, { useState } from "react";
 import { LeadCard } from "./LeadCard";
 import HomeModal from "../Widgets/HomeModal";
@@ -38,15 +36,18 @@ const leadcard: LeadItem[] = [
 
 const Lead: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+
   const toggleModal = () => {
     setModalOpen(!isModalOpen);
   };
+
   return (
-    <div  className="m-auto relative lg:absolute    lg:bottom-[-35px] lg:w-full lg:max-w-[1100px] h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7 ">
+    <div className="m-auto relative lg:absolute  lg:bottom-[-35px] lg:w-full lg:max-w-[1100px] h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7 ">
       {leadcard.map((leadItem) => (
-        <LeadCard key={leadItem.id} {...leadItem} onClick={toggleModal} />
+        <LeadCard key={leadItem.id} {...leadItem} onClick={leadItem.name === "Sürətli Kömək" ? toggleModal : undefined} />
       ))}
       {isModalOpen && <HomeModal onClose={toggleModal} />}
+    
     </div>
   );
 };

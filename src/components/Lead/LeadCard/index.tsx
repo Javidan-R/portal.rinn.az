@@ -18,12 +18,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({
   onClick,
 }) => (
   <Link to={to} onClick={onClick}>
-    <button
-      data-modal-target="crud-modal"
-      data-modal-toggle="crud-modal"
-      type="button"
-      className={`p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md w-full flex items-center rounded-lg h-[104px] `}
-    >
+    <div  className={`p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md w-full flex items-center rounded-lg h-[104px] `}   >
       <div className="text-gray-900 flex items-center">
         <div className="flex-none">
           <img
@@ -39,6 +34,9 @@ export const LeadCard: React.FC<LeadCardProps> = ({
           <div className="text-xs md:text-sm opacity-60">{desc}</div>
         </article>
       </div>
-    </button>
+    </div>
   </Link>
 );
+
+
+

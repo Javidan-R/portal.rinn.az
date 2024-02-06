@@ -1,28 +1,25 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import SwipperButton from "../atoms/Button/SwipperButton";
 import "./SwiperComponent.css";
 import { BtnData, Service } from "../../types/type";
 import { useNavigate } from "react-router-dom";
-import { setSelectedService } from "../../redux/serviceBtnSlice";
+// import { setSelectedService } from "../../redux/serviceBtnSlice";
 
 interface SwiperComponentProps {
-  onServiceClick: (services: Service[]) => void;
   data:BtnData[]
 }
 const SwiperComponent: React.FC<SwiperComponentProps> = ({
-  onServiceClick,
   data
 }) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleButtonClick = (services?: Service[]) => {
     if (services && services.length > 0) {
-      onServiceClick(services); // Pass the entire array to onServiceClick
-      dispatch(setSelectedService(services));
+      // dispatch(setSelectedService(services));
       console.log(services);      
             navigate("/search-result");
     }
