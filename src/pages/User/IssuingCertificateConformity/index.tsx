@@ -22,7 +22,7 @@ const issuingcert = [
   },
 ];
 
-export const IssuingCertificateConformity = () => {
+ const IssuingCertificateConformity = () => {
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto p-4">
@@ -45,3 +45,4 @@ export const IssuingCertificateConformity = () => {
     </div>
   );
 };
+export default IssuingCertificateConformity

@@ -1,24 +1,22 @@
-import type { FC, ReactNode } from 'react';
-import { Navigate } from 'react-router-dom';
+import type { FC } from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
 import { getUserRole } from '../../utils';
 import { Role } from '../../models';
 
 interface ProtectedRouteProps {
 	expectedRole: Role | null;
 	redirectPath?: string;
-	children?: ReactNode;
 }
 
 export const ProtectedRoute: FC<ProtectedRouteProps> = ({
 	expectedRole,
 	redirectPath = '/',
-	children,
 }) => {
 	const currentRole = getUserRole();
 	console.log('currentRole',currentRole);
 	
 	if (currentRole === expectedRole) {
-		return children;
+		return <Outlet />
 	}
 
 	switch (currentRole) {

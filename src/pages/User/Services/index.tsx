@@ -13,7 +13,7 @@ const breadcrumbItems = [
   { link: "/", name: "Əsas Səhifə" },
   { link: "/services", name: "Xidmətlər" },
 ];
-export const Services: FC = () => {
+ const Services: FC = () => {
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
 
   useEffect(() => {
@@ -70,3 +70,4 @@ export const Services: FC = () => {
     </div>
   );
 };
+export default Services

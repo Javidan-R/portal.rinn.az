@@ -19,7 +19,7 @@ const detailedinfo = [
     "pay": "Ödənişsiz"
   }
 ]
-export const DetailedInfoDep = () => {
+const DetailedInfoDep = () => {
   return (
     <div className="bg-gray-100">
     <div className="container-fluid v-container">
@@ -40,3 +40,4 @@ export const DetailedInfoDep = () => {
     
   )
 }
+export default DetailedInfoDep;

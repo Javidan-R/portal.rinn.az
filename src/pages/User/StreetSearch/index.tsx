@@ -1,5 +1,6 @@
-export const StreetSearch = () => {
+ const StreetSearch = () => {
   return (
     <div>StreetSearchService</div>
   )
 }
+export default  StreetSearch;

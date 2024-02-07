@@ -10,6 +10,7 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
     price: "",
     category: "",
     description: "",
+
   });
 
   const handleChange = (
@@ -19,6 +20,7 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
+
     }));
   };
 
@@ -90,6 +92,7 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
                 placeholder="Type product name"
                 required
               />
+
             </div>
             {/* Include other form fields */}
           </div>
@@ -99,6 +102,7 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
           >
             Add new product
           </button>
+          
         </form>
       </div>
     </div>

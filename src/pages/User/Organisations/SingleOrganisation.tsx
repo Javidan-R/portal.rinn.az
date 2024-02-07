@@ -18,7 +18,7 @@ const renderTableRow = ({ label, value }: RenderTableRowProps) => (
   </tr>
 );
 
-export const SingleOrganisation: React.FC = () => {
+const SingleOrganisation: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [organisation, setOrganisation] = useState<Organisation | null>(null);
 
@@ -85,7 +85,7 @@ export const SingleOrganisation: React.FC = () => {
                   <div className="lg:w-1/3 hidden lg:block">
                     <iframe
                       className="w-full h-48 lg:h-64 rounded-lg"
-                      // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.2794653572314!2d49.831168015648274!3d40.38049836576564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcebf10b3d12e3d14!2zNDDCsDIyJzQ5LjgiTiA0OcKwNTAnMDAuMSJF!5e0!3m2!1sen!2s!4v1650270384328!5m2!1sen!2s"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.2794653572314!2d49.831168015648274!3d40.38049836576564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcebf10b3d12e3d14!2zNDDCsDIyJzQ5LjgiTiA0OcKwNTAnMDAuMSJF!5e0!3m2!1sen!2s!4v1650270384328!5m2!1sen!2s"
                       title="Google Maps"
                     ></iframe>
                   </div>
@@ -119,4 +119,4 @@ export const SingleOrganisation: React.FC = () => {
   );
 };
 
-export default SingleOrganisation;
+export default SingleOrganisation

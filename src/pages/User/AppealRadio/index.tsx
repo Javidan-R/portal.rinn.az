@@ -20,7 +20,7 @@ const appealradio = [
   },
 ]
 
-export const AppealRadio = () => {
+ const AppealRadio = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -40,3 +40,4 @@ export const AppealRadio = () => {
     </div>
   )
 }
+export default AppealRadio;

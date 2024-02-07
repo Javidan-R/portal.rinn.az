@@ -83,7 +83,7 @@ const AuthenticatedLayout: FC = () => {
         <div>
       <div className="w-full">
         <Link to={"/"}  className="w-full">
-          <PrimaryButton className="bg-[#005abc] rounded-xl border-none px-6 w-40  lg:w-20 md:w-20 fixed z-10">Geri</PrimaryButton>
+          <PrimaryButton className="bg-[#005abc] rounded-xl border-none px-6 w-40  lg:w-24 md:w-20 abslolute z-10">Geri</PrimaryButton>
         </Link>
       </div>
     </div>

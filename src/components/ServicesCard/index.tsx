@@ -9,6 +9,14 @@ const ServicesCard: FC<ServicesCardProps> = ({
   sing,
   link,
 }) => {
+  const limitTitle = (title: string = ""): string => {
+    const words = title.split(" ");
+    if (words.length > 12) {
+      return words.slice(0, 12).join(" ") + "...";
+    }
+    return title;
+  };
+
     const buttonClass =
     "w-[90.8px] h-[30px] font-normal text-sm leading-none text-blue-700 bg-blue-100 rounded-md px-2 py-1 h-5";
   return (
@@ -42,7 +50,7 @@ const ServicesCard: FC<ServicesCardProps> = ({
               <div className="text-base font-medium mb-1">{name}</div>
             }
             <div className=" font-black  max-w-full leading-4 my-auto">
-              {title}
+              {limitTitle(title)}
             </div>
           </div>
         </div>

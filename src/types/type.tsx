@@ -96,7 +96,7 @@ export interface Category {
 }[]
 export interface Users {
   username: string;
-  name?:string;
+  fin?:string;
   password:string;
   role?:string
 }[]

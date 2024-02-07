@@ -24,7 +24,7 @@ const permissionMovement = [
     pay: "Ödənişsiz",
   },
 ];
-export const PostalTracking = () => {
+ const PostalTracking = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -33,7 +33,6 @@ export const PostalTracking = () => {
           backButtonProps={{
             customClassName:
               "flex flex-row flex-nowrap justify-center gap-2 items-center align-center",
-            customStyle: undefined,
           }}
           breadcrumbItems={breaditems}
         />
@@ -50,6 +49,7 @@ export const PostalTracking = () => {
     </div>
   );
 };
+export default PostalTracking
 
 const PostalTrackingService: React.FC = () => {
   return (
@@ -82,4 +82,3 @@ const PostalTrackingService: React.FC = () => {
   );
 };
 
-export default PostalTrackingService;

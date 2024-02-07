@@ -110,7 +110,7 @@ const MobileNumberForm: React.FC<MobileNumberFormProps> = ({ onSubmit }) => {
   );
 };
 
-export const NumberTransferred = () => {
+ const NumberTransferred = () => {
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto p-4">
@@ -136,3 +136,4 @@ export const NumberTransferred = () => {
     </div>
   );
 };
+export default NumberTransferred;

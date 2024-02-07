@@ -21,7 +21,7 @@ const issuance = [
     "pay": "Ödənişsiz"
   }
 ]
-export const IssuanceSpecialPermit = () => {
+ const IssuanceSpecialPermit = () => {
   return (
     <div className="bg-gray-100">
     <div className="container-fluid v-container">
@@ -41,3 +41,4 @@ export const IssuanceSpecialPermit = () => {
   </div>
   )
 }
+export default IssuanceSpecialPermit;

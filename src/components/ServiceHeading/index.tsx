@@ -10,7 +10,7 @@ interface BreadcrumbItem {
 
 interface ServiceHeadingProps {
   mainLink: string;
-  backButtonProps: {
+  backButtonProps?: {
     customClassName?: string;
     customStyle?: React.CSSProperties;
   };

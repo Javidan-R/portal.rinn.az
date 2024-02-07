@@ -17,7 +17,7 @@ const searchPhoneNumber =[ {
   "sing": "Qeydiyyatsız",
   "pay": "Ödənişsiz"
 },]
-export const SearchPhoneNumber = () => {
+ const SearchPhoneNumber = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -40,3 +40,4 @@ export const SearchPhoneNumber = () => {
   );
 };
 
+export default SearchPhoneNumber;

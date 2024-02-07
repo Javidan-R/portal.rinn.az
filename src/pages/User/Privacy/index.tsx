@@ -6,7 +6,7 @@ const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/information/22", name: "AZINTELECOM" },
 ];
-export const Privacy = () => {
+const Privacy = () => {
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
@@ -169,3 +169,5 @@ Bakı / Azərbaycan
   );
 }
 
+
+export default Privacy;

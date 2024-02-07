@@ -92,3 +92,4 @@ export const SingleCategory: FC = () => {
     </>
   );
 };
+export default SingleCategory;

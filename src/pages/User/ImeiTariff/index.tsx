@@ -20,7 +20,7 @@ const imeitarif = [
     "pay": "Ödənişsiz"
   }
 ]
-export const ImeiTariff: React.FC = () => (
+ const ImeiTariff: React.FC = () => (
   <div className="bg-gray-100">
     <div className="container-fluid v-container">
     <ServiceHeading mainLink={"/services"} backButtonProps={{
@@ -39,3 +39,4 @@ export const ImeiTariff: React.FC = () => (
     </div>
   </div>
 );
+export default ImeiTariff;

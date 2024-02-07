@@ -25,7 +25,7 @@ const faqs: AccProps[] = [
   },
 ];
 
-export const Faq = () => {
+ const Faq = () => {
   return (
     <>
     <div className="bg-[#f6f7f9]">
@@ -56,3 +56,4 @@ export const Faq = () => {
 
 
 
+export default Faq

@@ -5,7 +5,7 @@ import { Organisation, Service } from "../../../types/type";
 import TransitionSection from "../../../components/Widgets/TransitionSection";
 import Lead from "../../../components/Lead";
 import ServicesCard from "../../../components/ServicesCard";
-import { Categories } from "..";
+import { Categories } from "../Categories";
 // import { useSelector } from "react-redux";
 
 export const Home: React.FC = () => {
@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
               className="pt-6 md:pt-10 pb-8 mt-10 sm:h-auto md:h-96 lg:h-[22rem] md:h-auto bg-[#F6F7F9]"
             >
               <div className="">
-                <div className="h-20">
+                <div className="h-10">
                   <h3 className="font-semibold text-3xl text-#14142b">
                     Seçilmiş Xidmətlər
                   </h3>

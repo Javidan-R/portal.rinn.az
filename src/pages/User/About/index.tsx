@@ -7,7 +7,7 @@ const breadcrumbItems = [
   { link: "/", name: "Əsas səhifə" },
   { link: "/informatin/23", name: "AZINTELECOM" },
 ];
-export const About = () => {
+ const About = () => {
   return (
     <div className="bg-[#f6f7f9]">
       <div className="container-fluid v-container">
@@ -111,6 +111,8 @@ function AboutComponent() {
     </div>
   );
 }
+export default About;
+
 interface InformationHeaderProps {
   image: string;
 }

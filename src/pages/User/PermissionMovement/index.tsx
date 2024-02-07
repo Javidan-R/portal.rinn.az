@@ -22,7 +22,7 @@ const permissionMovement = [
     pay: "Ödənişsiz",
   },
 ];
-export const PermissionMovement = () => {
+const PermissionMovement = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -45,3 +45,4 @@ export const PermissionMovement = () => {
     </div>
   );
 };
+export default PermissionMovement;

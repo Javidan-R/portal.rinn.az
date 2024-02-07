@@ -5,7 +5,7 @@ import { Users } from '../types/type';
 
 const initialState:Users[] = [
     {
-      "username" : "cavidan",
+      "username" : "Cavidan",
       "password" : "123123"
     }
   ]
@@ -25,6 +25,7 @@ const userSlice = createSlice({
 });
 
 export const { setUser } = userSlice.actions;
+export const setSelectUser = (state: { user: Users[] }) => state.user.map(user =>user.username);
 
 export default userSlice.reducer;
 

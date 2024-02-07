@@ -6,9 +6,11 @@ import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
 import { GETAPIData } from "../../HTTP/HTTP";
 import { BtnData, Category, Organisation } from "../../types/type";
+import UserButton from "../../components/atoms/Button/UserButton";
 
 interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
+
   const [btnData , SetBtnData]  = useState<BtnData[]>([])
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [categories,setCategories] = useState<Category[]>([])
@@ -16,6 +18,7 @@ const Header: React.FC<HeaderProps> = () => {
   const [isHomePage, setIsHomePage] = useState(true);
   const location = useLocation();
 
+  
   useEffect(() => {
     setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
@@ -113,19 +116,11 @@ const Header: React.FC<HeaderProps> = () => {
                 1655 Çağrı Mərkəzi
               </b>
             </Link>
-            <Link to="/auth">
-            <button
-              className="flex item-center justify-center align-center py-[13px] px-[14px] text-[0.875rem] text-#304b82 cursor-pointer font-semibold bg-white border border-solid border-#304b82 rounded-md"
-            >
-              <img
-                src="https://portal.rinn.az/img/asan-login.d86aada9.svg"
-                alt="asan-login"
-              />
-            </button>
-            </Link>
+            <UserButton/>
            
           </div>
         </div>
+        
         <div className="relative flex items-center justify-center lg:top-10 mt-6 v-container">
           <div
             className={` lg:absolute  z-0 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
@@ -141,7 +136,6 @@ const Header: React.FC<HeaderProps> = () => {
           >
             <SearchInput onSearch={()=>{}} organisations={organisations} categories={categories} data={btnData} />
             <SwiperComponent data={btnData} />
- 
           </div>
         </div>
 

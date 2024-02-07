@@ -20,7 +20,7 @@ const calc = [
   },
 ]
 
-export const Calculator = () => {
+ const Calculator = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -40,5 +40,6 @@ export const Calculator = () => {
     </div>
   )
 }
+export default Calculator;
 
  

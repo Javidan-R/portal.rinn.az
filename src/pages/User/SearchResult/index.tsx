@@ -4,7 +4,7 @@ import ServiceDetails from '../../../components/ServiceDetails';
 import { selectSelectedService } from '../../../redux/serviceBtnSlice';
 
 
-export const ServiceResult: React.FC = () => {
+ const ServiceResult: React.FC = () => {
   const selectedService = useSelector(selectSelectedService);
   return (
     <>
@@ -13,3 +13,4 @@ export const ServiceResult: React.FC = () => {
   );
 };
 
+export default ServiceResult;

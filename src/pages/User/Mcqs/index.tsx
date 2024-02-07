@@ -29,7 +29,7 @@ const mcqs = [
   },
 ];
 
-export const Mcqs = () => {
+ const Mcqs = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleModalOpen = () => {
@@ -80,3 +80,4 @@ export const Mcqs = () => {
     </div>
   );
 };
+export default Mcqs;

@@ -22,8 +22,7 @@ const registrationRadio = [
     pay: "Ödənişsiz",
   },
 ];
-
-export const RegistrationRadio = () => {
+ const RegistrationRadio = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-fluid v-container">
@@ -46,3 +45,4 @@ export const RegistrationRadio = () => {
     </div>
   );
 };
+export default RegistrationRadio;

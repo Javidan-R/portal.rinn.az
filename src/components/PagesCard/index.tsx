@@ -16,10 +16,10 @@ interface PagesCardProps {
 export const PagesCard: FC<PagesCardProps> = ({ services }) => {
   return (
     <div className="w-full card p-6 bg-white border rounded-xl">
-      {services.map((service) => (
+      {services.map((service , index) => (
         <>
           <CompanyName
-            key={service.serviceId}
+            key={index}
             image={service.image}
             name={service.name}
             title={service.title}
