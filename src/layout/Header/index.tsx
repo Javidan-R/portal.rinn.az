@@ -61,10 +61,10 @@ const Header: React.FC<HeaderProps> = () => {
   };
   return (
     <header
-      className={`header bg-white py-2 shadow-md sm:h-30rem lg:transition-all lg:duration-1000 lg:ease-in-out ${
+      className={`header bg-white py-2 shadow-md  lg:transition-all lg:duration-1000 lg:ease-in-out ${
         isHomePage
-          ? "lg:h-[32rem] sm:h-[23rem] header--home-lg"
-          : "lg:h-[20rem] sm:h-30rem header--not-home-lg"
+          ? "lg:h-[32rem] sm:h-[25rem] xs:h-[28rem] header--home-lg"
+          : "lg:h-[20rem] sm:h-[20rem] xs:h-[28rem] header--not-home-lg"
       }`}
     >
       <div className="v-container mx-auto px-4">
@@ -121,9 +121,9 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
         
-        <div className="relative flex items-center justify-center lg:top-10 mt-6 v-container">
+        <div className="relative z-10 flex items-center justify-center  top-[3.8rem] lg:mt-6 s v-container ">
           <div
-            className={` lg:absolute  z-0 lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 `}
+            className={` lg:absolute   lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2  `}
             style={{
               maxWidth: isHomePage ? "45.5rem" : "100%", 
               width: "100%", 
@@ -131,7 +131,6 @@ const Header: React.FC<HeaderProps> = () => {
                 ? "max-width 0.5s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
                 : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",
               filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
-              zIndex:'1',
             }}
           >
             <SearchInput onSearch={()=>{}} organisations={organisations} categories={categories} data={btnData} />

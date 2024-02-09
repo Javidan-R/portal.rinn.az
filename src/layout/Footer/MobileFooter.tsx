@@ -15,9 +15,10 @@ export const MobileFooter:FC<MobileFooterPorp> = ({  onClose }) => {
               <div className="modal__title"></div>
               <button type="button" className="modal__close bg-none border-none cursor-pointer">
                 <img src="https://portal.rinn.az/img/modal-close.efba9567.svg" alt="" />
-              </button> <div className="lg:hidden overflow-hidden fixed inset-0 z-50 bg-white transition-transform transform ease-in-out duration-300">
-            <div className="px-8 py-4 transition-transform transform ease-in-out duration-300">
-              <div className="flex justify-between align-center items-center mt-4 mb-6">
+              </button> 
+              <div className="lg:hidden overflow-hidden fixed inset-0 z-50 bg-white">
+            <div className=" ">
+              <div className="flex justify-between align-center items-center ">
                 <div className="cursor-pointer" onClick={onClose}>
                   <img
                     src="https://portal.rinn.az/img/menu.6f936fc4.svg"

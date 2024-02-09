@@ -28,7 +28,6 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
   return (
     <div className="search__tags">
     <div className="swiper-container">
-      <div className="swiper-shadow-left"></div>
       <Swiper spaceBetween={10} slidesPerView={7}>
         {data.map((item, key) => (
           <SwiperSlide
@@ -48,7 +47,6 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-shadow-right"></div>
     </div>
   </div>
   

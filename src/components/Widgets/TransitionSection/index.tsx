@@ -11,14 +11,13 @@ interface TransitionSectionProps {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsContentVisible(true);
-    }, 500);
-
+    }, 200);
     return () => clearTimeout(timeoutId);
   }, []);
 
   const transitionStyles = {
-    transition: "transform 1s ease, opacity 0.6s ease",
-    transitionDelay: "0.1s",
+    transition: "transform 1s ease, opacity 0.2s ease",
+    transitionDelay: "0.1",
     transform: isContentVisible ? "translatex(0)" : "translatex(100%)",
     opacity: isContentVisible ? 1 : 0,
   };

@@ -52,7 +52,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
           <div className="search__input">
             <input
               placeholder="Hansı xidməti axtarırsınız?"
-              className={`w-full h-[60px] ${!isDropdownOpen ? 'rounded-tl-lg rounded-rt-lg' : 'rounded-lg'} font-medium tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-4 box-border text-sm font-bold leading-4 transition-all duration-500 ease-in-out`}
+              className={`w-full h-[60px] ${!isDropdownOpen ? 'rounded-tl-lg rounded-rt-lg' : 'rounded-lg'} placeholder:text-sm tracking-wide text-#14142b border border-solid border-gray-300 outline-none py-3 px-4 box-border text-sm font-semibold leading-1 transition-all duration-500 ease-in-out`}
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -61,7 +61,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
               <img
                 src="https://portal.rinn.az/img/search.9f2c397b.svg"
                 alt="search"
-                className="ml-[3px] w-[1.6rem]"
+                className="ml-[3px] w-[1.6rem]  "
               />
             </button>
             <div className="search__advanced-icon" onClick={toggleDropdown}>
@@ -69,7 +69,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
                 src="https://portal.rinn.az/img/filter.6f5fda6c.svg"
                 alt="filter"
               />
-              <span className="d-none d-md-block">Ətraflı axtarış</span>
+              <span className="hidden xl:block lg:block md:block text-base">Ətraflı axtarış</span>
             </div>
 
             {isDropdownOpen && (

@@ -42,7 +42,7 @@ const Lead: React.FC = () => {
   };
 
   return (
-    <div className="m-auto relative lg:absolute  lg:bottom-[-35px] lg:w-full lg:max-w-[1100px] h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7 ">
+    <div className=" h-auto m-auto relative lg:relative  lg:bottom-[67px] lg:w-full lg:max-w-[1110px] md:relative md:bottom-20 z-0   md:w-full md:max-w-[720px] sm:relative bottom-[67px]  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 ">
       {leadcard.map((leadItem) => (
         <LeadCard key={leadItem.id} {...leadItem} onClick={leadItem.name === "Sürətli Kömək" ? toggleModal : undefined} />
       ))}

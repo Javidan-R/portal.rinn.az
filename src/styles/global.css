@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+@font-face {
+  font-family: "custom";
+  src: url("/font/regular.otf");
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +13,6 @@
   list-style-type: none;
 }
 body {
-  font-family: Font-Regular;
   color: #14142b;
   
 }
@@ -246,7 +250,38 @@ img {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 975px) and (max-width: 1010px) {
+  .header {
+    height: 30rem ; /* Header height adjustment */
+  }
+
+  /* Make the logo responsive */
+  .header__logo img {
+    width: 100%;
+    height: auto;
+    max-width: 18.75rem;
+    max-height: 4.375rem;
+  }
+
+  /* Make login button and call section responsive */
+  .header__login {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header__login .header__call {
+    margin-right: 0;
+  }
+
+
+  /* Additional style modifications for this breakpoint if needed */
+}
+
+
+@media screen and (max-width: 974px) {
+  .header{
+    height:30rem;
+  }
   .header--home {
     animation-duration: 1s;
     padding-bottom: 16.0625rem;
@@ -276,12 +311,12 @@ img {
   
 
   
-  
 }
 
 @media screen and (max-width: 480px) {
   .header {
     animation: fadeInOut 1s ease-in-out;
+    height:23rem;
   }
   .header__logo {
     height: 70px;

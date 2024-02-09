@@ -4,15 +4,12 @@ export default  {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'custom': ['Font-Regular', 'sans-serif'],
+      },
+    },
   },
   plugins: []
-  // plugins: [
-  //   // ...
-  //   require('@tailwindcss/transition'),
-  //   require('@tailwindcss/forms'),
-  //   require('@tailwindcss/aspect-ratio'),
-  //   require('@tailwindcss/line-clamp'),
-  //   require('@tailwindcss/typography'),
-  // ],
+
 }

@@ -41,12 +41,12 @@ export const Home: React.FC = () => {
           <TransitionSection className="">
             <section
               id="pinned-services"
-              className="pt-6 md:pt-10 pb-8 mt-10 sm:h-auto md:h-96 lg:h-[22rem] md:h-auto bg-[#F6F7F9]"
+              className="pt-4  pb-8 sm:h-auto md:h-96 lg:h-[22rem] md:h-auto bg-[#F6F7F9]"
             >
               <div className="">
-                <div className="h-10">
-                  <h3 className="font-semibold text-3xl text-#14142b">
-                    Seçilmiş Xidmətlər
+                <div className="h-20">
+                  <h3 className="font-semibold font-custom text-3xl text-#14142b">
+                    Seçilmiş xidmətlər
                   </h3>
                 </div>
 
@@ -69,12 +69,12 @@ export const Home: React.FC = () => {
         </div>
       </div>
       {/* Most used Services */}
-      <div className="bg-[#F6F7F9]  h-auto  sm:pb-72 lg:pb-2">
+      <div className="bg-[#F6F7F9]  h-auto  lg:pb-2">
         <div className="v-container mx-auto p-4">
           <TransitionSection>
             <section
               id="most-used"
-              className="sm:h-100 md:h-96 lg:h-[574px] bg-[#F6F7F9] py-16"
+              className="sm:h-auto md:h-auto lg:h-[574px] bg-[#F6F7F9] py-16"
             >
               <div className="container mx-auto">
                 <div className="h-20">

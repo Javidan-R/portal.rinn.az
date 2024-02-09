@@ -18,20 +18,20 @@ export const LeadCard: React.FC<LeadCardProps> = ({
   onClick,
 }) => (
   <Link to={to} onClick={onClick}>
-    <div  className={`p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md w-full flex items-center rounded-lg h-[104px] `}   >
+    <div  className={`  w-full  h-[104px] p-5 bg-white border border-solid border-gray-100 cursor-pointer shadow flex items-center rounded-xl  `}   >
       <div className="text-gray-900 flex items-center">
         <div className="flex-none">
           <img
             src={image}
-            alt={`Icon for ${name}`}
-            className="h-12 w-12 object-contain"
+            alt={name}
+            className="h-12 w-12  object-scale-down "
           />
         </div>
         <article className="ml-4 w-60 text-wrap text-left">
-          <div className="font-bold overflow-hidden truncate text-sm">
+          <div className="font-black  overflow-hidden font-custom truncate text-sm " >
             {name}
           </div>
-          <div className="text-xs md:text-sm opacity-60">{desc}</div>
+          <div className="text-sm  opacity-50 font-semibold" style={{fontSize:'12px'}}>{desc}</div>
         </article>
       </div>
     </div>
