@@ -3,8 +3,7 @@ import Head from "../../components/Head";
 import Footer from "../../layout/Footer";
 import { FaUser } from "react-icons/fa";
 import userphoto from "../../assets/images/user.avif";
-import PrimaryButton from "../../components/atoms/Button/PrimaryButton";
-
+import PrimaryButton from "../../components/atoms/Button/PrimaryButton"; 
 type MenuItem = "Şəxsi Məlumatlarım" | "Müraciətlərim" | "Əks Əlaqə";
 
 const AuthAccount: FC = () => {

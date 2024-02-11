@@ -45,10 +45,10 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
     // Filter logic here
   
     // For example, filter the search results based on some criteria
-    const filteredResults = searchResults.filter(result => result === true);
+    // const filteredResults = searchResults.filter(result => result === true);
   
     // Update the search results state with filtered data
-    setSearchResults(filteredResults);
+    // setSearchResults(filteredResults);
   };
 
   return (

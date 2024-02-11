@@ -2,7 +2,23 @@
   "user": [
     {
       "username": "Cavidan",
-      "password": "123123"
+      "password": "123123",
+      "userdetail":[
+        {
+          "userId": 1,
+          "image":"./src/assets/images/user.avif",
+          "userAllName": "Rəcəbli Cavidan Ayaz oğlu",
+          "password": "XXXXXX",
+          "number": "1111111",
+          "address1": "Bakı şəhəri",
+          "address2": "Bakı şəhəri",
+          "pasDate": "2024-02-20",
+          "birthday": "1997-07-02",
+          "document" :"Asan-Gəncə(2)"
+
+
+        }
+      ]
     }
   ],
   "categories": [
