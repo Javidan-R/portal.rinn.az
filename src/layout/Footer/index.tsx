@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import MainLogo from '../../assets/images/MainLogo.svg';
 
 const Footer = () => {
+
   const currentDate = new Date().getFullYear();
   return (
     <div className="footer bg-[#14142b] text-white  lg:block hidden">

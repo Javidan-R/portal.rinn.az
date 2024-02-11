@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
 @font-face {
   font-family: "custom";
@@ -14,7 +14,6 @@
 }
 body {
   color: #14142b;
-  
 }
 
 .container-fluid {
@@ -48,9 +47,6 @@ body {
   }
 }
 
-
-
-
 .header--home-lg {
   animation-name: fadeInDown;
 }
@@ -70,69 +66,62 @@ body {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
   transition: height 0.5s ease-in-out;
-
-
-
 }
 .header--home {
   padding-bottom: 20.125rem;
 }
-   
-.header--home  .header__logo   img {
-      width: 18.75rem;
-      height: 4.375rem;
-    }
-  
-  .header__login {
-    width: 30rem;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
-  }
-  .header__login   .header__call {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-            margin-right: 3.125rem;
-            height: 50px;
-            font-weight: 600;
-            font-family: Font-SemiBold;
-            font-size: 1rem;
-            line-height: 1.3125rem;
-            color: #fff;
-    }
-            .header__call   img{
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1.4rem;
-      }
 
-    
-      .header__login   button {
-        padding: 15px 15px 13px 15px;
-        text-shadow: none;
-        font-size: .875rem;
-        color: #304b82;
-        cursor: pointer;
-        outline: none;
-        font-weight: 500;
-        line-height: 1.3125rem;
-        background-color: white;
-        border: 1px solid #304b82;
-        box-sizing: border-box;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
+.header--home .header__logo img {
+  width: 18.75rem;
+  height: 4.375rem;
+}
 
-    }
-   
+.header__login {
+  width: 30rem;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+.header__login .header__call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3.125rem;
+  height: 50px;
+  font-weight: 600;
+  font-family: Font-SemiBold;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: #fff;
+}
+.header__call img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1.4rem;
+}
+
+.header__login button {
+  padding: 15px 15px 13px 15px;
+  text-shadow: none;
+  font-size: 0.875rem;
+  color: #304b82;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  line-height: 1.3125rem;
+  background-color: white;
+  border: 1px solid #304b82;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
 
 .d-lg-none {
-    display: none !important;
-  }
-  
-  
+  display: none !important;
+}
+
 /* Row Styles */
 .row {
   display: flex;
@@ -143,8 +132,6 @@ body {
 .align-center {
   align-items: center;
 }
-
-
 
 /* Column Styles */
 .col-10 {
@@ -172,23 +159,14 @@ body {
   max-width: 100%;
 }
 
-
-
-
-
-
 /* Bootstrap Image Styles */
 img {
   max-width: 100%;
   height: auto;
 }
 
-
-
-
 .header__search-col {
-  transition: all .5s ease;
- 
+  transition: all 0.5s ease;
 }
 .header__search-col button {
   background: none;
@@ -202,20 +180,17 @@ img {
   position: absolute;
   left: 15px;
   top: 15px;
-  z-index: index 3;;
-  
+  z-index: index 3;
 }
-.search__button  >img {
+.search__button > img {
   max-width: 100%;
   vertical-align: middle;
 }
 .search__input input {
-  border-radius: .9375rem;
+  border-radius: 0.9375rem;
   padding: 1.25rem 1.25rem 1.25rem 4.0625rem;
   border: 0;
-
 }
-
 
 .search__advanced-icon {
   cursor: pointer;
@@ -226,12 +201,12 @@ img {
   align-items: center;
   display: flex;
   font-weight: 500;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.3125rem;
   color: #14142b;
 }
 .search__advanced-icon img {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   width: 1.25rem;
   height: 1.25rem;
 }
@@ -252,7 +227,7 @@ img {
 
 @media screen and (min-width: 975px) and (max-width: 1010px) {
   .header {
-    height: 30rem ; /* Header height adjustment */
+    height: 30rem; /* Header height adjustment */
   }
 
   /* Make the logo responsive */
@@ -273,20 +248,18 @@ img {
     margin-right: 0;
   }
 
-
   /* Additional style modifications for this breakpoint if needed */
 }
 
-
 @media screen and (max-width: 974px) {
-  .header{
-    height:30rem;
+  .header {
+    height: 30rem;
   }
   .header--home {
     animation-duration: 1s;
     padding-bottom: 16.0625rem;
-  } 
-  .header--home > .header__logo> img {
+  }
+  .header--home > .header__logo > img {
     width: 13rem;
     height: 70px;
     object-fit: contain;
@@ -304,32 +277,28 @@ img {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
   }
-  
+
   .d-block {
     display: block !important;
   }
-  
-
-  
 }
 
 @media screen and (max-width: 480px) {
   .header {
     animation: fadeInOut 1s ease-in-out;
-    height:23rem;
+    height: 23rem;
   }
   .header__logo {
     height: 70px;
-    
   }
-  .header__logo  img {
+  .header__logo img {
     width: 13rem;
     height: 70px;
     object-fit: contain;
   }
   .d-none {
     display: none !important;
-  } 
+  }
   .d-md-block {
     display: block !important;
   }
@@ -353,7 +322,7 @@ img {
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  animation:  fadeInDown 1s ease-in-out; /* Add a fade-in animation */
+  animation: fadeInDown 1s ease-in-out; /* Add a fade-in animation */
 }
 
 @keyframes fadeIn {

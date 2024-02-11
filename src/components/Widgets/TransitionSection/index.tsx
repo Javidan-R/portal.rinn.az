@@ -20,6 +20,7 @@ interface TransitionSectionProps {
     transitionDelay: "0.1",
     transform: isContentVisible ? "translatex(0)" : "translatex(100%)",
     opacity: isContentVisible ? 1 : 0,
+    overflow: 'hidden'
   };
 
   return (

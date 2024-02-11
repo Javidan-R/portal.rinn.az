@@ -2,6 +2,8 @@ import { FC, useState } from "react";
 import Head from "../../components/Head";
 import Footer from "../../layout/Footer";
 import { FaUser } from "react-icons/fa";
+import userphoto from "../../assets/images/user.avif";
+import PrimaryButton from "../../components/atoms/Button/PrimaryButton";
 
 type MenuItem = "Şəxsi Məlumatlarım" | "Müraciətlərim" | "Əks Əlaqə";
 
@@ -16,8 +18,11 @@ const AuthAccount: FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Head />
-      <div className="flex flex-col md:flex-row flex-grow">
-        <Menu onItemClick={handleMenuItemClick}  selectedMenuItem={selectedMenuItem}/>
+      <div className="flex flex-col md:flex-row flex-grow gap-4 ">
+        <Menu
+          onItemClick={handleMenuItemClick}
+          selectedMenuItem={selectedMenuItem}
+        />
         <UserInfo selectedMenuItem={selectedMenuItem} />
       </div>
       <Footer />
@@ -25,11 +30,10 @@ const AuthAccount: FC = () => {
   );
 };
 
-const Menu: FC<{ onItemClick: (title: MenuItem) => void , selectedMenuItem:string}> = ({
-  onItemClick,
-  selectedMenuItem
-
-}) => {
+const Menu: FC<{
+  onItemClick: (title: MenuItem) => void;
+  selectedMenuItem: string;
+}> = ({ onItemClick, selectedMenuItem }) => {
   const menuItems: MenuItem[] = [
     "Şəxsi Məlumatlarım",
     "Müraciətlərim",
@@ -39,11 +43,16 @@ const Menu: FC<{ onItemClick: (title: MenuItem) => void , selectedMenuItem:strin
   return (
     <div className="w-full md:w-1/4 bg-white border-r border-gray-200 p-4 shadow-xl">
       {menuItems.map((item) => (
-        <MenuItem key={item} title={item} onItemClick={onItemClick} active={item === selectedMenuItem} />
+        <MenuItem
+          key={item}
+          title={item}
+          onItemClick={onItemClick}
+          active={item === selectedMenuItem}
+        />
       ))}
     </div>
   );
-};  
+};
 
 const MenuItem: FC<{
   title: MenuItem;
@@ -52,11 +61,15 @@ const MenuItem: FC<{
 }> = ({ title, active, onItemClick }) => {
   return (
     <button
-      className={`flex justify-start items-center w-full text-left hover:underline mb-2 border rounded-xl h-[40px] p-2 ${active ? 'bg-gray-100' : ''}`}
+      className={`flex justify-start items-center w-full text-left hover:underline mb-2 border rounded-xl h-[40px] p-2 ${
+        active ? "bg-gray-100" : ""
+      }`}
       onClick={() => onItemClick(title)}
     >
-      <FaUser className={`text-lg ${active ? 'text-blue-500' : 'text-gray-400'}`} />
-      <p className="text-lg ml-2">{title}</p>
+      <FaUser
+        className={`text-base ${active ? "text-blue-500" : "text-gray-400"}`}
+      />
+      <p className="text-base ml-2">{title}</p>
     </button>
   );
 };
@@ -67,40 +80,80 @@ interface UserInfoProps {
 
 const UserInfo: FC<UserInfoProps> = ({ selectedMenuItem }) => {
   return (
-    <div className="w-full md:w-3/4 p-4 bg-gray-100 border rounded-xl m-6 my-10 shadow-xl">
+    <div className="row">
       {selectedMenuItem === "Şəxsi Məlumatlarım" && (
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/4 mb-4">
-            <img
-              src="../../assets/images/categories/is.png"
-              alt="User Avatar"
-              className="w-full rounded-lg"
-            />
-          </div>
-          <div className="md:w-3/4 md:pl-4">
+        <>
+          <div className=" col-12 w-full md:w-4/5 p-4 bg-gray-100 border rounded-xl  my-10 shadow-xl">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 mb-4">
-                <UserInfoRow title="Kullanıcı adı" value="JohnDoe" />
+              <div className="md:w-1/5 mb-4">
+                <img
+                  src={userphoto}
+                  alt="User Avatar"
+                  className="w-full rounded-lg"
+                />
               </div>
-              <div className="md:w-1/2 mb-4">
-                <UserInfoRow title="Doğum yılı" value={1990} />
+              <div className="md:w-4/5 md:pl-4">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Soyad, adı və atasının adı"
+                      value="Rəcəbli Cavidan Ayaz oğlu"
+                    />
+                  </div>
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Fərdi identifikasiya nömrəsi"
+                      value="xxxxxxx"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Sənədin verilmə tarixi"
+                      value="2024-02-20"
+                    />
+                  </div>
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow title="Doğum Yeri" value="XXXXXX" />
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Sənədin seriya və nömrəsi"
+                      value="XXXXXXX"
+                    />
+                  </div>
+                  <div className="md:w-1/2  mb-4">
+                    <UserInfoRow title="Doğum tarixi" value="1997" />
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Sənədi verən orqan"
+                      value="Asan Gəncə 2"
+                    />
+                  </div>
+                  <div className="md:w-1/2 mb-4">
+                    <UserInfoRow
+                      title="Qeydiyyatda olduğu ünvan"
+                      value="XXXXXXXXXXXXXXXX"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/8 mb-4 ">
+                <PrimaryButton className="px-8 py-2 ">Yenilə</PrimaryButton>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 mb-4">
-                <UserInfoRow title="Ata adı" value="Michael Doe" />
-              </div>
-              <div className="md:w-1/2 mb-4">
-                <UserInfoRow title="Yaşadığı yer" value="New York" />
-              </div>
-            </div>
           </div>
-          <div className="md:w-1/4 mb-4 ">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-              Yenilə
-            </button>
+
+          <div className="col-12">
+            <AddUserData />
           </div>
-        </div>
+        </>
       )}
     </div>
   );
@@ -111,11 +164,21 @@ const UserInfoRow: FC<{ title: string; value: string | number }> = ({
   value,
 }) => {
   return (
-    <div className="flex mb-2">
-      <span className="font-semibold mr-2">{title}:</span>
-      <span>{value}</span>
+    <div className="flex flex-col  mb-2">
+      <span className="font-base">{title}:</span>
+      <span className="font-custom font-black">{value}</span>
     </div>
   );
 };
 
+const AddUserData = () => {
+  return (
+    <div className="bg-white  row  border rounded-xl shadow-xl p-4">
+      <div className="col-12 w-full flex flex-row justify-between align-center items-center">
+        <div className="text-lg "> Əlaqə Məlumatlarınızı daxil edin</div>
+        <PrimaryButton className="px-8 py-2 ">Əlavə et</PrimaryButton>
+      </div>
+    </div>
+  );
+};
 export default AuthAccount;

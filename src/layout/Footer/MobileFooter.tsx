@@ -1,101 +1,78 @@
-import { FC } from "react";
-import loginmobile from "../../assets/images/services/loginmobile.svg";
-import telmobile from "../../assets/images/services/telmobile.svg";
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-interface MobileFooterPorp {
+import loginmobile from "../../assets/images/services/loginmobile.svg";
+import menublue from "../../assets/images/services/menu-blue.svg";
+import telmobile from '../../assets/images/services/telmobile.svg'
+
+
+
+interface MobileFooterProps {
   onClose: () => void;
 }
-export const MobileFooter:FC<MobileFooterPorp> = ({  onClose }) => {
+
+export const MobileFooter: FC<MobileFooterProps> = ({ onClose }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    onClose();
+  };
+
   return (
     <div>
-        <div className="modal ">
-        <div className="modal--lg ">
-          <div className="modal__content">
-            <div className="modal__header flex justify-between items-center">
-              <div className="modal__title"></div>
-              <button type="button" className="modal__close bg-none border-none cursor-pointer">
-                <img src="https://portal.rinn.az/img/modal-close.efba9567.svg" alt="" />
-              </button> 
-              <div className="lg:hidden overflow-hidden fixed inset-0 z-50 bg-white">
-            <div className=" ">
-              <div className="flex justify-between align-center items-center ">
-                <div className="cursor-pointer" onClick={onClose}>
+      <div className={`fixed inset-0 z-50 transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} overflow-xlip` }>
+        <div className="bg-white h-full transition-transform transform 1s ease-linear transform-gpu " style={{ transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)' }}>
+          <div className="modal  modal--lg bg-white h-full p-4 transition-transform transform-gpu" >
+            <div className="modal__content">
+              <div className="modal__header flex justify-between items-center p-4 py-8">
+                <button onClick={closeMenu}>
                   <img
-                    src="https://portal.rinn.az/img/menu.6f936fc4.svg"
+                    src={menublue}
                     alt="menu"
-                    style={{
-                      maxWidth: "100%",
-                      verticalAlign: "middle",
-                      backgroundColor: "blue ",
-                      padding: "10px",
-                      border: "1px solid blue",
-                      borderRadius: "5px",
-                    }}
+                    className="w-6 h-6"
                   />
-                </div>
-                <div className="cursor-pointer flex justify-center align-center gap-4">
-                  <div>
-                    <img src={loginmobile} alt="mobile-menu" />
-                  </div>
-                  <div>
-
-                    <Link to={'/auth/login'}><p>Daxil ol</p></Link>
-                  </div>
+                </button>
+                <div className="flex items-center gap-4">
+                  <img src={loginmobile} alt="mobile-menu" className="w-6 h-6" />
+                  <Link to={"/auth/login"} onClick={handleLinkClick}>Daxil ol</Link>
                 </div>
               </div>
               <hr />
-              <div className="py-4">
-                <div className="py-2">
-                  <Link to={"/information/22"} >
-                    <p className="cursor-pointer">Haqqımızda</p>
-                  </Link>
-                </div>
-                <div className="py-2">
-                  <Link to={"/information/23"}>
-                    <p>Məxfilik siyasəti</p>
-                  </Link>
-                </div>
-                <div className="py-2">
-                  <Link to={"/faq"}>
-                    <p>FAQ</p>
-                  </Link>
-                </div>
-              </div>
+              <div className="p-4">
+                      <div className="py-3">
+                        <Link to={"/information/22"} onClick={handleLinkClick}>
+                          <p className="cursor-pointer">Haqqımızda</p>
+                        </Link>
+                      </div>
+                      <div className="py-3">
+                        <Link to={"/information/23"} onClick={handleLinkClick}>
+                          <p>Məxfilik siyasəti</p>
+                        </Link>
+                      </div>
+                      <div className="py-3">
+                        <Link to={"/faq"} onClick={handleLinkClick}>
+                          <p>FAQ</p>
+                        </Link>
+                      </div>
+                    </div>
               <hr />
               <div className="my-20 mt-80">
-                <Link to={"1655"} className="flex justify-center gap-4 ">
-                  <img
-                    src={telmobile}
-                    alt="call"
-                  />
-                  <b className="text-[#304b82;] font-extrabold font-semibold text-base">
+                <Link to="1655" onClick={handleLinkClick} className="flex justify-center gap-4 items-center">
+                  <img src={telmobile} alt="call" className="w-6 h-6" />
+                  <span className="text-[#304b82] font-extrabold font-semibold text-base">
                     1655 Çağrı Mərkəzi
-                  </b>
+                  </span>
                 </Link>
-              </div>
-            </div>
-          </div>
-            </div>
-            <div className="modal__body flex justify-center items-center">
-              <div className="container">
-                <div className="grid grid-cols-12">
-                  <div className="col-span-12">
-                    <div className="modal__content">
-                      <div className="modal-text"></div>
-                      <div className="modal-bottom"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="modal__footer">
-              <div className="modal-button flex justify-center">
-                <button className="btn bg-white">Bağla</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+

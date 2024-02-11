@@ -13,36 +13,42 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
   const [searchResults, setSearchResults] = useState<BtnData[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
-
+  
   const handleSearch = () => {
     const filteredServices: BtnData[] = data.reduce((acc: BtnData[], btn) => {
       const matchingServices = btn.serviceName?.filter((service) =>
         service.title?.toLowerCase().includes(searchTerm.toLowerCase())
       );
-
+  
       const matchingBtnData = matchingServices?.map((service) => ({
         id: service.serviceId,
         serviceId: service.serviceId,
         name: btn.name,
         serviceName: [service],
       })) || [];
-
+  
       return acc.concat(matchingBtnData);
     }, []);
-
+  
     setSearchResults(filteredServices);
-
+  
     if (onSearch) {
       onSearch(filteredServices);
     }
   };
-
+  
   const handleFilter = () => {
-    // Handle filtering logic if needed
+    // Filter logic here
+  
+    // For example, filter the search results based on some criteria
+    const filteredResults = searchResults.filter(result => result === true);
+  
+    // Update the search results state with filtered data
+    setSearchResults(filteredResults);
   };
 
   return (
@@ -99,6 +105,3 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
 };
 
 export default SearchInput;
-
-
-

@@ -9,19 +9,24 @@ const breadcrumbItems = [
 ];
 const faqs: AccProps[] = [
   {
-    title: "Where are these chairs assembled?",
+    title: "Vahid Elektron Xidmətlər Portalı hansı zərurətdən yaranıb?",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quaerat temporibus quas dolore provident nisi ut aliquid ratione beatae sequi aspernatur veniam repellendus.",
+      "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinə tabe olan qurumların elektron xidmətlərinə tam nəzarət etmək, xidmətlər üzrə dəqiq statistik məlumatların toplanması, xidmətlərdən istifadə prosesini asanlaşdırmaq üçün Vahid Elektron Xidmətlər Portalının yaradılmasına ehtiyac yaranıb.",
   },
   {
-    title: "How long do I have to return my chair?",
+    title: "Vahid Elektron Xidmətlər Portalının yaradılmasına məqsəd nədir?",
     text:
-      "Pariatur recusandae dignissimos fuga voluptas unde optio nesciunt commodi beatae, explicabo natus.",
+      "Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinin tabe qurumunlarının təqdim etdiyi elektron xidmətləri vətəndaşlar üçün daha əlçatan etmək, müştəri məmnuniyyətini artırmaq, istifadəçilərin elektron xidmətləri daha rahat tapması məqsədi ilə yaradılıb.",
   },
   {
-    title: "Do you ship to countries outside the EU?",
+    title: "Yeni portalın istifadəyə verilməsi ilə Rəqəmsal İnkişaf və Nəqliyyat Nazirliyi hansı üstünlükləri əldə edəcək?",
     text:
-      "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
+      "Vahid Elektron Xidmətlər Portalı istifadəyə verildikdən sonra Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinin təqdim etdiyi və vətəndaşların istifadə etdiyi elektron xidmətlərə tam nəzarət etmək, məlumat bazasını formalaşdırmaq, təhlillər əsasında sistemi çevik təkmilləşdirmək və istifadə prosesini asanlaşdırmaqla səmərəliliyi artırmaq mümkün olacaq.",
+  },
+  {
+    title: "Vahid Elektron Xidmətlər Portalında hansı xidmətlərdən istifadə etmək mümkün olacaq?",
+    text:
+      "Vahid Elektron Xidmətlər Portalı üzərindən vətəndaşlar Rəqəmsal İnkişaf və Nəqliyyat Nazirliyinin bütün tabe idarələrinin, yəni 14 qurumunun təqdim etdiyi elektron xidmətlərdən istifadə edə biləcəklər.",
   },
 ];
 
@@ -39,7 +44,7 @@ const faqs: AccProps[] = [
           breadcrumbItems={breadcrumbItems}
         />
         <TransitionSection>
-        <section>
+        <section className="bg-white p-6 my-8 rounded-xl shadow-xl">
         <Accordion data={faqs} />
 
         </section>

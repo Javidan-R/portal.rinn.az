@@ -30,13 +30,11 @@ export const Home: React.FC = () => {
   );
   const shuffledServices: Service[] = shuffleArray(allServices).slice(4, 10);
   return (
-    <div>
+    <div >
       <div className="bg-[#F6F7F9] ">
         <div className="v-container mx-auto p-4">
           {/* HomeCard Section */}
-          <TransitionSection className=" lg:flex lg:justify-center m-auto">
             <Lead />
-          </TransitionSection>
           {/* Selected Services Section */}
           <TransitionSection className="">
             <section

@@ -1,6 +1,4 @@
-// userSlice.js
-
-import { createSlice } from '@reduxjs/toolkit';
+import { createSelector, createSlice } from '@reduxjs/toolkit';
 import { Users } from '../types/type';
 
 const initialState:Users[] = [
@@ -25,8 +23,11 @@ const userSlice = createSlice({
 });
 
 export const { setUser } = userSlice.actions;
-export const setSelectUser = (state: { user: Users[] }) => state.user.map(user =>user.username);
 
+export const setSelectUser = createSelector(
+  (state: { user: Users[] }) => state.user,
+  (users) => users.map(user => user.username)
+);
 export default userSlice.reducer;
 
 

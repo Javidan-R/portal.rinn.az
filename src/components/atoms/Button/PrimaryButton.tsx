@@ -13,7 +13,7 @@ interface PrimaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   color = "#304b82",
-  className = "bg-[#304b82] text-white font-base py-4 px-8 rounded shadow-none cursor-pointer ",
+  className = "bg-[#304b82] text-white font-base cursor-pointer ",
   type = "button",
   text,
   disabled,
@@ -23,12 +23,12 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   onClick,
   ...props
 }) => {
-  const baseClass = `font-bold py-2 px-4 rounded border border-${color} bg-${color} hover:bg-${color}-dark text-white  text-${color} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`;
+  const baseClass = ` rounded border border-[${color}] bg-[${color}] hover:bg-[${color}]-dark text-white  text-[${color}] ${disabled ? "opacity-50 cursor-not-allowed" : ""}`;
 
   const buttonClass = `${baseClass} ${
     outline
-      ? `border border-${color} text-${color} hover:bg-${color} hover:text-white`
-      : `bg-${color} hover:bg-${color}-dark text-white `
+      ? `border border-[${color}] text-[${color}] hover:bg-[${color}] hover:text-white`
+      : `bg-[${color}] hover:bg-[${color}]-dark text-white `
   } ${fullWidth ? "w-full" : ""} ${className}`;
 
   return (
@@ -38,6 +38,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
       type={type}
       disabled={disabled}
       onClick={onClick}
+      color={color}
     >
       {children || text}
     </button>

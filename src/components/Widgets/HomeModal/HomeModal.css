@@ -20,7 +20,7 @@
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    animation:  fadeInDown 1s ease-in-out; /* Add a fade-in animation */
+    animation:  fadeIn 1s ease-in-out; /* Add a fade-in animation */
   }
   
   @keyframes fadeIn {

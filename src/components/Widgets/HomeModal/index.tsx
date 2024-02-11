@@ -10,17 +10,17 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
     price: "",
     category: "",
     description: "",
-
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-
     }));
   };
 
@@ -47,9 +47,9 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-50 flex justify-center items-center">
-<div className="modal-content bg-white rounded-lg shadow p-4 md:p-5 z-50">
-          <div className="flex items-center justify-between border-b">
+    <div className="  fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-60 flex justify-center items-center " >
+      <div className="  modal-content bg-white rounded-lg shadow p-4 md:p-5 z-50 w-96 h-100 transition transition-all transition-opacity  transition-animation fadeInDown" >
+        <div className="flex items-center justify-between border-b">
           <h3 className="text-lg font-semibold text-gray-900">
             Create New Product
           </h3>
@@ -79,7 +79,10 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
         <form onSubmit={handleSubmit} className="mt-4">
           <div className="grid gap-4 mb-4 grid-cols-2">
             <div className="col-span-2">
-              <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">
+              <label
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
                 Name
               </label>
               <input
@@ -92,20 +95,16 @@ const HomeModal: React.FC<HomeModalProps> = ({ onClose }) => {
                 placeholder="Type product name"
                 required
               />
-
             </div>
             {/* Include other form fields */}
           </div>
-          <button
-            type="submit"
-            className="btn-primary"
-          >
+          <button type="submit" className="btn-primary">
             Add new product
           </button>
-          
         </form>
       </div>
     </div>
+    
   );
 };
 

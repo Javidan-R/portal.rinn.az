@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MainLogo from "../../assets/images/MainLogo.svg";
+import telmobilewhite from '../../assets/images/services/telmobilewhite.svg'
 import SearchInput from "../../components/SearchInput";
 import SwiperComponent from "../../components/SearchInput/SwipperButtons";
 import { MobileFooter } from "../Footer/MobileFooter";
@@ -109,7 +110,7 @@ const Header: React.FC<HeaderProps> = () => {
           <div className="hidden lg:flex items-center gap-14">
             <Link to="tel:1655" className="flex justify-center gap-4">
               <img
-                src="https://portal.rinn.az/img/call.859bda17.svg"
+                src={telmobilewhite}
                 alt="call"
               />
               <b className="text-white font-extrabold font-semibold text-base">
@@ -131,6 +132,7 @@ const Header: React.FC<HeaderProps> = () => {
                 ? "max-width 0.5s ease-in-out, margin 0.7s ease-in-out, transform 0.5s ease-in-out"
                 : "max-width 1s ease-in, margin 1s ease-in, transform 1s ease-in",
               filter: isHomePage ? "grayscale(0%)" : "grayscale(100%)",
+              zIndex:`100`
             }}
           >
             <SearchInput onSearch={()=>{}} organisations={organisations} categories={categories} data={btnData} />
