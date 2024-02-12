@@ -33,7 +33,7 @@ const ServiceResult = lazy(() => import("../pages/User/SearchResult"));
 
 // 
 const AuthenticatedLayout = lazy(() => import("../pages/Auth/AuthenticatedLayout"));
-const AuthAccount = lazy(() => import("../pages/Auth/AuthAccount"));
+const AuthAccount = lazy(() => import("../pages/Auth/Account/AuthAccount"));
 const AuthLayout = lazy(() => import("../features/AuthLayout"));
 
 export const router = createBrowserRouter([

@@ -1,46 +1,57 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useDispatch, useSelector } from "react-redux";
-import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { logout, authSliceService } from "../../../redux/authSlice";
-import { setSelectUser } from "../../../redux/userSlice";
+import { selectUsernames, useSelectedUser } from "../../../redux/userSlice";
 import loginmobile from "../../../assets/images/services/loginmobilesvg.svg";
 import asanlogin from "../../../assets/images/services/asportal.svg";
 import PrimaryButton from "./PrimaryButton";
+import { logout } from "../../../redux/authSlice";
 
 const UserButton: React.FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const userName = useSelector(setSelectUser);
-  const auth = useSelector(authSliceService);
-  const userButtonStyle =
-    "flex items-center justify-center space-x-2 py-[13px] px-[14px] text-[0.875rem] text-#304b82 cursor-pointer font-semibold bg-white border border-solid border-#304b82 rounded-md";
-  
+  const usernames = useSelector(selectUsernames);
+  const isAuthenticated = useSelector(
+    (state: any) => state.auth.isAuthenticated
+  );
+  const role = useSelector((state: any) => state.auth.role);
+
+  const selectedUser = useSelectedUser(usernames[0]); // Dynamically determine the username
+
   const handleLogout = () => {
     dispatch(logout());
     navigate("/");
   };
 
-  const handleAccountClick = () => {
-    navigate("/auth/account"); // Hesap sayfasına yönlendir
-  };
-
   return (
     <>
-      {auth.isAuthenticated && auth.role === "USER" ? (
-        <div>
-          <button className={userButtonStyle} onClick={handleAccountClick}>
-            <FaUser />
-            <span>{userName}</span>
-          </button>
-          <PrimaryButton className="cursor-pointer bg-white" onClick={handleLogout}>
+      {isAuthenticated && role === "USER" ? (
+        <div className="flex justify-center gap-4 align-center items-center">
+          <Link to={"/auth/account"}>
+            <div className="flex justify-center align-center items-center gap-2">
+              <img
+                src={`../../../${selectedUser?.userdetail[0].image}`}
+                alt={selectedUser?.userdetail[0].userAllName  }
+                className="w-12 h-12 rounded"
+              />
+              <span className="text-xl font-bold text-white">
+  {selectedUser?.userdetail[0].userAllName.split(' ').slice(0, 2).join(' ')}
+</span>
+
+            </div>
+          </Link>
+          <PrimaryButton
+            className="cursor-pointer bg-white"
+            onClick={handleLogout}
+          >
             <img src={loginmobile} alt="mobil-menu" />
           </PrimaryButton>
         </div>
       ) : (
         <Link to={"/auth/login"}>
-          <button className={userButtonStyle}>
+         <PrimaryButton className="bg-white  px-[.9rem] py-[.9rem]  rounded-[8px]" >
             <img src={asanlogin} alt="asan-login" />
-          </button>
+          </PrimaryButton>
         </Link>
       )}
     </>

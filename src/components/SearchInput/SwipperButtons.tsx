@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import SwipperButton from "../atoms/Button/SwipperButton";
 import "./SwiperComponent.css";
 import { BtnData, Service } from "../../types/type";
@@ -9,48 +9,44 @@ import { useNavigate } from "react-router-dom";
 import { setSelectedService } from "../../redux/serviceBtnSlice";
 
 interface SwiperComponentProps {
-  data:BtnData[]
+  data: BtnData[];
 }
-const SwiperComponent: React.FC<SwiperComponentProps> = ({
-  data
-}) => {
+const SwiperComponent: React.FC<SwiperComponentProps> = ({ data }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleButtonClick = (services?: Service[]) => {
     if (services && services.length > 0) {
       dispatch(setSelectedService(services));
-      console.log(services);      
-            navigate("/search-result");
+      navigate("/search-result");
     }
   };
-
   return (
     <div className="search__tags">
-    <div className="swiper-container">
-      <Swiper spaceBetween={10} slidesPerView={7}>
-        {data.map((item, key) => (
-          <SwiperSlide
-            key={key}
-            className="swiper-slide"
-            style={{
-              width: "initial",
-              transform: "translate3d(0px, 0px, 0px)",
-            }}
-          >
-            <SwipperButton
-              className="swiper-button"
-              onClick={() => item.serviceName && handleButtonClick(item.serviceName)}
+      <div className="swiper-container">
+        <Swiper spaceBetween={10} slidesPerView={7}>
+          {data.map((item, key) => (
+            <SwiperSlide
+              key={key}
+              className="swiper-slide"
+              style={{
+                width: "initial",
+                transform: "translate3d(0px, 0px, 0px)",
+              }}
             >
-              {item.name}
-            </SwipperButton>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              <SwipperButton
+                className="swiper-button"
+                onClick={() =>
+                  item.serviceName && handleButtonClick(item.serviceName)
+                }
+              >
+                {item.name}
+              </SwipperButton>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
-  </div>
-  
-
   );
 };
 

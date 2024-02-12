@@ -1,13 +1,8 @@
-import { useSelector } from "react-redux";
-import { Navigate, Outlet } from "react-router-dom";
-import { authSliceService } from "../../redux/authSlice";
+import {  Outlet } from "react-router-dom";
 
  const AuthLayout =() =>{
-    const {isAuthenticated}  = useSelector(authSliceService)
 
-    if(isAuthenticated){
-        return <Navigate to={"/"} />
-    }
+    
     return <><Outlet /></>
 }
 export default AuthLayout;

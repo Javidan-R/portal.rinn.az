@@ -1,12 +1,8 @@
-// Mcqs.tsx
-
-import  { useState, useEffect } from 'react';
 import { PagesCard } from '../../../components/PagesCard';
 import Steps from '../../../components/Steps';
 import ServiceHeading from '../../../components/ServiceHeading';
 import imei from '../../../../src/assets/images/services/Imei.png';
 import TransitionSection from '../../../components/Widgets/TransitionSection';
-import ReusableModal from '../../../components/atoms/Modal/ReusableModal';
 
 const breadcrumbItems = [
   { link: '/', name: 'Əsas səhifə' },
@@ -30,23 +26,23 @@ const mcqs = [
 ];
 
  const Mcqs = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  // const [isModalOpen, setIsModalOpen] = useState(true);
 
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
+  // const handleModalOpen = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      handleModalOpen();
-    }, 500);
+  // useEffect(() => {
+  //   const timeoutId = setTimeout(() => {
+  //     handleModalOpen();
+  //   }, 500);
 
-    return () => clearTimeout(timeoutId);
-  }, []);
+  //   return () => clearTimeout(timeoutId);
+  // }, []);
 
   return (
     <div className="bg-[#f6f7f9]">
@@ -70,13 +66,13 @@ const mcqs = [
       </div>
 
       {/* Modal */}
-      <ReusableModal
+      {/* <ReusableModal
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
         title="Modal Başlığı"
         content={<p>Modal Məzmunu burada olmalıdır.</p>}
         autoOpenDelay={500}
-      />
+      /> */}
     </div>
   );
 };

@@ -1,8 +1,10 @@
-import React, { FC,  } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 import BackButton from '../atoms/Button/BackButton';
 import Breadcrumb from '../Common/BredCrumb';
+
 interface BreadcrumbItem {
   link: string;
   name: string;
@@ -17,7 +19,8 @@ interface ServiceHeadingProps {
   breadcrumbItems: BreadcrumbItem[];
 }
 
-const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, breadcrumbItems,}) => {
+const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, breadcrumbItems }) => {
+
   return (
     <div>
       <section className="flex justify-start gap-10 py-4">
@@ -30,9 +33,11 @@ const ServiceHeading: FC<ServiceHeadingProps> = ({ mainLink, backButtonProps, br
           </div>
         </Link>
         <div className="flex items-center">
-         <Breadcrumb items={breadcrumbItems}/>
+          <Breadcrumb items={breadcrumbItems} />
         </div>
       </section>
+
+      
     </div>
   );
 };

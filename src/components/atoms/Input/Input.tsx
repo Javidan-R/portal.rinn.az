@@ -43,10 +43,7 @@ const Input: FC<InputProps> = ({
     inputRef.current?.focus();
   }, []);
 
-  const commonClasses = `border p-2 rounded-md ${
-    error ? 'border-red-500 focus:outline-none focus:ring focus:border-red-500' : 'border-gray-300'
-  } ${className || 'input'}`;
-
+  
 
   return (
     <div className="mb-4">
@@ -58,7 +55,7 @@ const Input: FC<InputProps> = ({
       max={max}
       size={size}
       name={name}
-      className={commonClasses}
+      className={className}
       value={value}
       checked={checked}
       readOnly={readOnly}
