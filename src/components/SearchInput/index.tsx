@@ -1,6 +1,6 @@
-import { FC, useState } from 'react';
-import SearchAdvanced from './SearchAdvanced';
+import React, { useState } from 'react';
 import { BtnData, Category, Organisation } from '../../types/type';
+import SearchAdvanced from './SearchAdvanced';
 
 interface SearchInputProps {
   onSearch: (searchCriteria: BtnData[]) => void;
@@ -9,8 +9,7 @@ interface SearchInputProps {
   data: BtnData[];
 }
 
-const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories, data }) => {
-  const [searchResults, setSearchResults] = useState<BtnData[]>([]);
+const SearchInput: React.FC<SearchInputProps> = ({ onSearch, organisations, categories, data }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
@@ -23,32 +22,18 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
       const matchingServices = btn.serviceName?.filter((service) =>
         service.title?.toLowerCase().includes(searchTerm.toLowerCase())
       );
-  
       const matchingBtnData = matchingServices?.map((service) => ({
         id: service.serviceId,
         serviceId: service.serviceId,
         name: btn.name,
         serviceName: [service],
       })) || [];
-  
       return acc.concat(matchingBtnData);
     }, []);
-  
-    setSearchResults(filteredServices);
-  
     if (onSearch) {
       onSearch(filteredServices);
     }
-  };
-  
-  const handleFilter = () => {
-    // Filter logic here
-  
-    // For example, filter the search results based on some criteria
-    // const filteredResults = searchResults.filter(result => result === true);
-  
-    // Update the search results state with filtered data
-    // setSearchResults(filteredResults);
+    setIsDropdownOpen(false); // Close dropdown after search
   };
 
   return (
@@ -67,7 +52,7 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
               <img
                 src="https://portal.rinn.az/img/search.9f2c397b.svg"
                 alt="search"
-                className="ml-[3px] w-[1.6rem]  "
+                className="ml-[3px] w-[1.6rem]"
               />
             </button>
             <div className="search__advanced-icon" onClick={toggleDropdown}>
@@ -77,26 +62,14 @@ const SearchInput: FC<SearchInputProps> = ({ onSearch, organisations, categories
               />
               <span className="hidden xl:block lg:block md:block text-base">Ətraflı axtarış</span>
             </div>
-
             {isDropdownOpen && (
-              <SearchAdvanced
-                organisations={organisations}
-                onFilter={handleFilter}
-                categories={categories}
-              />
+              <>
+                <SearchAdvanced
+                  organisations={organisations}
+                  categories={categories}
+                />
+                              </>
             )}
-            
-            {/* Render search results */}
-            {searchResults.map((result,index) => (
-              <div key={index}>
-                {/* Render each search result as needed */}
-                {result.serviceName.map((item,index)=>(
-                  <div key={index}>
-                    {item.title}
-                  </div>
-                ))}
-              </div>
-            ))}
           </div>
         </div>
       </div>

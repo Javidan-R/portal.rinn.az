@@ -15,7 +15,7 @@ const CategoriesCard: FC<CategoriesCardProps> = ({
   return (
     <Link to={`/categories/${categoriesId}`}>
       <div
-        className={`p-5 bg-white border border-solid border-gray-200  cursor-pointer shadow-md    w-full flex items-center w-full flex items-center rounded-lg  h-[104px] lg:h-[120px]`}
+        className={`p-5 bg-white border border-solid border-gray-200  cursor-pointer shadow-md    w-full flex items-center w-full flex items-center rounded-lg  h-[106px] lg:h-[120px]`}
       >
         <div className="cursor-pointer text-gray-900  flex items-center ">
           <div className="flex-none">
@@ -27,7 +27,7 @@ const CategoriesCard: FC<CategoriesCardProps> = ({
             </div>
             <div
               className="break-words max-w-full "
-              style={{ fontSize: ".75rem" }}
+              style={{ fontSize: ".7rem" }}
             >
               {desc}
             </div>

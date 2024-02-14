@@ -1,16 +1,16 @@
-import React, { ChangeEvent,  } from 'react';
+import React, { useCallback } from "react";
 
 interface CheckboxProps {
   name: string;
   label: string;
-  checked?: boolean;
+  checked: boolean;
   onChange: (checked: boolean) => void;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ name, label, checked = false, onChange }) => {
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange(e.target.checked);
-  };
+const Checkbox: React.FC<CheckboxProps> = ({ name, label, checked, onChange }) => {
+  const handleChange = useCallback(() => {
+    onChange(!checked);
+  }, [checked, onChange]);
 
   return (
     <div className="form__group flex justify-start gap-2 cursor-pointer">
@@ -18,7 +18,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ name, label, checked = false, onCha
         type="checkbox"
         name={name}
         id={name}
-        className="v-checkbox v-checkbox--square v-checkbox--dark-blue"
+        className="v-checkbox v-checkbox--square v-checkbox--dark-blue p-5"
         checked={checked}
         onChange={handleChange}
       />

@@ -32,7 +32,7 @@ function PrivacyComponent() {
   return (
     <div className="row  rounded-xl shadow-xl border  border-1 mt-10 mb-4 p-6">
       <div className="col-12">
-        <div className="flex lg:flex-row jutify-start gap-6 align-center items-center">
+        <div className="flex flex-col lg:flex-row  jutify-start gap-6 align-center items-center">
           <div className="flex lg:flex-row jutify-start gap-6 align-center items-center">
             <p className="font-extrabold">Telefon</p>
             <Link

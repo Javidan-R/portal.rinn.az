@@ -62,8 +62,8 @@
   display: inline-block;
   font-size: 0.9rem;
   line-height: 1.125rem;
-  word-spacing: 5px;
-  letter-spacing: 1px;
+  word-spacing: 1px;
+  letter-spacing: .6px;
   color: #fff;
   text-align: center;
   cursor: pointer;

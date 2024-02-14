@@ -195,91 +195,59 @@ const UserInfo: FC<{ selectedMenuItems: MenuItem }> = ({
         <div className="row">
           <div className=" col-12 w-full  p-4  bg-white border rounded-xl  my-10 shadow-xl">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/5  mb-4 mx-auto">
+              <div className="h-full sm:h-[5rem] md:w-1/5  mb-4  flex-justify-center align-center items-center">
                 <img
                   src={`../../${userDetail.image}`}
                   alt="User Avatar"
-                  className=" md:w-10 md:h-10 sm:w-24 sm:h-15   rounded-lg"
+                  className="w-full h-auto  sm:h-[5rem]  object-contain   rounded-lg"
                 />
               </div>
-              <div className="md:w-4/5 md:pl-4">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
+              <div className="w-full md:w-2/3 md:pl-4">
+                <div className="flex flex-col md:flex-row mb-4">
+                  <div className="md:w-1/2">
+                    <div className="flex flex-col mb-4">
                       <span className="font-base">
                         Soyad, adı və atasının adı:
                       </span>
-                      <span className="font-custom font-black">
+                      <span className="font-bold">
                         {userDetail.userAllName}
                       </span>
                     </div>
+                    <div className="flex flex-col mb-4">
+                      <span className="font-base">Sənədi verilmə tarixi:</span>
+                      <span className="font-bold">{userDetail.pasDate}</span>
+                    </div>
+                    <div className="flex flex-col mb-4">
+                      <span className="font-base">Doğum yeri:</span>
+                      <span className="font-bold">{userDetail.address2}</span>
+                    </div>
+                    <div className="flex flex-col mb-4">
+                      <span className="font-base">Sənədi verən orqan:</span>
+                      <span className="font-bold">{userDetail.document}</span>
+                    </div>
                   </div>
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
+                  <div className="md:w-1/2">
+                    <div className="flex flex-col mb-4">
                       <span className="font-base">
                         Fərdi identifikasiya nömrəsi:
                       </span>
-                      <span className="font-custom font-black">
-                        {userDetail.number}
-                      </span>
+                      <span className="font-bold">{userDetail.number}</span>
                     </div>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
-                      <span className="font-base">Sənədin verilmə tarixi:</span>
-                      <span className="font-custom font-black">
-                        {userDetail.pasDate}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
+                    <div className="flex flex-col mb-4">
                       <span className="font-base">Doğum tarixi:</span>
-                      <span className="font-custom font-black">
-                        {userDetail.birthday}
-                      </span>
+                      <span className="font-bold">{userDetail.birthday}</span>
                     </div>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
-                    <span className="font-base"> Doğum yeri:</span>
-                      <span className="font-custom font-black">
-                        {userDetail.address2}
+                    <div className="flex flex-col mb-4">
+                      <span className="font-base">
+                        Sənədi seriya və nömrəsi:
                       </span>
+                      <span className="font-bold">{userDetail.password}</span>
                     </div>
-                  </div>
-                  <div className="md:w-1/2  mb-4">
-                    <div className="flex flex-col  mb-2">
-                    <span className="font-base">Sənədi seriya və nömrəsi:</span>
-                      <span className="font-custom font-black">
-                        {userDetail.password}
-                      </span>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
-                      
-                      <span className="font-base">Sənədi verən orqan:</span>
-                      <span className="font-custom font-black">
-                        {userDetail.document}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="md:w-1/2 mb-4">
-                    <div className="flex flex-col  mb-2">
-                    <span className="font-base">
+                    <div className="flex flex-col mb-4">
+                      <span className="font-base">
                         Qeydiyyatda olduğu ünvan:
                       </span>
-                      <span className="font-custom font-black">
-                        {userDetail.address1}
-                      </span>
+                      <span className="font-bold">{userDetail.address1}</span>
                     </div>
                   </div>
                 </div>

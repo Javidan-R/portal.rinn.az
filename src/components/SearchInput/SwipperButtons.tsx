@@ -14,13 +14,20 @@ interface SwiperComponentProps {
 const SwiperComponent: React.FC<SwiperComponentProps> = ({ data }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const handleButtonClick = (services?: Service[]) => {
     if (services && services.length > 0) {
       dispatch(setSelectedService(services));
-      navigate("/search-result");
+      // Sorğu parametrlərini əlavə et
+      const queryParams = new URLSearchParams();
+      queryParams.append("serviceName", services.map(service => service.name).join(","));
+      queryParams.append("serviceId", services.map(service => service.serviceId).join(","));
+      navigate({
+        pathname: "/search-result",
+        search: `?${queryParams.toString()}`,
+      });
     }
   };
+
   return (
     <div className="search__tags">
       <div className="swiper-container">

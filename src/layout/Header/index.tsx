@@ -11,15 +11,12 @@ import UserButton from "../../components/atoms/Button/UserButton";
 
 interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
-
   const [btnData , SetBtnData]  = useState<BtnData[]>([])
   const [organisations, setOrganisations] = useState<Organisation[]>([]);
   const [categories,setCategories] = useState<Category[]>([])
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isHomePage, setIsHomePage] = useState(true);
   const location = useLocation();
-
-  
   useEffect(() => {
     setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
@@ -32,7 +29,6 @@ const Header: React.FC<HeaderProps> = () => {
         console.error("Error fetching data organisations is header:", error);
       }
     };
-
     fetchData();
     const fetchCategories = async () => {
       try {
@@ -42,7 +38,6 @@ const Header: React.FC<HeaderProps> = () => {
         console.error("Error fetching categories is Header:", error);
       }
     };
-  
     fetchCategories();
   }, []);
   useEffect(() => {
@@ -54,7 +49,6 @@ const Header: React.FC<HeaderProps> = () => {
         console.error("Error fetching data buttons is Header:", error);
       }
     };
-
     fetchData();
   }, []);
   const toggleMobileMenu = () => {
@@ -122,7 +116,7 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
         
-        <div className="relative z-10 flex items-center justify-center  top-[3.8rem] lg:mt-6 s v-container ">
+        <div className="relative z-10 flex items-center justify-center  top-[3.8rem] s v-container ">
           <div
             className={` lg:absolute   lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2  `}
             style={{

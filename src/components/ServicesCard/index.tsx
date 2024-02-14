@@ -21,11 +21,11 @@ const ServicesCard: FC<ServicesCardProps> = ({
     "w-[90.8px] h-[30px] font-normal text-sm leading-none text-blue-700 bg-blue-100 rounded-md px-2 py-1 h-5";
   return (
     <Link to={`/services/${link}`}>
-      <div className="p-5 bg-white border border-solid border-gray-200 cursor-pointer shadow-md h-[160px] md:h-[178px]     w-auto flex items-center w-full flex items-center rounded-lg">
+      <div className="px-4 bg-white border border-solid border-gray-200 cursor-pointer shadow-md h-[160px] md:h-[160px]     w-auto flex items-center w-full flex items-center rounded-lg">
         <div className=" w-full p-[2px] h-auto flex flex-col items-start">
-          <div className="w-full min-h-[38px]">
+          <div className="w-full min-h-[40px]">
             {sing === "Qeydiyyatlı" && sing.length > 0 && (
-              <div className="flex justify-between items-start w-full ">
+              <div className="flex justify-between items-start w-full mb-2">
                 <img
                   src={`../../${image}`}
                   alt={name}
@@ -45,11 +45,11 @@ const ServicesCard: FC<ServicesCardProps> = ({
             )}
           </div>
 
-          <div className="mt-4 ">
+          <div className="mt-2 ">
             {name &&
               <div className="text-base font-medium mb-1">{name}</div>
             }
-            <div className=" font-black  max-w-full leading-4 ">
+            <div className=" font-black  max-w-full leading-4  break-words">
               {limitTitle(title)}
             </div>
           </div>

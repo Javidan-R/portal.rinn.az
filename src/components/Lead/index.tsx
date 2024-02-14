@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LeadCard } from "./LeadCard";
-import HomeModal from "../Widgets/HomeModal";
+import ModalContent from "../Widgets/ModalContent";
 
 interface LeadItem {
   id: number;
@@ -41,14 +41,38 @@ const Lead: React.FC = () => {
     setModalOpen(!isModalOpen);
   };
 
+
   return (
-    <div className=" h-auto m-auto relative lg:relative  lg:bottom-[67px] lg:w-full lg:max-w-[1110px] md:relative md:bottom-20 z-0   md:w-full md:max-w-[720px] sm:relative bottom-[67px]  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 ">
-      {leadcard.map((leadItem) => (
-        <LeadCard key={leadItem.id} {...leadItem} onClick={leadItem.name === "Sürətli Kömək" ? toggleModal : undefined} />
-      ))}
-      {isModalOpen && <HomeModal onClose={toggleModal} />}
-    
-    </div>
+    <>
+      <div className=" h-auto m-auto relative lg:relative  lg:bottom-[67px] lg:w-full lg:max-w-[1110px] md:relative md:bottom-20 z-0   md:w-full md:max-w-[720px] sm:relative bottom-[67px]  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 ">
+        {leadcard.map((leadItem) => (
+          <LeadCard
+            key={leadItem.id}
+            {...leadItem}
+            onClick={
+              leadItem.name === "Sürətli Kömək" ? toggleModal : undefined
+            }
+          />
+        ))}
+      </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="transition-opacity duration-300 ease-in-out"></div>
+            <div
+              className=" fixed top-0 left-0 right-0 bottom-0 transition-transform duration-300 ease-in-out transform"
+              style={{
+                transform: isModalOpen ? "translateY(0%)" : "translateY(100%)",
+              }}
+            >
+              <div className="flex items-center justify-center min-h-screen">
+                  <ModalContent onClose={toggleModal} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

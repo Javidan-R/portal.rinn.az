@@ -1976,6 +1976,11 @@
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   "version" "7.0.15"
 
+"@types/lodash@^4.14.202":
+  "integrity" "sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ=="
+  "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.202.tgz"
+  "version" "4.14.202"
+
 "@types/node@*", "@types/node@^18.0.0 || >=20.0.0", "@types/node@^20.11.16":
   "integrity" "sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-20.11.16.tgz"

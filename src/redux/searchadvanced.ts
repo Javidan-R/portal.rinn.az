@@ -8,8 +8,7 @@ export interface FiltersState {
     registered: boolean;
     dontRegistered: boolean;
     selectedOrganization: string;
-    selectedCategory: string;
-    
+    selectedCategory: string;    
 }
 
 export interface SearchAdvancedState {
